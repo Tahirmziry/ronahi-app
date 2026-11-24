@@ -1,0 +1,15 @@
+Ronahî — Render Static Site Deployment (v1.59)
+
+Render settings:
+- Service type: Static Site
+- Build Command: leave EMPTY
+- Publish Directory: .
+- Branch: main
+
+After deployment:
+1. Open your https://<your-site>.onrender.com URL in Safari on iPhone.
+2. Load once while online.
+3. Tap Share > Add to Home Screen > Add.
+4. Open Ronahi from the Home Screen.
+
+This is a web/PWA test build, not a signed native IPA. iOS may limit background playback and automatic adhan while the app is closed. Test playback with the app open first. The service worker caches the app shell and caches audio/data after first fetch.

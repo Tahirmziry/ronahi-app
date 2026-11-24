@@ -1,0 +1,1609 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101d35"><meta name="description" content="Ronahî - مواقيت الصلاة واتجاه القبلة والأذكار">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>Ronahî</title>
+<style>
+:root{--bg:#0b1426;--panel:#14223b;--panel2:#1b2d4b;--gold:#e9bd68;--gold2:#f5d99e;--txt:#f6f4ef;--muted:#aab7ca;--line:#ffffff16;--green:#9ed7bd}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#253b60 0,#0b1426 58%);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh;padding-bottom:92px}.app{max-width:520px;margin:auto;padding:env(safe-area-inset-top) 17px 24px}.top{display:flex;align-items:center;justify-content:space-between;padding:18px 2px 12px}.brand{display:flex;gap:10px;align-items:center}.logo{width:43px;height:43px;border-radius:15px;background:linear-gradient(145deg,#f2d18c,#b98237);display:grid;place-items:center;color:#18243a;font-size:23px;box-shadow:0 8px 22px #0005}.brand h1{font-size:19px;margin:0}.brand small{color:var(--muted);font-size:11px}.top button,.iconbtn{border:1px solid var(--line);background:#ffffff0a;color:var(--txt);border-radius:12px;padding:9px 11px;font-size:17px}.location{text-align:center;color:var(--muted);font-size:13px;margin:8px 0 15px}.location b{color:var(--gold2);font-weight:600}.hero{border:1px solid #e9bd6838;background:linear-gradient(145deg,#1d3150,#14213a 70%);border-radius:25px;padding:23px 20px 20px;text-align:center;position:relative;overflow:hidden;box-shadow:0 18px 45px #0003}.hero:before{content:'☾';position:absolute;font-size:125px;color:#e9bd680d;top:-28px;left:18px}.date{color:var(--gold2);font-size:13px}.hero h2{font-size:16px;font-weight:500;color:var(--muted);margin:18px 0 5px}.next{font-size:34px;font-weight:700;letter-spacing:.4px;margin:0}.count{color:var(--gold2);font-size:14px;margin-top:9px}.progress{height:4px;background:#ffffff16;border-radius:9px;margin:20px 0 0;overflow:hidden}.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,var(--gold),#fff0c8);border-radius:9px}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:25px 2px 12px}.sectionhead h3{font-size:16px;margin:0}.sectionhead span{font-size:12px;color:var(--muted)}.prayers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.prayer{background:linear-gradient(145deg,#172743,#122039);border:1px solid var(--line);border-radius:17px;padding:14px 14px 12px;display:flex;align-items:center;justify-content:space-between}.prayer.active{border-color:#e9bd68a6;background:linear-gradient(145deg,#34405a,#1b2a44);box-shadow:inset 0 0 0 1px #e9bd6822}.pname{font-size:14px;color:#dce4ef}.ptime{font-size:19px;font-weight:650;color:var(--gold2);direction:ltr}.ptime-play{font-family:inherit;cursor:pointer;border:0;background:transparent;padding:0;touch-action:manipulation}.ptime-play:active{transform:scale(.96);opacity:.8}.ptime-play:focus-visible{outline:2px solid var(--gold2);outline-offset:5px;border-radius:5px}.picon{font-size:19px;margin-left:7px}.wide{grid-column:span 2}.prayer-main{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:1;min-width:0}.prayer-left{display:flex;align-items:center;min-width:0}.adhan-toggle{flex:0 0 auto;width:36px;height:36px;border-radius:12px;border:1px solid #e8c47b55;background:#ffffff0b;color:var(--gold2);font-size:18px;display:grid;place-items:center;cursor:pointer}.adhan-toggle[aria-pressed="true"]{color:#aab7ca;border-color:#ffffff25;background:#ffffff08}.adhan-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px}.adhan-toggle:active{transform:scale(.94)}.adhan-toggle.sunrise{opacity:.3;cursor:not-allowed}.tabs{position:fixed;z-index:5;bottom:0;left:0;right:0;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:#0c1729ed;backdrop-filter:blur(18px);border-top:1px solid var(--line)}.tabrow{max-width:520px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.tab{border:0;background:transparent;color:#91a0b7;font-size:11px;padding:7px 2px;border-radius:12px}.tab .ico{display:block;font-size:20px;margin-bottom:3px}.tab.active{color:var(--gold2);background:#e9bd6812}.page{display:none}.page.active{display:block}.card{background:#14233c;border:1px solid var(--line);border-radius:19px;padding:17px;margin-top:13px}.card h3{font-size:16px;margin:0 0 12px}.muted{color:var(--muted);font-size:13px;line-height:1.8}.btn{background:linear-gradient(120deg,#f0d18f,#c18a42);color:#1a263a;border:0;border-radius:13px;padding:12px 16px;font-weight:700;font-size:14px}.btn.secondary{background:#ffffff0d;color:var(--txt);border:1px solid var(--line)}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.compass{width:220px;height:220px;margin:18px auto;border-radius:50%;border:1px solid #e9bd6870;background:radial-gradient(circle,#233754,#101d32 70%);display:grid;place-items:center;position:relative;box-shadow:0 0 45px #e9bd6810}.needle{font-size:94px;color:var(--gold);transform:rotate(0deg);transition:transform .3s}.compasslabel{position:absolute;top:12px;color:var(--gold2);font-size:12px}.tasbih{text-align:center;padding:25px 0}.countnum{font-size:56px;color:var(--gold2);font-weight:700;margin:8px}.tasbtn{width:145px;height:145px;border-radius:50%;border:7px solid #e9bd6850;background:linear-gradient(145deg,#243b5d,#101d32);color:var(--gold2);font-size:18px;box-shadow:0 10px 28px #0005}.dhikr{padding:14px 0;border-bottom:1px solid var(--line);line-height:1.9}.dhikr:last-child{border:0}.dhikr p{font-size:18px;margin:0 0 5px}.field{width:100%;background:#0d192c;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--txt);font-size:15px;margin:6px 0 13px}.field:focus{outline:1px solid var(--gold)}label{font-size:13px;color:var(--muted)}.settingsgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hint{font-size:11px;color:var(--muted);line-height:1.7;margin-top:8px}.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#263c5d;padding:11px 16px;border-radius:12px;font-size:13px;display:none;z-index:10;box-shadow:0 5px 20px #0006}.loading{color:var(--muted);font-size:13px;text-align:center;padding:18px}.error{color:#ffc2a8}.footer{text-align:center;color:#7788a2;font-size:10px;margin:22px 0 5px}
+
+/* Ronahî 1.8 visual refresh */
+:root{--bg:#07111f;--panel:#101f34;--panel2:#172b45;--gold:#e8c47b;--gold2:#f7dfaa;--txt:#f8f7f2;--muted:#a9b8c9;--line:#ffffff19;--green:#9ed7bd}
+body{background:radial-gradient(ellipse at 50% -12%,#294766 0,#101f34 34%,#07111f 76%);background-attachment:fixed;letter-spacing:.05px}
+.app{max-width:560px;padding-left:18px;padding-right:18px}
+.top{padding-top:calc(20px + env(safe-area-inset-top));padding-bottom:15px}
+.logo{width:48px;height:48px;border-radius:17px;background:linear-gradient(145deg,#fff0c7,#d2a45c 72%);box-shadow:0 8px 26px #d2a45c35, inset 0 1px 0 #fff9}
+.brand h1{font-size:21px;letter-spacing:.4px}.brand small{font-size:11px}
+.iconbtn{width:44px;height:44px;border-radius:15px;font-size:21px;transition:.2s}
+.iconbtn:active,.btn:active,.tab:active{transform:scale(.97)}
+.location{margin:7px 0 18px;font-size:12px}
+.hero{border:1px solid #e8c47b55;background:radial-gradient(circle at 85% 0,#3b5675 0,transparent 44%),linear-gradient(145deg,#203b59,#12243a 72%);border-radius:29px;padding:26px 20px 21px;box-shadow:0 22px 55px #0005,inset 0 1px 0 #ffffff12}
+.hero:before{font-size:150px;top:-36px;left:16px;color:#e8c47b12;pointer-events:none}
+.date{font-size:13px;letter-spacing:.2px}.hero h2{margin:21px 0 8px;font-size:15px}.next{font-size:clamp(38px,10vw,48px);letter-spacing:1px;font-variant-numeric:tabular-nums}.count{font-size:13px;margin-top:10px}.progress{height:5px;margin-top:23px;background:#ffffff20}.progress span{box-shadow:0 0 12px #e8c47b88}
+.sectionhead{margin:27px 3px 13px}.sectionhead h3{font-size:17px}.sectionhead span{font-variant-numeric:tabular-nums}
+.prayers{gap:11px}.prayer{min-height:70px;padding:15px;border-radius:19px;background:linear-gradient(145deg,#172c46,#102037);box-shadow:0 8px 22px #0002;transition:border-color .2s,transform .2s}.prayer.active{border-color:#e8c47b;background:linear-gradient(145deg,#354c66,#1c3049);box-shadow:inset 0 0 0 1px #e8c47b25,0 8px 25px #0003}.pname{font-size:14px}.ptime{font-size:20px;font-variant-numeric:tabular-nums}.picon{filter:saturate(.8)}
+.card{background:linear-gradient(145deg,#142943,#0f1e32);border:1px solid #ffffff18;border-radius:22px;padding:19px;margin-top:15px;box-shadow:0 12px 30px #0002,inset 0 1px 0 #ffffff08}.card h3{font-size:16px}.muted{line-height:1.9}.btn{border-radius:15px;padding:13px 18px;box-shadow:0 7px 18px #d2a45c22;transition:transform .18s,filter .18s}.btn:hover{filter:brightness(1.06)}.btn.secondary{box-shadow:none;background:#ffffff0c}.tabs{background:#081525eF;border-top:1px solid #ffffff1b;padding-top:10px;box-shadow:0 -12px 35px #0003}.tabrow{max-width:560px}.tab{font-size:11px;padding:9px 3px;border-radius:15px;min-height:55px}.tab .ico{font-size:21px}.tab.active{background:linear-gradient(145deg,#e8c47b20,#e8c47b09);color:#f7dfaa;box-shadow:inset 0 0 0 1px #e8c47b22}
+.compass{width:min(68vw,245px);height:min(68vw,245px);border:1px solid #e8c47b80;background:radial-gradient(circle,#304d6a 0,#192f49 54%,#0c1a2c 75%);box-shadow:0 0 0 9px #e8c47b08,0 0 50px #e8c47b13,inset 0 0 35px #0005}.needle{font-size:100px;text-shadow:0 5px 20px #e8c47b33}
+.tasbtn{border-color:#e8c47b75;background:radial-gradient(circle at 35% 25%,#405c79,#1a304b 65%,#0e1d30);box-shadow:0 14px 35px #0005,inset 0 2px 8px #ffffff15;transition:transform .12s}.tasbtn:active{transform:scale(.96)}
+.field{border-radius:14px;background:#09182a;border-color:#ffffff20;min-height:46px}.field:focus{outline:2px solid #e8c47b88;outline-offset:1px}
+.hint{line-height:1.85}.toast{bottom:calc(100px + env(safe-area-inset-bottom));border:1px solid #ffffff1b;background:#203b59;backdrop-filter:blur(15px);max-width:calc(100vw - 36px);text-align:center}
+.page.active{animation:pageIn .24s ease-out}@keyframes pageIn{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+button,select,input{font:inherit}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(min-width:700px){.app{padding-top:20px}.tabs{padding-bottom:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* Ronahi 1.13 Theme system */
+.theme-swatches{display:flex;gap:9px;margin-top:7px;flex-wrap:wrap}
+.theme-swatches span{width:30px;height:30px;border-radius:50%;border:2px solid #ffffff55;box-shadow:0 2px 8px #0003}
+body[data-theme="midnight"]{--bg:#07111f;--panel:#101f34;--panel2:#172b45;--gold:#e8c47b;--gold2:#f7dfaa;--txt:#f8f7f2;--muted:#a9b8c9;--line:#ffffff19;background:radial-gradient(ellipse at 50% -12%,#294766 0,#101f34 34%,#07111f 76%);color:var(--txt)}
+body[data-theme="emerald"]{--bg:#061b19;--panel:#0c2c28;--panel2:#16423a;--gold:#65c6a4;--gold2:#a7f0d4;--txt:#effff8;--muted:#a5c8bd;--line:#b9f5df25;background:radial-gradient(ellipse at 50% -12%,#276b58 0,#103b32 38%,#061b19 78%);color:var(--txt)}
+body[data-theme="purple"]{--bg:#130e22;--panel:#211735;--panel2:#33234e;--gold:#b89be8;--gold2:#e0d0ff;--txt:#fbf7ff;--muted:#c0b4d1;--line:#e6d6ff25;background:radial-gradient(ellipse at 50% -12%,#58417a 0,#281c40 40%,#130e22 80%);color:var(--txt)}
+body[data-theme="rose"]{--bg:#21121b;--panel:#351b2b;--panel2:#4a2639;--gold:#e99bb7;--gold2:#ffd0df;--txt:#fff7fa;--muted:#d0adbb;--line:#ffe2ed25;background:radial-gradient(ellipse at 50% -12%,#75425b 0,#44263a 38%,#21121b 80%);color:var(--txt)}
+body[data-theme="ocean"]{--bg:#061827;--panel:#0b2a40;--panel2:#12405b;--gold:#65c8ee;--gold2:#b7edff;--txt:#f1fbff;--muted:#a9c6d5;--line:#d3f4ff25;background:radial-gradient(ellipse at 50% -12%,#286987 0,#10405b 38%,#061827 80%);color:var(--txt)}
+body[data-theme="desert"]{--bg:#211a12;--panel:#382a1c;--panel2:#51402d;--gold:#d5a967;--gold2:#f2d7a7;--txt:#fff8ed;--muted:#d1bea2;--line:#fff0d425;background:radial-gradient(ellipse at 50% -12%,#806342 0,#4b3926 40%,#211a12 82%);color:var(--txt)}
+body[data-theme="light"]{--bg:#edf4fb;--panel:#ffffff;--panel2:#e1ebf6;--gold:#426b9a;--gold2:#315d8e;--txt:#172b42;--muted:#61758c;--line:#24466a25;background:radial-gradient(ellipse at 50% -12%,#d4e6f7 0,#edf4fb 60%);color:var(--txt)}
+body[data-theme="light"] .hero{background:radial-gradient(circle at 85% 0,#ffffff 0,transparent 48%),linear-gradient(145deg,#e0edf9,#cbdced);border-color:#7799bc}
+body[data-theme="light"] .prayer{background:linear-gradient(145deg,#fff,#e5eef8)}
+body[data-theme="light"] .prayer.active{background:linear-gradient(145deg,#d2e2f2,#f7fbff)}
+body[data-theme="light"] .card{background:linear-gradient(145deg,#fff,#e7eff8);border-color:#c6d5e5}
+body[data-theme="light"] .tabs{background:#f2f7fceF;border-color:#c6d5e5}
+body[data-theme="light"] .tab{color:#61758c}
+body[data-theme="light"] .tab.active{color:#315d8e;background:#dce9f6}
+body[data-theme="light"] .field{background:#fff;color:#172b42;border-color:#b8cadd}
+body[data-theme="light"] .btn.secondary{background:#e5edf6;color:#274666;border-color:#bdcddd}
+body[data-theme="light"] .compass{background:radial-gradient(circle,#fff,#dbe8f5 70%)}
+body[data-theme="light"] .tasbtn{background:linear-gradient(145deg,#fff,#dce8f5);color:#315d8e}
+body[data-theme="light"] .pname{color:#29445f}
+body[data-theme="light"] .toast{background:#fff;color:#172b42;border-color:#c6d5e5}
+body[data-theme="light"] .logo{color:#fff;background:linear-gradient(145deg,#7398c1,#315d8e)}
+
+/* Ronahi 1.17 — full visual identities, not palette-only themes */
+body{position:relative;isolation:isolate;transition:background .45s ease,color .3s ease}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.42;transition:opacity .4s,background .4s}
+.hero,.card,.prayer,.tabs,.compass,.tasbtn,.logo,.btn,.tab{transition:all .35s cubic-bezier(.2,.75,.25,1)}
+/* Royal night: Islamic geometric star field, glass panels, crescent hero */
+body[data-theme="midnight"]{font-family:Georgia,"Times New Roman",Tahoma,serif;background:radial-gradient(ellipse at 50% 0,#304d70 0,#101f34 42%,#050b16 100%);background-attachment:fixed}
+body[data-theme="midnight"]:before{opacity:.22;background-image:radial-gradient(circle at 12% 18%,#f5d99e 0 1px,transparent 2px),radial-gradient(circle at 78% 34%,#f5d99e 0 1px,transparent 2px),radial-gradient(circle at 45% 70%,#f5d99e 0 1px,transparent 2px),repeating-linear-gradient(45deg,transparent 0 34px,#e8c47b12 35px 36px,transparent 37px 70px)}
+body[data-theme="midnight"] .hero{border-radius:34px 34px 18px 18px;background:linear-gradient(145deg,#274767dd,#0c1b30ee);backdrop-filter:blur(18px);border:1px solid #e8c47b70;box-shadow:0 25px 70px #0008,inset 0 1px #fff2}
+body[data-theme="midnight"] .hero:before{content:"☾";font-size:160px;color:#f5d99e18;transform:rotate(-18deg)}
+body[data-theme="midnight"] .prayer,body[data-theme="midnight"] .card{backdrop-filter:blur(14px);border-radius:20px 8px 20px 8px}
+body[data-theme="midnight"] .tabs{border-radius:22px 22px 0 0;background:#071426ed;backdrop-filter:blur(22px)}
+body[data-theme="midnight"] .logo{border-radius:50% 50% 12px 50%}
+body[data-theme="midnight"] .compass{border-style:double;border-width:5px}
+
+/* Emerald garden: leaf-like soft shapes, botanical ornaments, organic cards */
+body[data-theme="emerald"]{font-family:"Trebuchet MS",Tahoma,sans-serif;background:radial-gradient(ellipse at 50% 0,#276b58 0,#103b32 42%,#041713 100%);background-attachment:fixed}
+body[data-theme="emerald"]:before{opacity:.2;background-image:radial-gradient(ellipse at 8% 20%,#a7f0d4 0 2px,transparent 3px),radial-gradient(ellipse at 92% 38%,#a7f0d4 0 2px,transparent 3px),repeating-radial-gradient(ellipse at 0 100%,transparent 0 26px,#65c6a415 27px 28px,transparent 29px 55px)}
+body[data-theme="emerald"] .hero{border-radius:48px 18px 48px 18px;background:linear-gradient(135deg,#185447,#092923);border:1px solid #65c6a477;box-shadow:0 18px 48px #001c1688}
+body[data-theme="emerald"] .hero:before{content:"❧";font-size:150px;color:#a7f0d41b;transform:rotate(-24deg)}
+body[data-theme="emerald"] .prayer{border-radius:24px 12px 24px 12px;background:linear-gradient(135deg,#16483d,#0b2c27);border-color:#a7f0d426}
+body[data-theme="emerald"] .card{border-radius:26px;background:linear-gradient(150deg,#164238,#092720);border-color:#65c6a444}
+body[data-theme="emerald"] .logo,.theme[data-theme="emerald"] .logo{border-radius:14px 28px 14px 28px}
+body[data-theme="emerald"] .tabs{background:#05211bed;border-top:2px solid #65c6a455}
+body[data-theme="emerald"] .tab.active{border-radius:30px 30px 12px 12px}
+
+/* Violet cosmos: orbital rings, luminous surfaces, asymmetric dashboard cards */
+body[data-theme="purple"]{font-family:Tahoma,Arial,sans-serif;background:radial-gradient(ellipse at 50% 0,#58417a 0,#281c40 42%,#100a1c 100%);background-attachment:fixed}
+body[data-theme="purple"]:before{opacity:.38;background-image:radial-gradient(circle at 18% 22%,#fff 0 1px,transparent 2px),radial-gradient(circle at 80% 13%,#e0d0ff 0 1px,transparent 2px),radial-gradient(circle at 62% 62%,#fff 0 1px,transparent 2px),radial-gradient(ellipse at 50% 50%,transparent 0 110px,#b89be81c 111px 113px,transparent 114px 160px,#b89be812 161px 163px,transparent 164px)}
+body[data-theme="purple"] .hero{border-radius:24px;background:linear-gradient(145deg,#392855,#171026);border:1px solid #cbb3ff66;box-shadow:0 0 35px #b89be833,inset 0 0 35px #b89be811}
+body[data-theme="purple"] .hero:before{content:"✦";font-size:140px;color:#e0d0ff20}
+body[data-theme="purple"] .next{ text-shadow:0 0 24px #b89be866;letter-spacing:2px}
+body[data-theme="purple"] .prayer{border-radius:13px;background:linear-gradient(120deg,#302044,#1b132b);border-color:#b89be833}
+body[data-theme="purple"] .prayer.active{box-shadow:0 0 0 1px #b89be855,0 0 25px #b89be822}
+body[data-theme="purple"] .card{background:linear-gradient(145deg,#2b1d40,#171026);border:1px solid #b89be844;border-radius:16px 28px 16px 28px}
+body[data-theme="purple"] .tabs{background:#130c20ed;border-top:1px solid #b89be855}
+body[data-theme="purple"] .compass{box-shadow:0 0 0 8px #b89be811,0 0 55px #b89be844}
+
+/* Rose editorial: soft paper-like layers, pill controls, spacious typography */
+body[data-theme="rose"]{font-family:"Trebuchet MS",Tahoma,sans-serif;background:linear-gradient(160deg,#75425b 0,#44263a 38%,#21121b 100%);background-attachment:fixed}
+body[data-theme="rose"]:before{opacity:.18;background-image:radial-gradient(ellipse at 15% 15%,#ffd0df 0 2px,transparent 3px),radial-gradient(ellipse at 85% 70%,#ffd0df 0 2px,transparent 3px),repeating-linear-gradient(135deg,transparent 0 42px,#ffd0df10 43px 44px,transparent 45px 84px)}
+body[data-theme="rose"] .hero{border-radius:36px;background:linear-gradient(145deg,#61334d,#301b2a);border:1px solid #f2b5ca77;box-shadow:0 20px 50px #16081188}
+body[data-theme="rose"] .hero:before{content:"❀";font-size:145px;color:#ffd0df1c}
+body[data-theme="rose"] .next{font-weight:800;letter-spacing:.5px}
+body[data-theme="rose"] .prayers{gap:14px}
+body[data-theme="rose"] .prayer{border-radius:22px;background:#512b40;border:1px solid #ffd0df25;min-height:76px}
+body[data-theme="rose"] .card{border-radius:28px;background:linear-gradient(145deg,#512b40,#2e1928);border-color:#ffd0df35}
+body[data-theme="rose"] .btn,body[data-theme="rose"] .field{border-radius:999px}
+body[data-theme="rose"] .tabs{background:#281520f2;border-radius:26px 26px 0 0}
+body[data-theme="rose"] .tab.active{border-radius:999px;background:#e99bb72b}
+
+/* Ocean: wave bands, translucent glass, flowing rounded cards */
+body[data-theme="ocean"]{font-family:Arial,Tahoma,sans-serif;background:linear-gradient(180deg,#286987 0,#10405b 42%,#041827 100%);background-attachment:fixed}
+body[data-theme="ocean"]:before{opacity:.34;background-image:repeating-radial-gradient(ellipse at 50% 0,transparent 0 34px,#b7edff16 35px 37px,transparent 38px 72px),linear-gradient(165deg,transparent 35%,#65c8ee12 36%,transparent 58%)}
+body[data-theme="ocean"] .hero{border-radius:28px 28px 48px 48px;background:linear-gradient(155deg,#1b5b78dd,#09283fee);backdrop-filter:blur(16px);border:1px solid #9be7ff66}
+body[data-theme="ocean"] .hero:before{content:"〰";font-size:150px;color:#b7edff22;transform:rotate(-12deg)}
+body[data-theme="ocean"] .prayer{border-radius:25px;background:linear-gradient(145deg,#15506b,#0a2b41);border:1px solid #9be7ff2c}
+body[data-theme="ocean"] .card{border-radius:24px;background:linear-gradient(145deg,#15506b,#08283d);border-color:#9be7ff44;box-shadow:0 15px 38px #00121e77}
+body[data-theme="ocean"] .btn{background:linear-gradient(110deg,#b7edff,#52b4dc);color:#073047}
+body[data-theme="ocean"] .tabs{background:#052237eF;border-top:1px solid #9be7ff44}
+body[data-theme="ocean"] .compass{border:5px double #65c8ee88;background:radial-gradient(circle,#246783,#08243a 72%)}
+
+/* Desert mihrab: parchment texture, arch geometry, warm handcrafted surfaces */
+body[data-theme="desert"]{font-family:Georgia,"Times New Roman",Tahoma,serif;background:linear-gradient(145deg,#806342 0,#4b3926 42%,#211a12 100%);background-attachment:fixed}
+body[data-theme="desert"]:before{opacity:.22;background-image:repeating-linear-gradient(0deg,transparent 0 5px,#f2d7a711 6px,transparent 7px 12px),repeating-linear-gradient(90deg,transparent 0 47px,#f2d7a70d 48px,transparent 49px 96px)}
+body[data-theme="desert"] .hero{border-radius:150px 150px 22px 22px / 70px 70px 22px 22px;background:linear-gradient(180deg,#665039,#342719);border:2px solid #dfbd8377;padding-top:32px}
+body[data-theme="desert"] .hero:before{content:"۞";font-size:135px;color:#f2d7a71c;top:4px}
+body[data-theme="desert"] .prayer{border-radius:8px 22px 8px 22px;background:linear-gradient(145deg,#55412c,#302317);border:1px solid #dfbd833d}
+body[data-theme="desert"] .card{border-radius:8px 26px 8px 26px;background:linear-gradient(145deg,#59432d,#302316);border:1px solid #dfbd8355}
+body[data-theme="desert"] .logo{border-radius:50%;background:linear-gradient(145deg,#f2d7a4,#a87b42)}
+body[data-theme="desert"] .tabs{background:#241b12f2;border-top:2px solid #dfbd8366}
+body[data-theme="desert"] .compass{border:8px double #dfbd8377;background:radial-gradient(circle,#72583b,#302317 72%)}
+
+/* Daylight: bright minimal editorial interface, white surfaces and crisp dividers */
+body[data-theme="light"]{font-family:Arial,Tahoma,sans-serif;background:linear-gradient(180deg,#d4e6f7 0,#edf4fb 44%,#e5edf6 100%);background-attachment:fixed}
+body[data-theme="light"]:before{opacity:.35;background-image:linear-gradient(135deg,transparent 0 49.5%,#426b9a0c 50%,transparent 50.5%),linear-gradient(45deg,transparent 0 49.5%,#426b9a0b 50%,transparent 50.5%);background-size:34px 34px}
+body[data-theme="light"] .hero{border-radius:18px;background:linear-gradient(145deg,#fff,#dce9f6);border:1px solid #a9c2dc;box-shadow:0 12px 35px #426b9a1a}
+body[data-theme="light"] .hero:before{content:"☼";font-size:130px;color:#426b9a12}
+body[data-theme="light"] .prayer{border-radius:12px;background:#fff;border:1px solid #d2dfec;box-shadow:0 5px 15px #426b9a0d}
+body[data-theme="light"] .prayer.active{background:#e2eef9;border:1px solid #7398bc;box-shadow:inset 4px 0 #426b9a}
+body[data-theme="light"] .card{background:#fff;border:1px solid #d2dfec;border-radius:15px;box-shadow:0 8px 22px #426b9a12}
+body[data-theme="light"] .tabs{background:#ffffffed;border-top:1px solid #c7d7e7;box-shadow:0 -8px 25px #426b9a14}
+body[data-theme="light"] .tab{color:#61758c}
+body[data-theme="light"] .tab.active{background:#e4eef8;color:#315d8e;border-radius:10px}
+body[data-theme="light"] .btn{box-shadow:none}
+body[data-theme="light"] .compass{border:1px solid #9db5cf;background:radial-gradient(circle,#fff,#dbe8f5 70%);box-shadow:0 12px 28px #426b9a20}
+
+
+.page{min-height:45vh;padding-bottom:20px}
+.page .card{margin-top:16px}
+.page .field{width:100%;display:block;margin:8px 0 14px;padding:12px;border-radius:13px;background:#09182a;color:var(--text);border:1px solid var(--line)}
+.page label{display:block;margin-top:12px;color:var(--muted);font-size:13px}
+.compass{border:5px double var(--gold);background:radial-gradient(circle,#203c5a,#0b1729 72%);color:var(--gold2)}
+
+
+/* Premium interactive digital misbaha */
+#adhkar.page{padding-top:4px}
+.tasbih-shell{position:relative;overflow:hidden;padding:22px 18px 18px;border-radius:30px;background:linear-gradient(155deg,#ffffff12,#ffffff04),radial-gradient(ellipse at 50% 35%,#d6ae5b18,transparent 55%);border:1px solid color-mix(in srgb,var(--gold) 35%,transparent);box-shadow:0 22px 60px #0002,inset 0 1px #ffffff22}
+.tasbih-shell:before,.tasbih-shell:after{content:"۞";position:absolute;color:var(--gold);opacity:.055;font-size:140px;pointer-events:none}
+.tasbih-shell:before{top:85px;left:-42px}.tasbih-shell:after{bottom:5px;right:-40px}
+.tasbih-heading{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;margin-bottom:15px}
+.tasbih-heading h2{font-size:20px;margin:5px 0;color:var(--txt)}
+.tasbih-heading p{font-size:12px;color:var(--muted);margin:0}
+.tasbih-kicker{font-size:9px;letter-spacing:2px;color:var(--gold);font-weight:800}
+.tasbih-mark{font-size:38px;color:var(--gold);opacity:.8}
+.tasbih-controls{position:relative;z-index:1;display:grid;gap:7px}
+.tasbih-controls label{font-size:12px;color:var(--muted)}
+.tasbih-controls .field{width:100%;padding:12px 14px;border-radius:14px;background:#10233b;color:var(--txt);border:1px solid var(--line);font-family:inherit}
+.misbaha-stage{height:330px;display:grid;place-items:center;position:relative;margin:5px 0 0}
+.misbaha-halo{position:absolute;width:265px;height:265px;border-radius:50%;background:radial-gradient(circle,#d8ad5b1c 0,#d8ad5b08 50%,transparent 72%);filter:blur(6px)}
+.misbaha-ring{width:270px;height:270px;position:relative;border-radius:50%;display:grid;place-items:center;filter:drop-shadow(0 14px 22px #0003)}
+.misbaha-ring:before{content:"";position:absolute;inset:14px;border:1px solid color-mix(in srgb,var(--gold) 25%,transparent);border-radius:50%;box-shadow:0 0 24px #d9b66a15,inset 0 0 22px #d9b66a0b}
+.misbaha-beads{position:absolute;inset:0;border-radius:50%}
+.misbaha-bead{position:absolute;left:50%;top:50%;width:16px;height:19px;margin:-9.5px 0 0 -8px;border-radius:48% 48% 44% 44%;background:radial-gradient(circle at 32% 24%,#fff4c9,#d6a64e 36%,#80501d 78%,#3e2818);border:1px solid #f7dc9a;box-shadow:0 3px 7px #0007,inset 0 -2px 3px #51300f;transform:rotate(var(--angle)) translateY(-120px) rotate(calc(-1 * var(--angle)));transition:filter .2s,scale .2s}
+.misbaha-bead:nth-child(3n){width:19px;height:22px;margin:-11px 0 0 -9.5px;background:radial-gradient(circle at 30% 22%,#fff7d9,#f1d48a 32%,#a66a2c 78%,#593817)}
+.misbaha-bead.done{filter:brightness(1.35);box-shadow:0 0 10px #f3d58a99,inset 0 -2px 3px #51300f}
+.misbaha-bead:nth-child(11n){width:22px;height:25px;background:radial-gradient(circle at 30% 22%,#fff,#e8e4d7 35%,#777d83 80%,#343b45);border-color:#e9e5d7}
+.misbaha-center{z-index:2;width:158px;height:158px;border-radius:50%;border:1px solid #e8c77899;background:radial-gradient(circle at 35% 25%,#29496a,#10243d 68%,#091629);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:0 0 0 8px #d8ad5b0c,0 10px 35px #0008,inset 0 2px 10px #ffffff1c;cursor:pointer;touch-action:manipulation;transition:transform .12s,box-shadow .2s}
+.misbaha-center:active{transform:scale(.95);box-shadow:0 0 0 12px #d8ad5b20,0 4px 15px #0008}
+.misbaha-center-label{font-size:10px;color:#f2d99e}
+.misbaha-center strong{font-size:48px;line-height:1;font-variant-numeric:tabular-nums}
+.misbaha-tap-hint{font-size:11px;color:#d7dfeb}.misbaha-tap-hint span{display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--gold);color:#14243a;font-weight:900;margin-inline-start:3px}
+.misbaha-tassel{position:absolute;bottom:6px;left:calc(50% + 135px);width:22px;height:34px;transform:rotate(-20deg)}
+.misbaha-tassel span{display:block;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff0b5,#a96d2c);margin:auto}
+.misbaha-tassel i{display:inline-block;width:2px;height:22px;background:linear-gradient(#e9c16f,#8a5927);margin:0 2px;border-radius:4px}
+.tasbih-progress{position:relative;z-index:1;margin:4px 2px 0}
+.tasbih-progress-head{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:9px}
+.tasbih-progress-head strong{color:var(--gold2);font-variant-numeric:tabular-nums}
+.tasbih-track{height:7px;border-radius:20px;background:#ffffff18;overflow:hidden}
+.tasbih-track span{display:block;width:0;height:100%;border-radius:20px;background:linear-gradient(90deg,#a66d2e,#f5d99e);box-shadow:0 0 12px #e8c77866;transition:width .25s}
+.tasbih-targets{display:flex;justify-content:center;gap:9px;margin-top:14px}
+.target-chip{min-width:58px;padding:8px 14px;border-radius:20px;border:1px solid var(--line);background:#ffffff09;color:var(--muted);font-weight:700}
+.target-chip.active{background:linear-gradient(135deg,#f3d28b,#bd8338);color:#18263a;border-color:transparent;box-shadow:0 4px 14px #d8ad5b33}
+.tasbih-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:18px;position:relative;z-index:1}
+.tasbih-actions button{border-radius:13px;padding:10px 13px;font-size:12px;font-weight:700}
+.tasbih-reset{background:#ffffff0c;border:1px solid var(--line);color:var(--txt)}
+.tasbih-reset span{font-size:18px;vertical-align:-2px;margin-inline-end:4px}
+.tasbih-toggle{background:#ffffff08;border:1px solid var(--line);color:var(--muted)}
+.tasbih-toggle.active{border-color:#d8ad5b77;color:var(--gold2);background:#d8ad5b12}
+.tasbih-note{text-align:center;font-size:11px;color:var(--muted);margin:14px 0 0;min-height:18px;position:relative;z-index:1}
+@keyframes beadPulse{0%{scale:1}45%{scale:1.24;filter:brightness(1.5)}100%{scale:1}}
+.misbaha-bead.pulse{animation:beadPulse .28s ease-out}
+body[data-theme="light"] .tasbih-shell{background:linear-gradient(145deg,#ffffffed,#eaf2fb);border-color:#b8cde4;box-shadow:0 20px 45px #43658b1a}
+body[data-theme="light"] .tasbih-controls .field{background:#fff;color:#1b3049;border-color:#c9d9e9}
+body[data-theme="light"] .misbaha-center{background:radial-gradient(circle at 35% 25%,#537ca6,#23486e 70%,#173552);color:white}
+body[data-theme="light"] .misbaha-ring:before{border-color:#b78b4c55}
+body[data-theme="light"] .tasbih-reset,body[data-theme="light"] .tasbih-toggle{color:#294563;background:#fff;border-color:#c9d9e9}
+body[data-theme="light"] .tasbih-progress-head strong{color:#9a6829}
+body[data-theme="light"] .tasbih-note{color:#5c7189}
+body[data-theme="emerald"] .misbaha-center{background:radial-gradient(circle at 35% 25%,#2f806a,#0c382e 70%,#06251e)}
+body[data-theme="purple"] .misbaha-center{background:radial-gradient(circle at 35% 25%,#7656a0,#302047 70%,#1b1029)}
+body[data-theme="ocean"] .misbaha-center{background:radial-gradient(circle at 35% 25%,#438ba9,#10445e 70%,#08283a)}
+body[data-theme="rose"] .misbaha-center{background:radial-gradient(circle at 35% 25%,#b66d8a,#5b2b42 70%,#321725)}
+body[data-theme="desert"] .misbaha-center{background:radial-gradient(circle at 35% 25%,#9a784c,#574027 70%,#352416)}
+@media(max-width:390px){.misbaha-stage{height:292px}.misbaha-ring{transform:scale(.88)}.misbaha-tassel{left:calc(50% + 120px)}.tasbih-shell{padding:18px 12px}}
+
+
+/* v1.22 functional misbaha beads and responsive interaction */
+.misbaha-beads{position:absolute;inset:0;pointer-events:none;z-index:2}
+.misbaha-bead{position:absolute;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 32% 28%,#fff8d9 0 8%,#d9b35e 25%,#93652b 68%,#533716 100%);border:1px solid #f7dfa0;box-shadow:0 2px 5px #39240c66,inset 0 1px 2px #fff9;transition:background .2s,transform .2s,box-shadow .2s}
+.misbaha-bead.completed{background:radial-gradient(circle at 32% 28%,#fff 0 8%,#83b9ed 27%,#386b9e 72%,#173b61 100%);border-color:#c6e2ff;box-shadow:0 0 9px #75baff99}
+.misbaha-center{z-index:3;cursor:pointer;touch-action:manipulation;user-select:none}
+.misbaha-center.is-pressed{animation:tasbihPulse .22s ease}
+@keyframes tasbihPulse{0%{transform:scale(1)}45%{transform:scale(.955)}100%{transform:scale(1)}}
+.target-chip{cursor:pointer}.tasbih-toggle,.tasbih-reset{cursor:pointer;touch-action:manipulation}
+.tasbih-toggle.active{box-shadow:0 0 0 1px var(--gold) inset}
+@media(max-width:480px){.misbaha-bead{width:10px;height:10px}.tasbih-shell{padding:18px 12px}}
+
+
+.current-dhikr{display:flex;align-items:center;justify-content:center;min-height:58px;text-align:center;font-size:20px;font-weight:700;letter-spacing:.2px;background:linear-gradient(135deg,#ffffff,#edf4fb);color:#19314c;border:1px solid #bfd2e8;border-radius:16px;box-shadow:inset 0 1px #fff,0 6px 18px #244b7410;transition:transform .18s ease,box-shadow .18s ease}
+.current-dhikr.dhikr-change{transform:scale(1.025);box-shadow:0 0 0 3px #d6b46a33}
+
+
+#qiblaNeedle{transform-origin:50% 50%;transition:transform .18s ease;will-change:transform;color:#315f91;filter:drop-shadow(0 4px 4px #23496a55)}
+#compassStatus{line-height:1.8;max-width:440px;margin:10px auto 14px}
+#calibrate{touch-action:manipulation}
+
+
+/* Ronahî v1.29 — Bang-inspired sound library layout, original visual assets */
+#adhanCard{padding:19px;background:linear-gradient(155deg,#142b48f5,#0c1b30 78%);border:1px solid #d9b86a3d;box-shadow:0 18px 44px #0004;overflow:hidden;position:relative}
+#adhanCard:before{content:"";position:absolute;inset:-65px -80px auto auto;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,#e8c47b18,transparent 68%);pointer-events:none}
+.adhan-heading{display:flex;align-items:center;gap:12px;margin:5px 0 20px;position:relative}
+.adhan-heading strong{display:block;font-size:16px;color:#fff2d3}.adhan-heading small{display:block;color:#9fb0c6;font-size:11px;margin-top:5px}
+.adhan-orb{width:43px;height:43px;display:grid;place-items:center;border-radius:15px;color:#1b2b43;background:linear-gradient(145deg,#f7dfaa,#b88942);font-size:25px;box-shadow:0 7px 18px #0004}
+.voice-label{display:block;color:#e9cc8d;font-weight:700;font-size:12px;margin:17px 0 9px}
+.prayer-voice-panel{margin:16px 0;padding:14px;border:1px solid var(--line,#d8deea);border-radius:16px;background:rgba(255,255,255,.035)}.prayer-voice-row{display:grid;grid-template-columns:68px minmax(0,1fr) 42px;gap:8px;align-items:center;margin:9px 0}.prayer-voice-row label{font-size:13px;color:var(--text);font-weight:650}.prayer-voice-row select{width:100%;min-width:0;padding:10px 8px;border-radius:10px;border:1px solid var(--line,#778399);background:var(--surface,#fff);color:var(--text);font:inherit;font-size:12px}.prayer-voice-row button{width:40px;height:40px;border-radius:11px;border:1px solid #d6b35b88;background:#d6b35b18;color:var(--gold2);font-size:16px;cursor:pointer}.prayer-voice-help{font-size:11px;opacity:.72;margin-top:8px;line-height:1.6}@media(max-width:380px){.prayer-voice-row{grid-template-columns:55px minmax(0,1fr) 38px;gap:5px}.prayer-voice-row label{font-size:11px}.prayer-voice-row select{font-size:11px;padding:8px 5px}}
+.voice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:13px}
+.voice-tile{min-width:0;min-height:75px;display:flex;align-items:center;gap:8px;padding:10px;border-radius:14px;border:1px solid #ffffff16;background:linear-gradient(145deg,#1a304c,#11223a);color:#eaf0f8;text-align:right;cursor:pointer;transition:transform .18s,border-color .18s,background .18s;touch-action:manipulation}
+.voice-tile:active{transform:scale(.97)}.voice-tile.selected{border-color:#e9c779;background:linear-gradient(145deg,#354b62,#1d3048);box-shadow:inset 0 0 0 1px #e9c77935,0 5px 17px #0003}
+.voice-avatar{flex:0 0 34px;width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:#e9c77918;color:#f4d99c;font-size:17px}
+.voice-copy{flex:1;min-width:0}.voice-copy b{display:block;font-size:11px;line-height:1.5;white-space:normal}.voice-copy small{display:block;color:#91a4bd;font-size:9px;margin-top:3px}
+.voice-play{flex:0 0 27px;width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#e8c47b;color:#15253a;font-size:11px;border:0}
+.voice-select-hidden{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;margin:0!important;padding:0!important}
+.adhan-stop{background:#ffffff0c!important;border-color:#ffffff20!important;color:#e6edf6!important}
+#adhanCard .hint{position:relative}#adhanStatus{padding:10px 12px;border-radius:12px;background:#ffffff08;border:1px solid #ffffff12}
+@media(max-width:360px){.voice-grid{gap:6px}.voice-tile{padding:8px;gap:6px}.voice-avatar{width:30px;height:30px;flex-basis:30px}.voice-copy b{font-size:10px}}
+
+
+/* v1.30 — full navigation and visual language inspired by the supplied reference video */
+:root{--bg:#071827;--panel:#10283a;--panel2:#183449;--gold:#d7b64f;--gold2:#f0d77e;--green:#62b99b;--muted:#9eb4bf;--line:#d5e5ed18}
+body{background:radial-gradient(ellipse at 50% -18%,#1d3b4c 0,#071827 62%);padding-bottom:98px}
+.app{max-width:520px;padding-left:15px;padding-right:15px}
+.top{padding-top:13px}.brand .logo{background:linear-gradient(145deg,#e7d078,#b38c2d);border-radius:14px;color:#132a3b}
+.location{display:none}
+.hero{border-radius:20px;background:linear-gradient(145deg,#102d43,#0b2032);border:1px solid #d6b95a38;padding:20px 17px 16px;box-shadow:0 12px 32px #0003}
+.hero:before{font-size:105px;color:#e9bd6809}.hero h2{margin:12px 0 4px}.next{font-size:clamp(35px,9vw,44px)}
+.sectionhead{margin:20px 2px 10px}.prayers{grid-template-columns:1fr;gap:7px}.prayer{min-height:57px;padding:12px 15px;border-radius:15px;background:#102638;border-color:#ffffff0c;box-shadow:none}.prayer.active{background:linear-gradient(90deg,#1a3548,#142c3d);border-color:#d8b84d88;box-shadow:inset 3px 0 #d8b84d}
+.tabs{padding:7px 5px calc(7px + env(safe-area-inset-bottom));background:#061724f2;border-top:1px solid #d5e5ed16;box-shadow:0 -8px 26px #0004}.tabrow{grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;max-width:520px}.tab{font-size:9px;min-height:54px;padding:5px 1px;color:#79a995;border-radius:11px}.tab .ico{font-size:20px;color:#65b99b;margin-bottom:2px}.tab.active{background:transparent;color:#e6ca67;box-shadow:none}.tab.active .ico{color:#e6ca67;text-shadow:0 0 13px #e6ca6744}
+.card{background:linear-gradient(145deg,#112a3d,#0c2030);border:1px solid #ffffff12;border-radius:18px;box-shadow:none}
+.ref-head{display:flex;align-items:center;justify-content:space-between;padding:14px 4px 18px}.ref-head small{color:var(--gold2);font-weight:700}.ref-head h2{margin:5px 0;font-size:22px}.ref-head p{margin:0;color:var(--muted);font-size:11px}.ref-emblem{width:47px;height:47px;border:1px solid #d7b64f55;border-radius:15px;display:grid;place-items:center;color:var(--gold2);font-size:28px;background:#d7b64f0b}
+.ref-tools{background:#10283a;border-radius:16px;padding:11px;margin-bottom:12px}.ref-tools .field{margin:0 0 9px}.ref-chip-row{display:flex;gap:7px;flex-wrap:wrap}.ref-chip{border:1px solid #ffffff16;background:#132f42;color:#afc0c8;border-radius:20px;padding:7px 13px;font-size:11px}.ref-chip.active{background:linear-gradient(120deg,#e2c45d,#b89939);color:#182a35;border-color:transparent;font-weight:700}
+.surah-list{display:grid;gap:8px}.surah-item{display:flex;align-items:center;gap:12px;width:100%;text-align:right;border:1px solid #ffffff0d;background:linear-gradient(110deg,#102a3c,#0d2233);border-radius:14px;padding:12px;color:#e9eff0}.surah-number{width:34px;height:34px;display:grid;place-items:center;border:1px solid #d7b64f55;color:var(--gold2);transform:rotate(45deg);border-radius:9px;font-size:12px}.surah-number span{transform:rotate(-45deg)}.surah-copy{flex:1}.surah-copy b{display:block;font-size:14px}.surah-copy small{color:var(--muted);font-size:10px}.surah-count{color:#68b69a;font-size:12px}
+.quran-reader{margin-top:12px;background:#10283a;border:1px solid #d7b64f25;border-radius:18px;padding:14px}.quran-reader h2{text-align:center;color:var(--gold2);font-size:22px;margin:20px 0}.ayah-list{font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:2.2;text-align:justify}.ayah{display:inline}.ayah-num{display:inline-grid;place-items:center;border:1px solid #d7b64f77;border-radius:50%;width:27px;height:27px;font-family:Tahoma,sans-serif;font-size:11px;color:var(--gold2);margin:0 5px}
+.adhkar-progress{background:#10283a;border-radius:15px;padding:13px;margin:12px 0}.adhkar-progress span{font-size:11px;color:var(--muted)}.adhkar-progress strong{float:left;color:var(--gold2);font-size:12px}.adhkar-progress .progress{margin-top:12px;height:4px}.adhkar-list{display:grid;gap:10px}.adhkar-item{background:linear-gradient(145deg,#132d40,#0e2334);border:1px solid #ffffff12;border-radius:16px;padding:15px}.adhkar-item p{font-size:19px;line-height:2;text-align:center;margin:5px 0 13px;color:#f0e8d4}.adhkar-item .adhkar-foot{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:10px}.adhkar-count{border:1px solid #d7b64f55;background:#d7b64f12;color:var(--gold2);border-radius:20px;padding:7px 14px;font-size:12px}
+#tasbih .tasbih-shell{background:linear-gradient(155deg,#102b3e,#091c2b);border-color:#d7b64f33}
+.ref-clock{text-align:center;color:#d9c36f;font-size:clamp(28px,8vw,38px);font-variant-numeric:tabular-nums;letter-spacing:1px;padding:6px 0 11px;text-shadow:0 0 22px #d7b64f22}.ref-clock:after{content:"";display:block;width:44px;height:2px;border-radius:3px;background:linear-gradient(90deg,transparent,#d7b64f,transparent);margin:7px auto 0}
+@media(max-width:390px){.tab .ico{font-size:18px}.tab{font-size:8px}.prayer{min-height:53px}}
+
+
+
+/* v1.31 – Home screen aligned to the supplied Bang reference */
+body:has(#home.active) .app>.top,body:has(#home.active) .app>.location{display:none}
+.home-reference-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:calc(8px + env(safe-area-inset-top)) 0 13px}
+.home-mark{width:37px;height:37px;display:grid;place-items:center;border-radius:13px;color:#e8c96c;background:linear-gradient(145deg,#d8bc5d25,#d8bc5d08);border:1px solid #d8bc5d44;font-size:23px}
+.home-location{display:flex;align-items:center;gap:9px;margin-inline-start:auto;border:1px solid #d7bc5a35;border-radius:13px;background:#10283a;color:#e8edf0;padding:8px 12px;text-align:right;min-width:160px}
+.home-location small{display:block;color:#9fb2bc;font-size:10px}.home-location b{display:block;color:#e5c75f;font-size:13px;font-weight:700}.home-pin{font-size:19px;color:#e6c85f}.home-arrow{color:#e6c85f;margin-inline-start:5px}.home-notify{width:38px;height:38px;border-radius:50%;border:1px solid #ffffff16;background:#132a3b;color:#d7bd62;font-size:18px}
+.home-date-line{display:flex;justify-content:space-between;gap:8px;color:#d8bd60;font-size:11px;padding:3px 2px 0}.home-date-line #hijriDate{color:#94a9b2}
+.ref-clock{padding:8px 0 13px;font-size:clamp(30px,8.4vw,40px);color:#f1f0ed;text-shadow:none;letter-spacing:1.2px}.ref-clock:after{display:none}
+.home-next-card{background:linear-gradient(145deg,#142d40,#102638);border:1px solid #ffffff12;border-radius:17px;padding:12px 14px 10px;margin:2px 0 19px}
+.home-next-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#d9e0e2;font-size:13px}.home-next-caption strong{font-size:15px;color:#e2c45d;font-variant-numeric:tabular-nums;direction:ltr}
+.home-progress-track{height:4px;border-radius:10px;background:#ffffff17;margin:12px 0 9px;overflow:hidden}.home-progress-track span{height:100%;width:0;display:block;background:linear-gradient(90deg,#69b99a,#e5c65b);border-radius:10px;transition:width .6s linear}
+.home-time-edges{display:flex;align-items:center;justify-content:space-between;gap:6px;color:#8fa4ae;font-size:10px;font-variant-numeric:tabular-nums}.home-time-edges #countdown{color:#e3c45d;font-size:11px;text-align:center}
+.home-prayer-heading{display:flex;align-items:center;justify-content:space-between;margin:0 2px 9px}.home-prayer-heading h3{margin:0;font-size:16px;color:#e7edf0}.home-prayer-heading span{color:#8ca3ad;font-size:11px}
+#home .prayers{display:grid;grid-template-columns:1fr;gap:7px}#home .prayer{min-height:52px;padding:10px 13px;border-radius:13px;background:linear-gradient(100deg,#122b3e,#102638);border:1px solid #ffffff0b;box-shadow:none}#home .prayer.active{background:linear-gradient(100deg,#1b3949,#152d3e);border-color:#d8bd5a88;box-shadow:inset -3px 0 #d8bd5a}#home .pname{font-size:14px;color:#dce5e7}#home .ptime{font-size:18px;color:#e4c75e}#home .picon{font-size:16px;filter:grayscale(.25)}#home .wide{grid-column:auto}
+.home-more-settings{margin-top:16px;border:1px solid #ffffff12;border-radius:15px;background:#102638;overflow:hidden}.home-more-settings>summary{display:flex;justify-content:space-between;align-items:center;list-style:none;padding:14px;color:#d8c36b;font-size:13px;cursor:pointer}.home-more-settings>summary::-webkit-details-marker{display:none}.home-more-settings[open]>summary{border-bottom:1px solid #ffffff12}.home-more-settings .card{margin:0;border:0;border-radius:0;box-shadow:none}
+#home .theme-card{margin-top:12px}
+@media(max-width:390px){.home-location{min-width:145px}.home-date-line{font-size:10px}#home .prayer{min-height:49px}}
+
+
+
+/* Ronahî v1.36 — annual prayer calendar and Islamic occasions */
+body[data-theme="light"] #home .ref-clock{color:#18344f!important;text-shadow:none!important}
+body[data-theme="light"] #home .home-date-line{color:#385a78!important}
+body[data-theme="light"] #home .home-date-line #hijriDate{color:#526d86!important}
+body[data-theme="light"] #home .home-prayer-heading h3{color:#1b3853!important}
+body[data-theme="light"] #home .home-prayer-heading span{color:#5a7188!important}
+body[data-theme="light"] #home #sourceNote{color:#526d86!important}
+body[data-theme="light"] #home .home-location{color:#f4f7fa!important}
+body[data-theme="light"] #home .home-location small{color:#c2d0da!important}
+body[data-theme="light"] #home .home-location b{color:#f0d36b!important}
+body[data-theme="light"] #home .home-next-caption{color:#edf3f6!important}
+body[data-theme="light"] #home .home-time-edges{color:#c4d2da!important}
+body[data-theme="light"] #home .home-next-caption strong,body[data-theme="light"] #home .home-time-edges #countdown{color:#f0d36b!important}
+body[data-theme="light"] #home .prayer .pname{color:#edf3f6!important}
+body[data-theme="light"] #home .prayer .ptime{color:#f0d36b!important}
+body[data-theme="light"] #home .home-more-settings>summary{color:#e7c95f!important}
+body[data-theme="light"] #home .home-mark{color:#9a7422!important;background:#fff8df;border-color:#d9c47c}
+body[data-theme="light"] #home .home-notify{color:#315d8e!important;background:#fff;border-color:#c4d6e8}
+
+
+/* Ronahî v1.36 — annual prayer calendar */
+.tabrow{grid-template-columns:repeat(7,minmax(0,1fr))!important}
+.tab{font-size:9px;padding-left:0;padding-right:0}
+.calendar-year{font-size:22px;font-weight:800;color:var(--gold2);letter-spacing:1px}
+.annual-table-wrap{overflow:auto;max-height:62vh;margin-top:14px;border-radius:12px;-webkit-overflow-scrolling:touch}
+.annual-table{width:100%;min-width:690px;border-collapse:separate;border-spacing:0;font-size:11px;font-variant-numeric:tabular-nums}
+.annual-table th{position:sticky;top:0;background:#203955;color:#f3d58f;padding:10px 8px;white-space:nowrap;z-index:1}
+.annual-table td{padding:9px 8px;text-align:center;border-bottom:1px solid #ffffff12;white-space:nowrap;color:var(--txt)}
+.annual-table tbody tr:nth-child(even){background:#ffffff06}
+.annual-table tbody tr.event-day{background:#e8c47b16}
+.annual-table .date-cell{text-align:right;font-weight:700}
+.annual-events{display:grid;gap:9px}
+.annual-event{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;border:1px solid #e8c47b25;border-radius:13px;background:#ffffff06}
+.annual-event b{color:var(--gold2);font-size:13px}
+.annual-event small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.annual-event time{direction:ltr;color:var(--txt);font-size:12px;white-space:nowrap}
+body[data-theme="light"] .annual-table th{background:#dce9f6;color:#244666}
+body[data-theme="light"] .annual-table td{color:#203b56;border-color:#d7e2ed}
+body[data-theme="light"] .annual-event{background:#f4f8fc;border-color:#d5e2ef}
+body[data-theme="light"] .annual-event b{color:#315d8e}
+@media(max-width:390px){.tab{font-size:8px}.tab .ico{font-size:17px}}
+
+
+
+/* Ronahî v1.37 — premium home visual refresh inspired by supplied reference */
+:root{
+ --bg:#0a1427;--panel:#14233b;--panel2:#192b46;--gold:#efc44e;--gold2:#ffd65e;
+ --txt:#f7f8fb;--muted:#9cacc2;--line:#ffffff18;--green:#53d2bf;
+}
+html{background:#0a1427}
+body{
+ background:
+  radial-gradient(ellipse at 50% -18%,#24445a 0%,transparent 52%),
+  radial-gradient(circle at 12% 18%,#24435b28 0 2px,transparent 3px),
+  radial-gradient(circle at 82% 73%,#24435b28 0 2px,transparent 3px),
+  linear-gradient(155deg,#0a1427 0%,#101e34 54%,#15243b 100%);
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.12;
+ background-image:
+  repeating-linear-gradient(30deg,transparent 0 31px,#547082 32px,transparent 33px 64px),
+  repeating-linear-gradient(150deg,transparent 0 31px,#547082 32px,transparent 33px 64px);
+ mask-image:linear-gradient(to bottom,black,transparent 92%);
+}
+.app{position:relative;z-index:1;max-width:620px;padding-inline:20px;padding-bottom:112px}
+.home-reference-head{padding-top:calc(15px + env(safe-area-inset-top));padding-bottom:19px}
+.home-mark{width:54px;height:54px;border-radius:50%;font-size:27px;border:1px solid #e9c34c99;background:radial-gradient(circle,#263b4e,#111e32);box-shadow:0 0 0 5px #e9c34c12,0 8px 22px #0005}
+.home-location{min-height:58px;min-width:245px;border-radius:19px;border:1px solid #d9b74760;background:linear-gradient(110deg,#111e32,#1b3044);padding:10px 15px;box-shadow:0 8px 24px #0003}
+.home-location small{font-size:11px;color:#d0d8e2}
+.home-location b{font-size:16px;color:var(--gold2)}
+.home-pin{font-size:20px}.home-arrow{font-size:18px}
+.home-notify{width:48px;height:48px;border-radius:16px;background:#192b40;border-color:#e6c34d44;font-size:21px}
+.home-date-line{font-size:13px;padding:8px 4px 0;color:#f0c94f}
+.home-date-line #hijriDate{color:#a8b4c7}
+.ref-clock{font-size:clamp(48px,11vw,60px);font-weight:300;letter-spacing:1px;padding:10px 0 22px;color:#f7f8fb}
+.home-next-card{border-radius:26px;padding:19px 20px 16px;margin:0 0 23px;background:linear-gradient(135deg,#14243aee,#101d31ee);border:1px solid #8da3b51e;box-shadow:0 12px 30px #0002,inset 0 1px #ffffff0a}
+.home-next-caption{font-size:16px;color:#d8e0eb}
+.home-next-caption strong{font-size:clamp(19px,4.8vw,24px);color:var(--gold2)}
+.home-progress-track{height:6px;border-radius:12px;margin:16px 0 12px;background:#ffffff19}
+.home-progress-track span{background:linear-gradient(90deg,#4fd5bf,#f4c84f)}
+.home-time-edges{font-size:12px}
+.home-time-edges #countdown{font-size:14px;color:var(--gold2);font-weight:700}
+.home-prayer-heading{margin:0 4px 12px}
+.home-prayer-heading h3{font-size:17px;color:#eaf0f6}
+.home-prayer-heading span{font-size:12px}
+#home .prayers{gap:12px}
+#home .prayer{
+ min-height:82px;padding:13px 18px;border-radius:24px;
+ background:linear-gradient(115deg,#172941eF,#14233bed);
+ border:1px solid #ffffff12;box-shadow:0 8px 22px #0002,inset 0 1px #ffffff08;
+ gap:14px;transition:transform .18s,border-color .18s,background .18s;
+}
+#home .prayer:active{transform:scale(.985)}
+#home .prayer.active{
+ background:linear-gradient(110deg,#263b45,#1a2c3d);
+ border:1.5px solid #e9c34d;box-shadow:0 0 0 1px #e9c34d20,0 8px 24px #0003;
+}
+#home .prayer-main{align-items:center;gap:12px}
+#home .prayer-left{gap:12px}
+#home .pname{font-size:clamp(18px,4.2vw,23px);color:#f5f6fa;font-weight:500}
+#home .picon{font-size:19px;filter:none;margin:0;opacity:.95}
+#home .ptime{font-size:clamp(25px,5.4vw,31px);font-weight:750;color:var(--gold2);letter-spacing:.2px}
+#home .adhan-toggle{
+ width:43px;height:43px;border-radius:15px;border:0;
+ background:#ffffff0b;color:#aebbd0;font-size:21px;
+ box-shadow:inset 0 0 0 1px #ffffff0d;
+}
+#home .adhan-toggle[aria-pressed="false"]{color:#9eacbf}
+#home .prayer.active .adhan-toggle{background:#f2c94e22;color:#ffd65e}
+#home .adhan-toggle[aria-pressed="true"]{color:#efc44e;background:#ffffff0b}
+#home .adhan-toggle.sunrise{opacity:.25}
+.home-more-settings{border-radius:20px;background:#13243a;border-color:#ffffff18;margin-top:20px}
+.home-more-settings>summary{padding:17px 18px;font-size:14px}
+.tabs{
+ padding:10px 10px calc(10px + env(safe-area-inset-bottom));
+ background:linear-gradient(180deg,#071a2ceF,#061b2cfa);
+ border-top:1px solid #4bd2bd30;box-shadow:0 -10px 30px #0002;
+}
+.tabrow{max-width:620px;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.tab{color:#83b8b0;font-size:10px;padding:8px 1px;border-radius:15px;white-space:nowrap}
+.tab .ico{font-size:25px;line-height:1.1;margin-bottom:5px;color:#6fd0bd}
+.tab.active{color:#ffd65e;background:linear-gradient(145deg,#f1c94b25,#f1c94b0a);box-shadow:inset 0 0 0 1px #e9c34d50}
+.tab.active .ico{color:#ffd65e}
+#home .sourceNote,.hint{line-height:1.7}
+@media(max-width:430px){
+ .app{padding-inline:14px}
+ .home-location{min-width:0;flex:1;max-width:245px}
+ #home .prayer{min-height:72px;padding:11px 13px;border-radius:20px}
+ #home .pname{font-size:18px}
+ #home .ptime{font-size:24px}
+ #home .adhan-toggle{width:39px;height:39px}
+ .tab{font-size:9px}
+ .tab .ico{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){#home .prayer{transition:none}}
+
+
+/* v1.39 — quick city picker directly from the home location pill */
+.city-picker-overlay{position:fixed;inset:0;z-index:30;display:none;align-items:flex-end;justify-content:center;padding:14px;background:#050d1bcc;backdrop-filter:blur(8px)}
+.city-picker-overlay.open{display:flex}
+.city-picker-sheet{width:min(100%,500px);max-height:min(82vh,680px);overflow:auto;border:1px solid #d9bd6250;border-radius:24px;background:linear-gradient(155deg,#1b3048,#0e1c30 78%);box-shadow:0 24px 70px #0009;padding:20px 17px calc(18px + env(safe-area-inset-bottom));animation:citySheetIn .22s ease-out}
+@keyframes citySheetIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.city-picker-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+.city-picker-head h3{margin:0;color:#f1d27c;font-size:18px}
+.city-picker-close{width:36px;height:36px;border-radius:12px;border:1px solid #ffffff22;background:#ffffff0b;color:#f4f1e8;font-size:21px}
+.city-picker-sheet .field{background:#0a1729;border-color:#ffffff20}
+.city-picker-actions{display:flex;gap:9px;margin-top:5px}
+.city-picker-actions button{flex:1}
+body[data-theme="light"] .city-picker-sheet{background:linear-gradient(155deg,#fff,#eaf1f8);border-color:#c6a44c}
+body[data-theme="light"] .city-picker-head h3{color:#203c58}
+body[data-theme="light"] .city-picker-close{color:#203c58;background:#203c580b;border-color:#203c5822}
+body[data-theme="light"] .city-picker-sheet .field{background:#fff;color:#203c58;border-color:#b7c8d9}
+@media(min-width:600px){.city-picker-overlay{align-items:center}.city-picker-sheet{border-radius:24px}}
+
+/* v1.42 — monthly timetable styled after the supplied reference */
+.annual-table-wrap{max-height:68vh;border-radius:15px;background:#111d35;border:1px solid #ffffff12;overflow:auto;-webkit-overflow-scrolling:touch}
+.monthly-prayer-table{width:100%;min-width:0;table-layout:fixed;font-size:12px;border-spacing:0}
+.monthly-prayer-table th{position:sticky;top:0;z-index:3;background:linear-gradient(180deg,#20375e,#1a2b4d);color:#dce9ff;padding:11px 3px 10px;line-height:1.5;font-size:11px;border-bottom:1px solid #ffffff16}
+.monthly-prayer-table th:first-child{width:17%;color:#c6d2e6}.monthly-prayer-table th:not(:first-child){width:16.6%}
+.monthly-prayer-table td{padding:11px 2px;text-align:center;white-space:nowrap;font-size:12px;font-variant-numeric:tabular-nums;color:#dce4f3;border-bottom:1px solid #ffffff0d}
+.monthly-prayer-table td:first-child{text-align:center;font-weight:700;color:#d5deee;direction:ltr}
+.monthly-prayer-table tbody tr:nth-child(odd){background:#172440}.monthly-prayer-table tbody tr:nth-child(even){background:#1c2a49}
+.monthly-prayer-table tbody tr.today-row{background:#123f48!important;box-shadow:inset 3px 0 #42d3b2}
+.monthly-prayer-table tbody tr.event-day{background:#3a3150}.monthly-prayer-table tbody tr.today-row td{color:#70e0c5;font-weight:800}
+body[data-theme="light"] .annual-table-wrap{background:#f2f6fb;border-color:#d6e2ef}
+body[data-theme="light"] .monthly-prayer-table th{background:#dce9f6;color:#244666}
+body[data-theme="light"] .monthly-prayer-table td{color:#29445f;border-color:#d7e2ed}
+body[data-theme="light"] .monthly-prayer-table tbody tr:nth-child(odd){background:#f7faff}
+body[data-theme="light"] .monthly-prayer-table tbody tr:nth-child(even){background:#eaf1f8}
+body[data-theme="light"] .monthly-prayer-table tbody tr.today-row{background:#d8f4ed!important}
+@media(max-width:390px){.monthly-prayer-table th{font-size:10px;padding:9px 1px}.monthly-prayer-table td{font-size:11px;padding:10px 1px}}
+
+/* v1.43 — Home screen shortcut to the monthly prayer timetable */
+.monthly-table-launch{width:100%;display:flex;align-items:center;gap:13px;margin:16px 0 20px;padding:15px 16px;border:1px solid rgba(83,210,185,.25);border-radius:18px;background:linear-gradient(115deg,#172b4b,#10233e 72%,#123b48);color:#edf5ff;text-align:right;cursor:pointer;box-shadow:0 8px 24px #0002;transition:transform .18s,border-color .18s}
+.monthly-table-launch:active{transform:scale(.985);border-color:#43d6b5}
+.monthly-launch-icon{width:45px;height:45px;display:grid;place-items:center;flex:0 0 45px;border-radius:14px;background:#24466a;color:#54dfbd;font-size:25px}
+.monthly-launch-copy{display:flex;flex:1;flex-direction:column;gap:5px}
+.monthly-launch-copy strong{font-size:14px;font-weight:800}
+.monthly-launch-copy small{font-size:11px;color:#b7c8df}
+.monthly-launch-arrow{font-size:28px;color:#55d9b8;line-height:1}
+body[data-theme="light"] .monthly-table-launch{background:linear-gradient(115deg,#eaf3fb,#e2f4f0);color:#193754;border-color:#c7e4dc}
+body[data-theme="light"] .monthly-launch-icon{background:#d5e9f3;color:#168d78}
+body[data-theme="light"] .monthly-launch-copy small{color:#55718a}
+
+/* v1.45 — tap-to-open theme selector */
+.theme-picker-trigger{width:100%;display:flex;align-items:center;gap:12px;padding:13px 14px;margin:8px 0 12px;border:1px solid var(--line);border-radius:15px;background:var(--panel2);color:var(--txt);text-align:right;cursor:pointer}
+.theme-picker-trigger-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#203e60,#2b766f);font-size:21px}
+.theme-picker-trigger>span:nth-child(2){display:flex;flex:1;flex-direction:column;gap:4px}
+.theme-picker-trigger strong{font-size:14px}.theme-picker-trigger small{font-size:11px;color:var(--muted)}
+.theme-picker-chevron{font-size:23px;color:var(--gold)}
+.theme-picker-overlay{position:fixed;inset:0;z-index:2147483000;background:#020817c9;display:flex;align-items:center;justify-content:center;padding:16px;padding-top:max(16px,env(safe-area-inset-top));padding-bottom:max(16px,env(safe-area-inset-bottom));backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.theme-picker-overlay[hidden]{display:none}
+.theme-picker-sheet{width:min(100%,520px);max-height:min(82dvh,700px);max-height:min(82vh,700px);overflow-y:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:22px;padding:18px;background:var(--panel);color:var(--txt);box-shadow:0 20px 70px #0008;flex-shrink:1}
+.theme-picker-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.theme-picker-head h3{margin:0 0 5px;font-size:17px}.theme-picker-head p{margin:0;color:var(--muted);font-size:12px}
+.theme-picker-head>button{width:36px;height:36px;border:0;border-radius:50%;background:var(--panel2);color:var(--txt);font-size:25px;cursor:pointer}
+.theme-picker-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.theme-choice{display:flex;align-items:center;gap:9px;min-width:0;text-align:right;padding:10px 8px;border:1px solid var(--line);border-radius:14px;background:var(--panel2);color:var(--txt);cursor:pointer}
+.theme-choice>span:nth-child(2){display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.theme-choice strong{font-size:12px}.theme-choice small{font-size:9px;color:var(--muted);line-height:1.4}
+.theme-choice>b{font-size:13px;color:var(--muted)}
+.theme-choice.selected{border:2px solid #40c9a8;background:color-mix(in srgb,var(--panel2),#1b806b 18%)}
+.theme-choice.selected>b{color:#40d6b1}
+.theme-choice-preview{width:35px;height:35px;flex:0 0 35px;border-radius:11px;border:1px solid #ffffff55;box-shadow:0 2px 8px #0003}
+.theme-auto{background:linear-gradient(135deg,#edf4fb 0 48%,#101f34 52%)}
+.theme-midnight{background:linear-gradient(135deg,#07111f,#e8c47b)}
+.theme-emerald{background:linear-gradient(135deg,#092b25,#55c6a1)}
+.theme-purple{background:linear-gradient(135deg,#211735,#b89be8)}
+.theme-rose{background:linear-gradient(135deg,#351b2b,#f0a5bd)}
+.theme-ocean{background:linear-gradient(135deg,#09263d,#65c8ee)}
+.theme-desert{background:linear-gradient(135deg,#382a1c,#dfbd83)}
+.theme-light{background:linear-gradient(135deg,#edf4fb,#4d79aa)}
+@media(max-width:370px){.theme-picker-options{grid-template-columns:1fr}.theme-picker-sheet{padding:14px}}
+
+/* v1.46 — home-screen language picker */
+.home-language{display:flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid var(--line);border-radius:13px;background:var(--panel2);color:var(--txt);font-size:12px;cursor:pointer;white-space:nowrap}
+.home-language>span{font-size:16px;color:var(--gold)}.home-language small{font-size:11px;color:var(--txt)}.home-language b{font-size:14px;color:var(--muted)}
+.language-picker-overlay{position:fixed;inset:0;z-index:2147483001;background:#020817c9;display:flex;align-items:center;justify-content:center;padding:16px;padding-top:max(16px,env(safe-area-inset-top));padding-bottom:max(16px,env(safe-area-inset-bottom));backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.language-picker-overlay[hidden]{display:none}
+.language-picker-sheet{width:min(100%,500px);max-height:min(78dvh,680px);max-height:min(78vh,680px);overflow-y:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:22px;padding:18px;background:var(--panel);color:var(--txt);box-shadow:0 20px 70px #0008;flex-shrink:1}
+.language-picker-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.language-picker-head h3{margin:0 0 5px;font-size:17px}.language-picker-head p{margin:0;color:var(--muted);font-size:12px}
+.language-picker-head>button{width:36px;height:36px;border:0;border-radius:50%;background:var(--panel2);color:var(--txt);font-size:25px;cursor:pointer}
+.language-picker-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.language-choice{display:flex;align-items:center;gap:9px;padding:13px 10px;border:1px solid var(--line);border-radius:13px;background:var(--panel2);color:var(--txt);text-align:right;cursor:pointer}
+.language-choice>span{font-size:18px}.language-choice>strong{font-size:12px;flex:1}.language-choice>b{opacity:0;color:#43d6b5}
+.language-choice.selected{border:2px solid #43cba9;background:color-mix(in srgb,var(--panel2),#1b806b 18%)}
+.language-choice.selected>b{opacity:1}
+@media(max-width:370px){.home-language{padding:7px 6px;gap:4px}.language-picker-options{grid-template-columns:1fr}}
+
+/* v1.47 — modal stacking and viewport safety */
+.theme-picker-overlay,.language-picker-overlay{isolation:isolate;box-sizing:border-box}
+.theme-picker-sheet,.language-picker-sheet{box-sizing:border-box;min-height:0}
+@media(max-height:520px){
+ .theme-picker-sheet,.language-picker-sheet{max-height:88vh;padding:13px}
+ .theme-picker-head{margin-bottom:9px}
+ .theme-picker-options,.language-picker-options{gap:7px}
+}
+
+/* v1.48 — move theme picker shortcut to the top of Home */
+.home-reference-head{flex-wrap:wrap}
+.home-theme-language{border-color:rgba(83,210,185,.28)}
+.home-theme-language>span{font-size:16px;color:var(--gold)}
+@media(max-width:390px){
+ .home-reference-head{gap:7px}
+ .home-language{padding:7px 8px}
+ .home-language small{font-size:10px}
+}
+
+/* v1.49 — smooth bottom-section navigation like the reference recording */
+.page{display:none;will-change:opacity,transform}
+.page.active{display:block;animation:ronahiPageEnter .30s cubic-bezier(.2,.75,.25,1) both}
+@keyframes ronahiPageEnter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.tabs{z-index:50}
+.tabrow{max-width:720px;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.tab{position:relative;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:7px 1px 6px;font-size:10px;line-height:1.2;transition:color .18s,background .18s,transform .18s}
+.tab .ico{font-size:19px;line-height:1.2;margin:0;transition:transform .2s}
+.tab.active{color:var(--gold2);background:linear-gradient(145deg,#e9bd6820,#e9bd6808);box-shadow:inset 0 0 0 1px #e9bd6835}
+.tab.active .ico{transform:translateY(-2px) scale(1.08)}
+.tab:active{transform:scale(.94)}
+@media(max-width:360px){.tabs{padding-left:5px;padding-right:5px}.tab{font-size:9px}.tab .ico{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.page.active{animation:none}.tab,.tab .ico{transition:none}}
+
+</style></head>
+<body><main class="app">
+<header class="top"><div class="brand"><div class="logo">☾</div><div><h1>Ronahî</h1><small id="tagline">رفيقك للصلاة والذكر</small></div></div><button class="iconbtn" id="refresh" aria-label="تحديث">↻</button></header>
+<div class="location">📍 <b id="legacyCityLabel">دهوك – العراق</b> <span id="hijriTop"></span></div>
+<section id="home" class="page active">
+<div class="home-reference-head">
+ <div class="home-mark" aria-hidden="true">☾</div>
+ <button class="home-language" id="openLanguagePicker" type="button" aria-haspopup="dialog" aria-controls="languagePicker"><span>文</span><small id="homeLanguageLabel">العربية</small><b>⌄</b></button>
+ <button class="home-language home-theme-language" id="openThemePicker" type="button" aria-haspopup="dialog" aria-controls="themePickerOverlay"><span>🎨</span><small>الثيمات</small><b>⌄</b></button>
+ <button class="home-location" id="openCityPicker" type="button" aria-haspopup="dialog" aria-controls="cityPicker"><span class="home-pin">⌖</span><span><small>الأذان بتوقيت</small><b id="cityLabel">دهوك</b></span><span class="home-arrow">⌄</span></button>
+ <button class="home-notify" type="button" onclick="document.getElementById('adhanCard').scrollIntoView({behavior:'smooth',block:'start'})" aria-label="إعدادات الأذان">◉</button>
+</div>
+<div class="home-date-line"><span id="gregDate">جارٍ تحميل التاريخ...</span><span id="hijriDate">التاريخ الهجري</span></div>
+<div class="ref-clock" id="digitalClock">--:--:--</div>
+<div class="home-next-card">
+ <div class="home-next-caption"><span id="nextLabel">الصلاة القادمة</span><strong id="nextPrayer">--:--:--</strong></div>
+ <div class="home-progress-track"><span id="progress"></span></div>
+ <div class="home-time-edges"><span id="homePrevTime">--:--</span><span id="countdown">جارٍ تحميل المواقيت</span><span id="homeNextTime">--:--</span></div>
+</div>
+<div class="home-prayer-heading"><h3 id="timesTitle">مواقيت الصلاة</h3><span>اليوم</span></div>
+<div class="prayers" id="prayerGrid"><div class="loading">جارٍ جلب مواقيت الصلاة لمدينة دهوك...</div></div><div id="sourceNote" class="hint" style="text-align:center"></div>
+<button type="button" class="monthly-table-launch" id="openMonthlyPrayerTable" aria-label="فتح جدول مواقيت الصلاة الشهري">
+ <span class="monthly-launch-icon">▦</span>
+ <span class="monthly-launch-copy"><strong>جدول مواقيت الصلاة</strong><small>عرض مواقيت الصلاة لجميع أيام الشهر</small></span>
+ <span class="monthly-launch-arrow">‹</span>
+</button>
+<details class="home-more-settings"><summary><span>إعدادات الأذان والأصوات</span><span>⌄</span></summary>
+<div class="card" id="adhanCard">
+<h3 style="margin-top:0">🕌 الأذان والصوت</h3>
+<div class="muted" style="margin-bottom:12px">يُشغّل تسجيل الأذان كاملاً عند دخول وقت الصلاة، ما دام التطبيق مفتوحاً ومسموحاً له بتشغيل الصوت.</div>
+<div class="silent-adhan-option" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;margin:14px 0;border:1px solid #d9b86a55;border-radius:14px;background:#ffffff08">
+ <div style="min-width:0"><strong style="display:block;color:#fff2d3;font-size:13px">السماح بالأذان أثناء وضع الصامت</strong><small style="display:block;color:var(--muted);font-size:11px;line-height:1.6;margin-top:4px">عند التفعيل، يطلب التطبيق تشغيل الأذان حتى مع تفعيل الصامت في الآيفون، إذا كانت نسخة iOS تدعم إعداد الصوت الأصلي.</small></div>
+ <label style="display:flex;align-items:center;gap:7px;white-space:nowrap"><input id="adhanSilentOverride" type="checkbox" style="width:20px;height:20px;accent-color:#d9b86a"><span id="adhanSilentState" style="font-size:11px;color:var(--gold2)">إيقاف</span></label>
+</div>
+<div class="adhan-heading"><span class="adhan-orb">◖</span><div><strong>اختر صوت المؤذّن</strong><small>استمع قبل الاختيار، وحدّد صوتاً مستقلاً للفجر</small></div></div>
+<div class="hint" style="margin:0 0 12px">مكتبة Bang المضافة: 23 تسجيلاً من ملفات البرنامج المرفق. بعض المقاطع قصيرة وليست جميعها أذاناً كاملاً؛ استمع قبل اعتمادها.</div>
+<label class="voice-label" for="adhanVoice">أذان الصلوات اليومية</label>
+<div class="voice-grid" id="generalVoiceGrid" aria-label="اختيار مؤذن الصلوات"></div>
+<select class="field voice-select-hidden" id="adhanVoice" aria-hidden="true" tabindex="-1">
+<option value="makkah">أذان مكة المكرمة</option>
+<option value="ali_mulla">علي بن أحمد ملا</option>
+<option value="abdulbasit">عبد الباسط عبد الصمد</option>
+<option value="naeena">أحمد نعينع</option>
+<option value="iraqi">عبدالرحمن العراقي</option>
+<option value="bang1">تسجيل بانگ رقم 01</option>
+<option value="bang2">تسجيل بانگ رقم 02</option>
+<option value="bang3">تسجيل بانگ رقم 03</option>
+<option value="bang4">تسجيل بانگ رقم 04</option>
+<option value="bang5">تسجيل بانگ رقم 05</option>
+<option value="bang6">تسجيل بانگ رقم 06</option>
+<option value="bang7">تسجيل بانگ رقم 07</option>
+<option value="bang8">تسجيل بانگ رقم 08</option>
+<option value="bang9">تسجيل بانگ رقم 09</option>
+<option value="bang10">تسجيل بانگ رقم 10</option>
+<option value="bang11">تسجيل بانگ رقم 11</option>
+<option value="bang12">تسجيل بانگ رقم 12</option>
+<option value="bang13">تسجيل بانگ رقم 13</option>
+<option value="bang14">تسجيل بانگ رقم 14</option>
+<option value="bangtawaw1">تسجيل بانگ طويل 1</option>
+<option value="bangtawaw2">تسجيل بانگ طويل 2</option>
+<option value="bangtawaw3">تسجيل بانگ طويل 3</option>
+<option value="bangtawaw4">تسجيل بانگ طويل 4</option>
+<option value="bangtawaw5">تسجيل بانگ طويل 5</option>
+<option value="bangtawaw6">تسجيل بانگ طويل 6</option>
+<option value="makka01">تسجيل مكة – Bang</option>
+<option value="peshawa01">پێشەوا – Bang</option>
+<option value="abdulrahman01">عبدالرحمن – Bang</option>
+<option value="raad">رعد الكردي (أضف ملف MP3)</option>
+</select>
+<label class="voice-label" for="fajrVoice">أذان صلاة الفجر</label>
+<div class="voice-grid" id="fajrVoiceGrid" aria-label="اختيار مؤذن الفجر"></div>
+<select class="field voice-select-hidden" id="fajrVoice" aria-hidden="true" tabindex="-1">
+<option value="makkah_fajr">أذان الفجر – مكة المكرمة</option>
+<option value="madinah_fajr">أذان الفجر – المدينة المنورة</option>
+<option value="abdulbasit_fajr">عبد الباسط عبد الصمد – الفجر</option>
+<option value="naeena">أحمد نعينع</option>
+<option value="bang1">تسجيل بانگ رقم 01</option>
+<option value="bang2">تسجيل بانگ رقم 02</option>
+<option value="bang3">تسجيل بانگ رقم 03</option>
+<option value="bang4">تسجيل بانگ رقم 04</option>
+<option value="bang5">تسجيل بانگ رقم 05</option>
+<option value="bang6">تسجيل بانگ رقم 06</option>
+<option value="bang7">تسجيل بانگ رقم 07</option>
+<option value="bang8">تسجيل بانگ رقم 08</option>
+<option value="bang9">تسجيل بانگ رقم 09</option>
+<option value="bang10">تسجيل بانگ رقم 10</option>
+<option value="bang11">تسجيل بانگ رقم 11</option>
+<option value="bang12">تسجيل بانگ رقم 12</option>
+<option value="bang13">تسجيل بانگ رقم 13</option>
+<option value="bang14">تسجيل بانگ رقم 14</option>
+<option value="bangtawaw1">تسجيل بانگ طويل 1</option>
+<option value="bangtawaw2">تسجيل بانگ طويل 2</option>
+<option value="bangtawaw3">تسجيل بانگ طويل 3</option>
+<option value="bangtawaw4">تسجيل بانگ طويل 4</option>
+<option value="bangtawaw5">تسجيل بانگ طويل 5</option>
+<option value="bangtawaw6">تسجيل بانگ طويل 6</option>
+<option value="makka01">تسجيل مكة – Bang</option>
+<option value="peshawa01">پێشەوا – Bang</option>
+<option value="abdulrahman01">عبدالرحمن – Bang</option>
+<option value="raad">رعد الكردي (أضف ملف MP3)</option>
+</select>
+<div class="prayer-voice-panel" id="prayerVoicePanel">
+ <div class="adhan-heading"><span class="adhan-orb">♫</span><div><strong>صوت مستقل لكل صلاة</strong><small>اختر المؤذن لكل وقت واستمع إليه قبل الحفظ</small></div></div>
+ <div id="prayerVoiceRows"></div>
+</div>
+<label for="raadAudioFile">إضافة تسجيل رعد الكردي (MP3)</label>
+<input class="field" id="raadAudioFile" type="file" accept="audio/mpeg,audio/mp3,.mp3">
+<div class="hint">اختر ملف أذان MP3 أصلياً لرعد الكردي. سيُحفظ على هذا الجهاز لاستخدامه عند الأذان.</div>
+<div class="row" style="gap:10px;flex-wrap:wrap;margin-top:12px">
+<button class="btn" id="adhanEnable" type="button">تفعيل الأذان التلقائي</button>
+<button class="btn secondary" id="adhanTest" type="button">تجربة أذان الصلوات</button>
+<button class="btn secondary" id="fajrTest" type="button">تجربة أذان الفجر</button>
+<button class="btn secondary adhan-stop" id="adhanStop" type="button">■ إيقاف الصوت</button>
+</div>
+<div class="hint" id="adhanStatus" style="margin-top:10px">اختر المؤذّن، ثم جرّب الصوت وفعّل الأذان. يحتاج بث التسجيلات إلى الإنترنت.</div>
+<audio id="adhanAudio" preload="auto" playsinline></audio>
+</div></details>
+
+</section>
+
+<div class="language-picker-overlay" id="languagePicker" hidden>
+ <div class="language-picker-sheet" role="dialog" aria-modal="true" aria-labelledby="languagePickerTitle">
+  <div class="language-picker-head"><div><h3 id="languagePickerTitle">🌐 اختر لغة التطبيق</h3><p>اختر اللغة التي تريد استخدامها في Ronahî</p></div><button type="button" id="closeLanguagePicker" aria-label="إغلاق">×</button></div>
+  <div class="language-picker-options">
+   <button type="button" class="language-choice" data-language-choice="ar"><span>🇮🇶</span><strong>العربية</strong><b>✓</b></button>
+   <button type="button" class="language-choice" data-language-choice="ku"><span>☀️</span><strong>Kurdî – Badînî</strong><b>✓</b></button>
+   <button type="button" class="language-choice" data-language-choice="ku-sorani"><span>☀️</span><strong>کوردی – سۆرانی</strong><b>✓</b></button>
+   <button type="button" class="language-choice" data-language-choice="en"><span>🇬🇧</span><strong>English</strong><b>✓</b></button>
+   <button type="button" class="language-choice" data-language-choice="tr"><span>🇹🇷</span><strong>Türkçe</strong><b>✓</b></button>
+   <button type="button" class="language-choice" data-language-choice="fa"><span>🇮🇷</span><strong>فارسی</strong><b>✓</b></button>
+  </div>
+ </div>
+</div>
+
+
+<section id="qibla" class="page">
+ <div class="card">
+  <h3 id="qiblaTitle">🧭 اتجاه القبلة</h3>
+  <p id="qiblaDesc" class="muted">اتجاه الكعبة المشرفة من موقعك المحدد</p>
+  <div class="compass" style="width:230px;height:230px;margin:24px auto;border-radius:50%;display:grid;place-items:center;position:relative">
+   <span style="position:absolute;top:12px">N</span><span id="qiblaNeedle" aria-label="سهم اتجاه القبلة" style="font-size:70px;line-height:1;transform:rotate(0deg);display:block">↑</span>
+   <strong id="qiblaDegree" style="position:absolute;bottom:20px;font-size:24px">--°</strong>
+  </div>
+  <p id="qiblaText" class="muted" style="text-align:center">يتم حساب اتجاه القبلة</p>
+  <p id="compassStatus" class="muted" style="text-align:center;font-size:12px">الاتجاه محسوب من موقع دهوك. فعّل بوصلة الجهاز لتوجيه السهم مع حركة الهاتف.</p>
+  <div class="row" style="display:flex;gap:10px;flex-wrap:wrap">
+   <button class="btn" id="locateBtn" type="button">تحديد موقعي</button>
+   <button class="btn secondary" id="calibrate" type="button">استخدام بوصلة الجهاز</button>
+  </div>
+ </div>
+</section>
+<section id="quran" class="page">
+ <div class="ref-head"><div><small>القرآن الكريم</small><h2>سور القرآن الكريم</h2><p>اقرأ السور ورتّب قراءتك بسهولة</p></div><span class="ref-emblem">۞</span></div>
+ <div class="ref-tools"><input class="field" id="surahSearch" type="search" placeholder="ابحث عن سورة..." aria-label="ابحث عن سورة"><div class="ref-chip-row"><span class="ref-chip active">السور</span><span class="ref-chip">أجزاء القرآن</span></div></div>
+ <div id="surahList" class="surah-list"><div class="loading">جارٍ تحميل قائمة سور القرآن الكريم...</div></div>
+ <div id="quranReader" class="quran-reader" hidden><div class="row"><button class="btn secondary" id="backSurahs">← قائمة السور</button><span id="readerMeta" class="muted"></span></div><h2 id="readerTitle"></h2><div id="ayahList" class="ayah-list"></div></div>
+ <p class="hint">يتطلب تحميل نص السور اتصالاً بالإنترنت. لا يتم تخزين نص القرآن محلياً في هذه النسخة.</p>
+</section>
+<section id="adhkar" class="page">
+ <div class="ref-head"><div><small>أذكار المسلم</small><h2>الأذكار اليومية</h2><p>أذكار الصباح والمساء والذكر بعد الصلاة</p></div><span class="ref-emblem">۞</span></div>
+ <div class="ref-chip-row" id="adhkarModes"><button class="ref-chip active" data-kind="morning">أذكار الصباح</button><button class="ref-chip" data-kind="evening">أذكار المساء</button><button class="ref-chip" data-kind="prayer">بعد الصلاة</button></div>
+ <div class="adhkar-progress"><span>تقدّم الأذكار</span><strong id="adhkarProgress">0 / 3</strong><div class="progress"><span id="adhkarProgressBar" style="width:0%"></span></div></div>
+ <div id="adhkarList" class="adhkar-list"></div>
+</section>
+<section id="tasbih" class="page">
+ <div class="tasbih-shell">
+  <div class="tasbih-heading">
+   <div><span class="tasbih-kicker">RONAHI • DHIKR</span><h2 id="tasbihTitle">📿 المسبحة الإلكترونية</h2><p>لحظات هادئة للذكر والطمأنينة</p></div>
+   <span class="tasbih-mark">۞</span>
+  </div>
+  <div class="tasbih-controls">
+   <label>الذكر الحالي — يتغير تلقائياً مع كل ضغطة</label>
+   <div id="currentDhikr" class="field current-dhikr" aria-live="polite">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+  </div>
+  <div class="misbaha-stage">
+   <div class="misbaha-halo"></div>
+   <div class="misbaha-ring" id="misbahaRing" role="group" aria-label="حبات المسبحة">
+    <div class="misbaha-beads" id="misbahaBeads"></div>
+    <button type="button" class="misbaha-center" id="tasAdd" aria-label="اضغط لزيادة التسبيح">
+     <span class="misbaha-center-label">مجموع التسبيح</span>
+     <strong id="tasCount">0</strong>
+     <span class="misbaha-tap-hint">اضغط للعدّ <span>＋</span></span>
+    </button>
+   </div>
+   <div class="misbaha-tassel"><span></span><i></i><i></i><i></i></div>
+  </div>
+  <div class="tasbih-actions">
+   <button class="tasbih-reset" id="tasReset" type="button"><span>↺</span> إعادة العداد</button>
+   <button class="tasbih-toggle active" id="tasVibration" type="button" aria-pressed="true">〰 اهتزاز</button>
+   <button class="tasbih-toggle" id="tasSound" type="button" aria-pressed="false">♪ صوت</button>
+  </div>
+  <p class="tasbih-note" id="tasFeedback" aria-live="polite">اضغط على المسبحة وابدأ ذكرك 🌙</p>
+ </div>
+</section>
+<section id="calendar" class="page">
+ <div class="ref-head"><div><small>RONAHÎ • مواقيت الصلاة</small><h2>جدول مواقيت الصلاة</h2><p>المواقيت الشهرية حسب المدينة وطريقة الحساب المختارة</p></div><span class="ref-emblem">☾</span></div>
+ <div class="card calendar-controls">
+  <div class="row"><div><h3 style="margin:0">مواقيت الصلاة الشهرية</h3><p class="muted" style="margin:5px 0 0">اختر الشهر لعرض جميع الأيام ومواقيت الصلاة</p></div><span class="calendar-year" id="calendarYearLabel">٢٠٢٦</span></div>
+  <label for="annualMonth">الشهر</label>
+  <select class="field" id="annualMonth"><option value="1">يناير</option><option value="2">فبراير</option><option value="3">مارس</option><option value="4">أبريل</option><option value="5">مايو</option><option value="6">يونيو</option><option value="7">يوليو</option><option value="8">أغسطس</option><option value="9">سبتمبر</option><option value="10">أكتوبر</option><option value="11">نوفمبر</option><option value="12">ديسمبر</option></select>
+  <button class="btn" id="loadAnnualCalendar" type="button">تحديث المواقيت</button>
+  <div class="hint" id="annualStatus">سيتم تحميل المواقيت حسب إحداثيات المدينة وطريقة الحساب المختارة في الإعدادات.</div>
+ </div>
+ <div class="card"><h3>🌙 الأعياد والمناسبات الإسلامية 2027</h3><div id="annualEvents" class="annual-events"></div><p class="hint">التواريخ الهجرية تقديرية وقد تتقدم أو تتأخر يوماً بحسب ثبوت الهلال والإعلان الرسمي في العراق.</p></div>
+ <div class="card"><div class="row"><h3 style="margin:0">مواقيت الصلاة اليومية</h3><span class="muted" id="annualCount">365 يوماً</span></div><div class="annual-table-wrap"><table class="annual-table monthly-prayer-table"><thead><tr><th>التاريخ</th><th>🌊<br>الفجر</th><th>☀️<br>الظهر</th><th>🌤️<br>العصر</th><th>🌅<br>المغرب</th><th>🌙<br>العشاء</th></tr></thead><tbody id="annualPrayerRows"><tr><td colspan="6" class="loading">اضغط «تحديث المواقيت» لعرض المواقيت السنوية.</td></tr></tbody></table></div></div>
+</section>
+<section id="settings" class="page">
+ <div class="card">
+  <h3 id="settingsTitle">⚙ الإعدادات</h3>
+  <label for="governorateSelect">المحافظة العراقية</label><select class="field" id="governorateSelect" aria-label="اختر المحافظة"></select>
+  <label id="cityLabelText" for="citySelect">المدينة أو القضاء</label><select class="field" id="citySelect" aria-label="اختر المدينة"></select>
+  <p class="hint">اختر المحافظة ثم المدينة. تُستخدم إحداثيات المدينة المختارة لحساب مواقيت الصلاة، ويمكنك تغيير الاختيار في أي وقت.</p>
+  <input type="hidden" id="cityInput" value="Duhok">
+  <label id="countryLabelText" for="countryInput">الدولة</label><input class="field" id="countryInput" value="Iraq" readonly>
+  <label id="methodLabel" for="method">طريقة الحساب</label>
+  <select class="field" id="method"><option value="3">رابطة العالم الإسلامي</option><option value="4">أم القرى</option><option value="2">ISNA</option><option value="5">الهيئة المصرية</option></select>
+  <label id="schoolLabel" for="school">المذهب للعصر</label>
+  <select class="field" id="school"><option value="0">شافعي</option><option value="1">حنفي</option></select>
+  <button class="btn" id="saveSettings" type="button">حفظ الإعدادات</button>
+ </div>
+ <div class="card" id="interactionSoundCard">
+  <h3>🔊 أصوات التفاعل</h3>
+  <p class="muted">مؤثرات صوتية أصلية وناعمة للأزرار والتنقل، بإحساس عصري مع الحفاظ على هدوء Ronahî.</p>
+  <button class="btn" id="interactionSoundToggle" type="button" aria-pressed="false">الأصوات: متوقفة</button>
+  <p class="muted" id="interactionSoundHint" style="margin:8px 0 0">يمكنك تشغيلها أو إيقافها في أي وقت. تتوقف مؤثرات Ronahî تلقائياً أثناء تشغيل الأذان وتعود بعد انتهائه.</p>
+ </div>
+ <div class="card">
+  <h3 id="reminderTitle">🌙 تذكير بالصلاة</h3>
+  <p id="reminderDesc" class="muted">فعّل التنبيهات لتذكيرك عندما يكون التطبيق مفتوحاً</p>
+  <button class="btn" id="notifyBtn" type="button">تفعيل الإشعارات</button>
+ </div>
+ <div class="card" id="prePrayerReminderCard">
+  <h3>⏰ تنبيه قبل الأذان</h3>
+  <p class="muted">اختر كم دقيقة قبل دخول وقت الصلاة ليصلك تنبيه يساعدك على الاستعداد للصلاة قبل الأذان.</p>
+  <label for="preReminderEnabled">تفعيل التنبيه المسبق</label>
+  <select class="field" id="preReminderEnabled"><option value="off">متوقف</option><option value="on">مفعّل</option></select>
+  <label for="preReminderMinutes">التنبيه قبل الصلاة بكم دقيقة؟</label>
+  <select class="field" id="preReminderMinutes"><option value="5">5 دقائق</option><option value="10" selected>10 دقائق</option><option value="15">15 دقيقة</option><option value="20">20 دقيقة</option><option value="30">30 دقيقة</option><option value="45">45 دقيقة</option><option value="60">ساعة واحدة</option></select>
+  <label for="preReminderSound">صوت التنبيه عند فتح التطبيق</label>
+  <select class="field" id="preReminderSound"><option value="chime">رنين هادئ</option><option value="bell">جرس لطيف</option><option value="soft">نغمة ناعمة</option><option value="none">بدون صوت</option></select>
+  <button class="btn secondary" id="preReminderTest" type="button">تجربة صوت التنبيه</button>
+  <button class="btn" id="savePreReminder" type="button">حفظ إعدادات التنبيه</button>
+  <p class="hint" id="preReminderStatus">بعد السماح بالإشعارات، سيجدول التطبيق تنبيهات الصلاة مسبقاً حتى عند إغلاق التطبيق. صوت الإشعار يعتمد على صوت إشعارات النظام؛ ويمكن تجربة النغمة المختارة داخل التطبيق.</p>
+ </div>
+ <select class="field" id="language" aria-label="لغة التطبيق" style="display:none"><option value="ar">العربية</option><option value="ku">Kurdî – Badînî</option><option value="ku-sorani">کوردی – سۆرانی</option><option value="en">English</option><option value="tr">Türkçe</option><option value="fa">فارسی</option></select>
+<div class="card theme-card"><h3>🎨 المظهر والخلفيات</h3>
+<div class="muted">كل ثيم يغيّر هوية التطبيق كاملة: الخلفية والزخارف وشكل البطاقات والساعة والأزرار والخطوط وشريط التنقل والبوصلة والمسبحة.</div>
+<select class="field" id="themeSelect" style="display:none">
+<option value="auto">تلقائي – يتغير حسب الشروق والغروب</option>
+<option value="midnight">ليلة ملكية – زجاج داكن وهلال ونجوم</option>
+<option value="emerald">حديقة زمردية – زخارف نباتية وبطاقات عضوية</option>
+<option value="purple">كون بنفسجي – نجوم وتوهج وبطاقات عميقة</option>
+<option value="rose">وردي ناعم – أسلوب تحريري ناعم وحواف مستديرة</option>
+<option value="ocean">محيط – موجات زجاجية وتدرجات مائية</option>
+<option value="desert">محراب رملي – ملمس ورقي وأقواس تراثية</option>
+<option value="light">نهاري – تصميم نظيف ومسطح ومشرق</option>
+</select>
+<div class="hint" id="themeStatus">يتم حفظ اختيارك تلقائياً.</div></div><div class="card"><h3 id="aboutTitle">حول التطبيق</h3><div class="muted">Ronahî<br>الإصدار 1.9<br>تطبيق ويب تجريبي لمواقيت الصلاة والقبلة والأذكار.</div></div></section>
+
+<div class="theme-picker-overlay" id="themePickerOverlay" hidden>
+ <div class="theme-picker-sheet" role="dialog" aria-modal="true" aria-labelledby="themePickerTitle">
+  <div class="theme-picker-head"><div><h3 id="themePickerTitle">🎨 اختر مظهر التطبيق</h3><p>اختر اللون والتصميم الذي يناسبك</p></div><button type="button" id="closeThemePicker" aria-label="إغلاق">×</button></div>
+  <div class="theme-picker-options">
+   <button type="button" class="theme-choice" data-theme-choice="auto"><span class="theme-choice-preview theme-auto"></span><span><strong>تلقائي</strong><small>يتغير حسب الشروق والغروب</small></span><b>◉</b></button>
+   <button type="button" class="theme-choice" data-theme-choice="midnight"><span class="theme-choice-preview theme-midnight"></span><span><strong>ليلة ملكية</strong><small>زجاج داكن وهلال ونجوم</small></span><b>◉</b></button>
+   <button type="button" class="theme-choice" data-theme-choice="emerald"><span class="theme-choice-preview theme-emerald"></span><span><strong>حديقة زمردية</strong><small>زخارف نباتية وبطاقات عضوية</small></span><b>◉</b></button>
+   <button type="button" class="theme-choice" data-theme-choice="purple"><span class="theme-choice-preview theme-purple"></span><span><strong>كون بنفسجي</strong><small>نجوم وتوهج وبطاقات عميقة</small></span><b>◉</b></button>
+   <button type="button" class="theme-choice" data-theme-choice="rose"><span class="theme-choice-preview theme-rose"></span><span><strong>وردي ناعم</strong><small>أسلوب ناعم وحواف مستديرة</small></span><b>◉</b></button>
+   <button type="button" class="theme-choice" data-theme-choice="ocean"><span class="theme-choice-preview theme-ocean"></span><span><strong>محيط</strong><small>موجات زجاجية وتدرجات مائية</small></span><b>◉</b></button>
+   <button type="button" class="theme-choice" data-theme-choice="desert"><span class="theme-choice-preview theme-desert"></span><span><strong>محراب رملي</strong><small>ملمس ورقي وأقواس تراثية</small></span><b>◉</b></button>
+   <button type="button" class="theme-choice" data-theme-choice="light"><span class="theme-choice-preview theme-light"></span><span><strong>نهاري</strong><small>تصميم نظيف ومشرق</small></span><b>◉</b></button>
+  </div>
+ </div>
+</div>
+
+<div class="footer" id="appFooter">Ronahî · تقبّل الله طاعتكم</div></main>
+
+<div class="city-picker-overlay" id="cityPicker" role="dialog" aria-modal="true" aria-labelledby="cityPickerTitle">
+ <div class="city-picker-sheet">
+  <div class="city-picker-head"><h3 id="cityPickerTitle">📍 تغيير المدينة</h3><button class="city-picker-close" id="closeCityPicker" type="button" aria-label="إغلاق">×</button></div>
+  <p class="muted" style="margin:0 0 12px">اختر المحافظة ثم المدينة لعرض مواقيت الصلاة حسب موقعها.</p>
+  <label for="quickGovernorateSelect">المحافظة</label><select class="field" id="quickGovernorateSelect" aria-label="اختر المحافظة"></select>
+  <label for="quickCitySelect">المدينة أو القضاء</label><select class="field" id="quickCitySelect" aria-label="اختر المدينة"></select>
+  <div class="city-picker-actions"><button class="btn secondary" id="cancelCityPicker" type="button">إلغاء</button><button class="btn" id="applyQuickCity" type="button">حفظ المدينة</button></div>
+ </div>
+</div>
+<nav class="tabs"><div class="tabrow"><button class="tab active" data-page="home"><span class="ico">⌂</span><span id="tabHome">الرئيسية</span></button><button class="tab" data-page="quran"><span class="ico">۞</span><span id="tabQuran">القرآن</span></button><button class="tab" data-page="adhkar"><span class="ico">▤</span><span id="tabAdhkar">الأذكار</span></button><button class="tab" data-page="qibla"><span class="ico">◉</span><span id="tabQibla">القبلة</span></button><button class="tab" data-page="tasbih"><span class="ico">♧</span><span id="tabTasbih">المسبحة</span></button><button class="tab" data-page="settings"><span class="ico">⚙</span><span id="tabSettings">الإعدادات</span></button></div></nav><div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);let timings=null, prayerTimes=[], timer=null, city='Duhok',country='Iraq',method='3',school='0',lat=36.8671,lon=42.9497,heading=null,watching=false;
+const readPrefs=()=>{try{return JSON.parse(localStorage.getItem('ronahi-settings')||'{}')}catch(e){return {}}};const savedPrefs=readPrefs();city=savedPrefs.city||city;country=savedPrefs.country||country;method=savedPrefs.method||method;school=savedPrefs.school||school;lat=Number(savedPrefs.lat)||lat;lon=Number(savedPrefs.lon)||lon;
+// Iraq's 18 governorates with commonly used city/district centres and approximate city-centre coordinates.
+// Coordinates are used for prayer calculations; village-level locations can still be refined with device GPS.
+const IRAQ_GOVERNORATES=[
+ {key:'duhok',name:'دهوك',cities:[['duhok','دهوك','Duhok',36.8671,42.9497],['zakho','زاخو','Zakho',37.1487,42.6872],['amadiya','العمادية','Amadiya',37.0921,43.4870],['aqre','عقرة','Aqrah',36.7415,43.8950],['semel','سميل','Semel',36.8627,43.0090],['bardarash','بردرش','Bardarash',36.8340,43.5650],['shekhan','شيخان','Shekhan',36.6800,43.3400]]},
+ {key:'erbil',name:'أربيل',cities:[['erbil','أربيل','Erbil',36.1901,44.0091],['koya','كويسنجق','Koysinjaq',36.0828,44.6290],['shaqlawa','شقلاوة','Shaqlawa',36.4040,44.3210],['soran','سوران','Soran',36.6530,44.5440],['rawanduz','رواندوز','Rawanduz',36.6120,44.5230],['makhmur','مخمور','Makhmur',35.7700,43.5800],['choman','چومان','Choman',36.6300,44.8900]]},
+ {key:'sulaymaniyah',name:'السليمانية',cities:[['sulaymaniyah','السليمانية','Sulaymaniyah',35.5613,45.4300],['halabja','حلبجة','Halabja',35.1778,45.9861],['ranya','رانية','Ranya',36.2550,44.8830],['penjwen','بنجوين','Penjwen',35.6180,45.9500],['qaradagh','قره داغ','Qaradagh',35.3100,45.3900],['chamchamal','چمچمال','Chamchamal',35.5330,44.8300],['dokan','دوكان','Dukan',35.9300,44.9600],['kalar','كلار','Kalar',34.6270,45.3240]]},
+ {key:'kirkuk',name:'كركوك',cities:[['kirkuk','كركوك','Kirkuk',35.4681,44.3922],['hawija','الحويجة','Hawija',35.3260,43.7720],['dಿಬs','دبس','Dibis',35.6900,44.0800],['tuz','طوزخورماتو','Tuz Khurmatu',34.8880,44.6320]]},
+ {key:'nineveh',name:'نينوى',cities:[['mosul','الموصل','Mosul',36.3350,43.1189],['telafar','تلعفر','Tal Afar',36.3760,42.4490],['sinjar','سنجار','Sinjar',36.3200,41.8750],['hamdaniya','الحمدانية','Hamdaniya',36.2700,43.3800],['qayyarah','القيارة','Qayyarah',35.8200,43.2900],['baaj','البعاج','Baaj',36.0000,41.7200],['shirqat','الشرقاط','Shirqat',35.5200,43.2300]]},
+ {key:'anbar',name:'الأنبار',cities:[['ramadi','الرمادي','Ramadi',33.4230,43.3050],['fallujah','الفلوجة','Fallujah',33.3530,43.7800],['hit','هيت','Hit',33.6410,42.8250],['haditha','حديثة','Haditha',34.1390,42.3780],['rutba','الرطبة','Rutba',33.0370,40.2850],['qaim','القائم','Al Qaim',34.3760,41.0020],['ana','عانة','Ana',34.4680,41.9530]]},
+ {key:'baghdad',name:'بغداد',cities:[['baghdad','بغداد','Baghdad',33.3152,44.3661],['abu_ghraib','أبو غريب','Abu Ghraib',33.3050,44.1850],['mahmudiya','المحمودية','Mahmudiya',33.0500,44.3650],['tarmiyah','الطارمية','Tarmiyah',33.6700,44.3750],['madaen','المدائن','Al Mada’in',33.1050,44.5800]]},
+ {key:'diyala',name:'ديالى',cities:[['baqubah','بعقوبة','Baqubah',33.7480,44.6430],['muqdadiya','المقدادية','Muqdadiyah',33.9780,44.9360],['khalis','الخالص','Khalis',33.8400,44.5250],['khanaqin','خانقين','Khanaqin',34.3480,45.3870],['baladruz','بلدروز','Balad Ruz',33.6970,45.0780],['mandali','مندلي','Mandali',33.7490,45.5550]]},
+ {key:'babil',name:'بابل',cities:[['hillah','الحلة','Hillah',32.4800,44.4300],['musayyib','المسيب','Musayyib',32.7780,44.2900],['iskandariya','الإسكندرية','Iskandariya',32.8900,44.3500],['hashimiyah','الهاشمية','Hashimiyah',32.3050,44.5300],['mahawil','المحاويل','Mahawil',32.6500,44.3700]]},
+ {key:'karbala',name:'كربلاء',cities:[['karbala','كربلاء','Karbala',32.6160,44.0240],['hindiyah','الهندية','Hindiyah',32.5430,44.2280],['hur','الحر','Al-Hurr',32.6700,43.9900]]},
+ {key:'najaf',name:'النجف',cities:[['najaf','النجف','Najaf',32.0000,44.3350],['kufa','الكوفة','Kufa',32.0300,44.4000],['manathira','المناذرة','Manathira',31.9300,44.4600],['mishkhab','المشخاب','Mishkhab',31.8000,44.4900]]},
+ {key:'qadisiyah',name:'القادسية',cities:[['diwaniyah','الديوانية','Diwaniyah',31.9920,44.9250],['afak','عفك','Afak',32.0700,45.2500],['shamiyah','الشامية','Shamiyah',31.9600,44.6000],['hamza','الحمزة','Hamza',31.7200,44.9700]]},
+ {key:'wasit',name:'واسط',cities:[['kut','الكوت','Kut',32.5120,45.8180],['numaniyah','النعمانية','Numaniyah',32.5560,45.3550],['aziziyah','العزيزية','Aziziyah',32.9050,45.0600],['hayy','الحي','Al-Hayy',32.1700,46.0400],['badra','بدرة','Badra',33.1200,45.9500]]},
+ {key:'maysan',name:'ميسان',cities:[['amarah','العمارة','Amarah',31.8350,47.1450],['majr','المجر الكبير','Al-Majar Al-Kabir',31.5800,47.1800],['kahla','الكحلاء','Al-Kahla',31.7200,47.2700],['ali_gharbi','علي الغربي','Ali Al-Gharbi',32.4600,46.6900],['mashrah','المشرح','Al-Mashrah',31.7800,47.4500]]},
+ {key:'thiqar',name:'ذي قار',cities:[['nasiriyah','الناصرية','Nasiriyah',31.0570,46.2570],['shatra','الشطرة','Shatra',31.4100,46.1700],['rifai','الرفاعي','Al-Rifai',31.5200,46.1100],['suq_shuyukh','سوق الشيوخ','Suq Al-Shuyukh',30.8900,46.8500],['jubayish','الجبايش','Chibayish',30.9600,47.0000]]},
+ {key:'muthanna',name:'المثنى',cities:[['samawah','السماوة','Samawah',31.3180,45.2800],['rumaitha','الرميثة','Rumaitha',31.5300,45.2000],['khidr','الخضر','Al-Khidr',31.0700,45.6300],['salman','السلمان','Salman',30.4800,45.3000]]},
+ {key:'basra',name:'البصرة',cities:[['basra','البصرة','Basra',30.5085,47.7804],['zubair','الزبير','Zubair',30.3900,47.7010],['qurna','القرنة','Qurna',31.0150,47.4300],['fao','الفاو','Faw',29.9750,48.4730],['abu_khasib','أبو الخصيب','Abu Al-Khasib',30.4400,48.0100],['medaina','المدينة','Al-Medaina',30.9800,47.3000],['shatt_arab','شط العرب','Shatt Al-Arab',30.5600,47.8200]]},
+ {key:'saladin',name:'صلاح الدين',cities:[['tikrit','تكريت','Tikrit',34.6150,43.6780],['samarra','سامراء','Samarra',34.1950,43.8750],['baiji','بيجي','Baiji',34.9300,43.4900],['balad','بلد','Balad',34.0200,44.1450],['duluiya','الدجيل','Dujail',33.8460,44.2300],['sharqat','الشرقاط','Shirqat',35.5200,43.2300]]},
+ ];
+let selectedCityAr=savedPrefs.cityAr||'دهوك',provinceKey=savedPrefs.provinceKey||'duhok',cityKey=savedPrefs.cityKey||'duhok';
+const findGovernorate=key=>IRAQ_GOVERNORATES.find(g=>g.key===key)||IRAQ_GOVERNORATES[0];
+const findCity=key=>IRAQ_GOVERNORATES.flatMap(g=>g.cities).find(c=>c[0]===key);
+function populateGovernorates(){const sel=$('governorateSelect');if(!sel)return;sel.innerHTML=IRAQ_GOVERNORATES.map(g=>`<option value="${g.key}">${g.name}</option>`).join('');sel.value=provinceKey;populateCities();}
+function populateCities(){const g=findGovernorate($('governorateSelect').value);const sel=$('citySelect');sel.innerHTML=g.cities.map(c=>`<option value="${c[0]}">${c[1]}</option>`).join('');let c=g.cities.find(x=>x[0]===cityKey)||g.cities[0];if(c)sel.value=c[0];}
+function applySelectedCity(){const g=findGovernorate($('governorateSelect').value),c=findCity($('citySelect').value);if(!c)return;provinceKey=g.key;cityKey=c[0];selectedCityAr=c[1];city=c[2];lat=c[3];lon=c[4];country='Iraq';$('cityInput').value=city;$('countryInput').value='Iraq';}
+
+// Exact prayer times transcribed from the user's Bang app screenshots (Duhok, Nov 2026).
+// Column order in Bang's monthly table: Isha, Maghrib, Asr, Dhuhr, Fajr. Asr is stored in 24-hour format.
+const BANG_DUHOK_2026_11={
+'01':['06:40','05:18','14:55','11:59','05:02'],
+'02':['06:39','05:17','14:54','11:59','05:02'],
+'03':['06:38','05:16','14:53','11:59','05:03'],
+'04':['06:37','05:15','14:52','11:59','05:04'],
+'05':['06:36','05:14','14:52','11:59','05:05'],
+'06':['06:35','05:13','14:51','11:59','05:06'],
+'07':['06:33','05:12','14:50','12:00','05:07'],
+'08':['06:32','05:11','14:49','12:00','05:08'],
+'09':['06:31','05:10','14:49','12:00','05:08'],
+'10':['06:30','05:09','14:48','12:00','05:09'],
+'11':['06:29','05:08','14:48','12:00','05:10'],
+'12':['06:28','05:07','14:47','12:00','05:11'],
+'13':['06:27','05:06','14:46','12:00','05:12'],
+'14':['06:26','05:05','14:46','12:00','05:13'],
+'15':['06:25','05:04','14:45','12:01','05:14'],
+'16':['06:25','05:04','14:45','12:01','05:14'],
+'17':['06:24','05:03','14:44','12:01','05:15'],
+'18':['06:24','05:03','14:44','12:01','05:16'],
+'19':['06:23','05:02','14:44','12:01','05:17'],
+'20':['06:23','05:02','14:43','12:02','05:18'],
+'21':['06:22','05:01','14:43','12:02','05:19'],
+'22':['06:22','05:01','14:43','12:02','05:20'],
+'23':['06:21','05:00','14:42','12:03','05:20'],
+'24':['06:21','05:00','14:42','12:03','05:21'],
+'25':['06:20','04:59','14:42','12:03','05:22'],
+'26':['06:20','04:59','14:41','12:04','05:23'],
+'27':['06:19','04:58','14:41','12:04','05:24'],
+'28':['06:19','04:58','14:41','12:04','05:25'],
+'29':['06:17','04:57','14:41','12:05','05:25'],
+'30':['06:17','04:57','14:41','12:05','05:26']
+};
+// Exact December 2026 Duhok prayer timetable supplied by the user.
+// Stored order: Isha, Maghrib, Asr (24-hour), Dhuhr, Fajr.
+const BANG_DUHOK_2026_12={
+'01':['18:16','16:56','14:41','12:05','05:27'],
+'02':['18:16','16:56','14:41','12:06','05:28'],
+'03':['18:16','16:56','14:41','12:06','05:29'],
+'04':['18:16','16:56','14:41','12:07','05:29'],
+'05':['18:16','16:56','14:41','12:07','05:30'],
+'06':['18:16','16:56','14:41','12:07','05:31'],
+'07':['18:16','16:56','14:41','12:08','05:32'],
+'08':['18:16','16:56','14:41','12:08','05:32'],
+'09':['18:17','16:57','14:41','12:09','05:33'],
+'10':['18:17','16:57','14:41','12:09','05:34'],
+'11':['18:17','16:57','14:41','12:10','05:34'],
+'12':['18:17','16:57','14:42','12:10','05:35'],
+'13':['18:17','16:57','14:42','12:11','05:36'],
+'14':['18:17','16:57','14:42','12:11','05:36'],
+'15':['18:17','16:57','14:43','12:11','05:37'],
+'16':['18:18','16:58','14:43','12:12','05:38'],
+'17':['18:18','16:58','14:43','12:12','05:38'],
+'18':['18:19','16:59','14:44','12:13','05:39'],
+'19':['18:19','16:59','14:44','12:13','05:39'],
+'20':['18:20','17:00','14:44','12:14','05:40'],
+'21':['18:20','17:00','14:45','12:14','05:40'],
+'22':['18:21','17:01','14:45','12:15','05:41'],
+'23':['18:21','17:01','14:46','12:15','05:41'],
+'24':['18:22','17:02','14:46','12:16','05:42'],
+'25':['18:22','17:02','14:47','12:16','05:42'],
+'26':['18:23','17:03','14:48','12:17','05:43'],
+'27':['18:23','17:03','14:48','12:17','05:43'],
+'28':['18:24','17:04','14:49','12:18','05:43'],
+'29':['18:24','17:04','14:49','12:18','05:44'],
+'30':['18:25','17:05','14:50','12:19','05:44'],
+'31':['18:25','17:05','14:51','12:19','05:44']
+};
+const names=[['Fajr','الفجر','🌅'],['Sunrise','الشروق','☀️'],['Dhuhr','الظهر','🌤️'],['Asr','العصر','🌇'],['Maghrib','المغرب','🌆'],['Isha','العشاء','🌙']];
+function toast(s){$('toast').textContent=s;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2600)}
+function cleanTime(s){return (s||'').split(' ')[0]}
+function fmtTime(t){let [h,m]=t.split(':').map(Number);let d=new Date();d.setHours(h,m,0,0);return new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit'}).format(d)}
+const ADHAN_MUTE_KEY='ronahi-adhan-muted-prayers';
+let mutedAdhanPrayers=(()=>{try{return JSON.parse(localStorage.getItem(ADHAN_MUTE_KEY)||'{}')}catch(e){return {}}})();
+function saveMutedAdhanPrayers(){try{localStorage.setItem(ADHAN_MUTE_KEY,JSON.stringify(mutedAdhanPrayers))}catch(e){}}
+function togglePrayerAdhan(key){if(!['Fajr','Dhuhr','Asr','Maghrib','Isha'].includes(key))return;mutedAdhanPrayers[key]=!mutedAdhanPrayers[key];saveMutedAdhanPrayers();renderGrid();const prayerName=(names.find(x=>x[0]===key)||[])[1]||key;toast(mutedAdhanPrayers[key]?`تم كتم أذان ${prayerName}`:`تم تفعيل أذان ${prayerName}`)}
+function renderGrid(){if(!timings)return;$('prayerGrid').innerHTML=names.map(([key,n,ico])=>{const isSunrise=key==='Sunrise',muted=!!mutedAdhanPrayers[key],time=timings[key]&&timings[key]!=='—'?fmtTime(cleanTime(timings[key])):'—';return `<div class="prayer ${key===window.currentKey?'active':''} ${key==='Dhuhr'?'wide':''}"><div class="prayer-main"><div class="prayer-left"><span class="pname">${n}</span><span class="picon">${ico}</span></div>${isSunrise?`<span class="ptime">${time}</span>`:`<button type="button" class="ptime ptime-play" data-play-adhan="${key}" aria-label="تشغيل أذان ${n}" title="اضغط لتشغيل الأذان">${time}</button>`}</div><button type="button" class="adhan-toggle ${isSunrise?'sunrise':''}" data-prayer="${key}" aria-label="${isSunrise?'الشروق لا يوجد له أذان':(muted?'تفعيل أذان ':'كتم أذان ')+n}" aria-pressed="${muted}" ${isSunrise?'disabled':''} title="${isSunrise?'لا يوجد أذان للشروق':(muted?'الأذان مكتوم':'الأذان يعمل')}">${isSunrise?'—':muted?'🔕':'🔔'}</button></div>`}).join('')} 
+$('prayerGrid').addEventListener('click',e=>{
+ const playBtn=e.target.closest('.ptime-play[data-play-adhan]');
+ if(playBtn){const key=playBtn.dataset.playAdhan;if(mutedAdhanPrayers[key])toast('الأذان مكتوم تلقائياً لهذه الصلاة؛ سيتم تشغيله للمعاينة فقط.');playAdhan(true,key);return}
+ const btn=e.target.closest('.adhan-toggle[data-prayer]');
+ if(btn&&!btn.disabled)togglePrayerAdhan(btn.dataset.prayer);
+});
+async function loadTimes(){
+ const date=new Date();
+ const dateLabel=new Intl.DateTimeFormat('ar-IQ',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(date);
+ $('gregDate').textContent=dateLabel;
+ $('prayerGrid').innerHTML='<div class="loading">جارٍ تحميل المواقيت...</div>';
+ $('hijriDate').textContent='التاريخ الهجري';
+ const normalizedCity=String(city||'').trim().toLowerCase();
+ const normalizedCountry=String(country||'').trim().toLowerCase();
+ const isDuhok=['duhok','dohuk','دهوك'].includes(normalizedCity)&&['iraq','العراق',''].includes(normalizedCountry);
+ const day=String(date.getDate()).padStart(2,'0');
+ const localRow=isDuhok&&date.getFullYear()===2026
+   ?(date.getMonth()===10?BANG_DUHOK_2026_11[day]:date.getMonth()===11?BANG_DUHOK_2026_12[day]:null)
+   :null;
+ $('cityLabel').textContent=selectedCityAr|| (isDuhok?'دهوك':city); if($('legacyCityLabel'))$('legacyCityLabel').textContent=(selectedCityAr||city)+' – العراق';
+ if(localRow){
+  timings={Isha:localRow[0],Maghrib:localRow[1],Asr:localRow[2],Dhuhr:localRow[3],Fajr:localRow[4],Sunrise:'—'};
+  $('sourceNote').textContent='مواقيت دهوك من الجدول المحلي المضاف للتطبيق.';
+  $('hijriDate').textContent='التاريخ الهجري يحتاج اتصالاً بالإنترنت';
+  $('prayerGrid').innerHTML='';
+  renderGrid();updateNext();refreshAutomaticTheme();
+  window.ronahiLoadedDay=date.toDateString();schedulePrePrayerNotifications();
+  if(!timer)timer=setInterval(()=>{if(document.visibilityState==='visible'){
+   const n=new Date();if(n.toDateString()!==window.ronahiLoadedDay){loadTimes();return}
+   updateNext();checkAdhan(n);refreshAutomaticTheme();
+  }},1000);
+  // Hijri date is supplementary: never block prayer times or countdown.
+  const dmy=`${String(date.getDate()).padStart(2,'0')}-${String(date.getMonth()+1).padStart(2,'0')}-${date.getFullYear()}`;
+  // Sunrise-only online update: do not replace or recalculate any prayer time from the local table.
+  const sunriseTs=Math.floor(new Date(date.getFullYear(),date.getMonth(),date.getDate(),12).getTime()/1000);
+  const sunriseUrl=`https://api.aladhan.com/v1/timings/${sunriseTs}?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lon)}&method=${encodeURIComponent(method)}&school=${encodeURIComponent(school)}&timezonestring=Asia%2FBaghdad`;
+  fetch(sunriseUrl).then(r=>r.ok?r.json():null).then(j=>{
+   const raw=j&&j.code===200&&j.data&&j.data.timings&&j.data.timings.Sunrise;
+   const sunrise=cleanTime(raw);
+   if(/^\d{1,2}:\d{2}$/.test(sunrise)){
+    // The ONLY timetable field updated by this request is timings.Sunrise.
+    timings.Sunrise=sunrise;
+    $('sourceNote').textContent='بقية أوقات الصلاة من الجدول المحلي دون تغيير؛ وقت الشروق فقط من الإنترنت.';
+    renderGrid();
+   }
+  }).catch(()=>{});
+  fetch(`https://api.aladhan.com/v1/gToH/${dmy}`).then(r=>r.ok?r.json():null).then(j=>{
+   const x=j&&j.data&&j.data.hijri;if(x){const txt=`${x.day} ${x.month.ar} ${x.year} هـ`;$('hijriDate').textContent=txt;$('hijriTop').textContent=' · '+txt}
+  }).catch(()=>{});
+  return;
+ }
+ const dmy=`${String(date.getDate()).padStart(2,'0')}-${String(date.getMonth()+1).padStart(2,'0')}-${date.getFullYear()}`;
+ const timeout=(url,ms=7000)=>Promise.race([
+  fetch(url).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}),
+  new Promise((_,rej)=>setTimeout(()=>rej(Error('timeout')),ms))
+ ]);
+ let data=null;
+ const ts=Math.floor(new Date(date.getFullYear(),date.getMonth(),date.getDate(),12).getTime()/1000);
+ const coordUrl=`https://api.aladhan.com/v1/timings/${ts}?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lon)}&method=${encodeURIComponent(method)}&school=${encodeURIComponent(school)}`;
+ // For the built-in Iraqi city directory, calculate from that city's coordinates first.
+ try{const j=await timeout(coordUrl);if(j&&j.code===200)data=j.data}catch(e){}
+ if(!data){const cityUrl=`https://api.aladhan.com/v1/timingsByCity/${dmy}?city=${encodeURIComponent(city)}&country=${encodeURIComponent(country)}&method=${encodeURIComponent(method)}&school=${encodeURIComponent(school)}`;try{const j=await timeout(cityUrl);if(j&&j.code===200)data=j.data}catch(e){}}
+ if(!data){
+  timings=null;
+  $('prayerGrid').innerHTML='<div class="loading error">تعذر تحميل المواقيت. تحقق من اتصال الإنترنت، أو أعد اختيار المدينة من الإعدادات.</div>';
+  $('nextPrayer').textContent='--:--:--';$('countdown').textContent='المواقيت غير متاحة حالياً';
+  $('hijriDate').textContent='غير متاح';toast('تعذر تحميل مواقيت الصلاة');return;
+ }
+ timings=data.timings;
+ const hij=data.date&&data.date.hijri;
+ if(hij){const txt=`${hij.day} ${hij.month.ar} ${hij.year} هـ`;$('hijriDate').textContent=txt;$('hijriTop').textContent=' · '+txt}
+ $('sourceNote').textContent='المواقيت محسوبة حسب الموقع والإعدادات المختارة.';
+ renderGrid();updateNext();refreshAutomaticTheme();window.ronahiLoadedDay=date.toDateString();schedulePrePrayerNotifications();
+ if(!timer)timer=setInterval(()=>{if(document.visibilityState==='visible'){
+  const n=new Date();if(n.toDateString()!==window.ronahiLoadedDay){loadTimes();return}
+  updateNext();checkAdhan(n);refreshAutomaticTheme();
+ }},1000);
+}
+function updateNext(){
+ if(!timings)return;
+ const now=new Date(),keys=['Fajr','Dhuhr','Asr','Maghrib','Isha'];
+ const all=keys.map(k=>{const raw=cleanTime(timings[k]);if(!/^\d{1,2}:\d{2}$/.test(raw))return null;const [hh,mm]=raw.split(':').map(Number);const d=new Date(now);d.setHours(hh,mm,0,0);return{k,n:(names.find(x=>x[0]===k)||[k,k])[1],d}}).filter(Boolean);
+ if(!all.length)return;
+ let next=all.find(x=>x.d>now);
+ if(!next){next={...all[0],d:new Date(all[0].d)};next.d.setDate(next.d.getDate()+1)}
+ let prev=[...all].reverse().find(x=>x.d<=now);
+ if(!prev){prev={d:new Date(all[all.length-1].d)};prev.d.setDate(prev.d.getDate()-1)}
+ const sec=Math.max(0,Math.floor((next.d-now)/1000)),hh=Math.floor(sec/3600),mm=Math.floor(sec%3600/60),ss=sec%60;
+ const ld=LANGS[$('language').value]||LANGS.ar;
+ $('nextLabel').textContent=(ld.remaining||'الوقت المتبقي')+' — '+next.n;
+ $('nextPrayer').textContent=`${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;
+ $('countdown').textContent='العد التنازلي للصلاة القادمة';
+ $('progress').style.width=Math.max(0,Math.min(100,(now-prev.d)/(next.d-prev.d)*100))+'%';
+ if($('homePrevTime'))$('homePrevTime').textContent=fmtTime(String(prev.d.getHours()).padStart(2,'0')+':'+String(prev.d.getMinutes()).padStart(2,'0'));
+ if($('homeNextTime'))$('homeNextTime').textContent=fmtTime(String(next.d.getHours()).padStart(2,'0')+':'+String(next.d.getMinutes()).padStart(2,'0'));
+ $('countdown').textContent=`المتبقي ${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`;
+ window.currentKey=next.k;renderGrid();checkAdhan(now);
+}
+const ADHAN_SOURCES={"makkah": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Adhan_Makkah_%28%D8%A3%D8%B0%D8%A7%D9%86_%D9%85%D9%83%D8%A9_%D8%A7%D9%84%D9%85%D9%83%D8%B1%D9%85%D8%A9%29.mp3", "ali_mulla": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Ali_Ibn_Ahmad_Mala_-_HQ_%28%D8%B9%D9%84%D9%8A_%D8%A8%D9%86_%D8%A3%D8%AD%D9%85%D8%AF_%D9%85%D9%84%D8%A7%29.mp3", "abdulbasit": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Abdulbasit_Abdusamad_1_-_Egypt_%28%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%B7_%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D8%B5%D9%85%D8%AF_-_%D9%85%D8%B5%D8%B1%29.mp3", "abdulbasit_fajr": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Abdulbasit_Abdusamad_6_-_Fajr_Egypt_%28%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%B7_%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D8%B5%D9%85%D8%AF_-_%D9%81%D8%AC%D8%B1_%D9%85%D8%B5%D8%B1%29.mp3", "naeena": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Ahmed_Nuinaa_1_-_Egypt_%28%D8%A3%D8%AD%D9%85%D8%AF_%D9%86%D8%B9%D9%8A%D9%86%D8%B9_-_%D9%85%D8%B5%D8%B1%29.mp3", "iraqi": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Abdul_Rahman_Al_Arake_1_%28%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86_%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82%D9%8A%29.mp3", "makkah_fajr": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Adhan_Fajr_Al_Haram_Al_Maki_%28%D8%A3%D8%B0%D8%A7%D9%86_%D8%A7%D9%84%D9%81%D8%AC%D8%B1_%D8%A7%D9%84%D8%AD%D8%B1%D9%85_%D8%A7%D9%84%D9%85%D9%83%D9%8A%29.mp3", "madinah_fajr": "https://raw.githubusercontent.com/Kiwifu/adhan-mp3/main/Adhan_Fajr_Al_Haram_Al_Madani_%28%D8%A3%D8%B0%D8%A7%D9%86_%D8%A7%D9%84%D9%81%D8%AC%D8%B1_%D8%A7%D9%84%D8%AD%D8%B1%D9%85_%D8%A7%D9%84%D9%85%D8%AF%D9%86%D9%8A%29.mp3"};
+const BANG_AUDIO_SOURCES={'bang1':'./audio/bang/bang1.mp3','bang2':'./audio/bang/bang2.mp3','bang3':'./audio/bang/bang3.mp3','bang4':'./audio/bang/bang4.mp3','bang5':'./audio/bang/bang5.mp3','bang6':'./audio/bang/bang6.mp3','bang7':'./audio/bang/bang7.mp3','bang8':'./audio/bang/bang8.mp3','bang9':'./audio/bang/bang9.mp3','bang10':'./audio/bang/bang10.mp3','bang11':'./audio/bang/bang11.mp3','bang12':'./audio/bang/bang12.mp3','bang13':'./audio/bang/bang13.mp3','bang14':'./audio/bang/bang14.mp3','bangtawaw1':'./audio/bang/bangtawaw1.mp3','bangtawaw2':'./audio/bang/bangtawaw2.mp3','bangtawaw3':'./audio/bang/bangtawaw3.mp3','bangtawaw4':'./audio/bang/bangtawaw4.mp3','bangtawaw5':'./audio/bang/bangtawaw5.mp3','bangtawaw6':'./audio/bang/bangtawaw6.mp3','makka01':'./audio/bang/makka01.mp3','peshawa01':'./audio/bang/peshawa01.mp3','abdulrahman01':'./audio/bang/abdulrahman01.mp3'};
+let adhanPrefs=(()=>{try{return JSON.parse(localStorage.getItem('ronahi-adhan-prefs')||'{}')}catch(e){return {}}})();
+let adhanEnabled=(()=>{try{return localStorage.getItem('ronahi-adhan-enabled')==='true'}catch(e){return false}})();
+// User preference for allowing adhan through the iOS Ring/Silent switch.
+// Native iOS integration can be supplied by a registered RonahiAudio Capacitor plugin.
+let adhanSilentOverride=(()=>{try{return localStorage.getItem('ronahi-adhan-silent-override')==='true'}catch(e){return false}})();
+function applyAdhanSilentOverride(){
+ const toggle=$('adhanSilentOverride'),state=$('adhanSilentState');
+ if(toggle)toggle.checked=adhanSilentOverride;
+ if(state)state.textContent=adhanSilentOverride?'مفعّل':'إيقاف';
+ try{
+  const nativeAudio=window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.RonahiAudio;
+  if(nativeAudio&&typeof nativeAudio.setSilentModePlayback==='function') nativeAudio.setSilentModePlayback({enabled:adhanSilentOverride});
+  window.dispatchEvent(new CustomEvent('ronahi:adhan-silent-override',{detail:{enabled:adhanSilentOverride}}));
+ }catch(e){console.warn('Ronahi native audio bridge unavailable',e)}
+}
+const silentToggle=$('adhanSilentOverride');
+if(silentToggle)silentToggle.addEventListener('change',()=>{
+ adhanSilentOverride=!!silentToggle.checked;
+ try{localStorage.setItem('ronahi-adhan-silent-override',String(adhanSilentOverride))}catch(e){}
+ applyAdhanSilentOverride();
+ toast(adhanSilentOverride?'تم تفعيل خيار الأذان أثناء الصامت':'تم إيقاف خيار الأذان أثناء الصامت');
+});
+applyAdhanSilentOverride();
+
+$('adhanVoice').value=adhanPrefs.general||'makkah';
+$('fajrVoice').value=adhanPrefs.fajr||'makkah_fajr';
+function saveAdhanPrefs(){
+ adhanPrefs={...adhanPrefs,general:$('adhanVoice').value,fajr:$('fajrVoice').value,prayers:adhanPrefs.prayers||{}};
+ try{localStorage.setItem('ronahi-adhan-prefs',JSON.stringify(adhanPrefs))}catch(e){}
+}
+$('adhanVoice').onchange=saveAdhanPrefs;$('fajrVoice').onchange=saveAdhanPrefs;
+const VOICE_LABELS={makkah:'أذان مكة المكرمة',ali_mulla:'علي بن أحمد ملا',abdulbasit:'عبد الباسط عبد الصمد',naeena:'أحمد نعينع',iraqi:'عبدالرحمن العراقي',raad:'رعد الكردي · ملفك الخاص',makkah_fajr:'أذان الفجر · مكة',madinah_fajr:'أذان الفجر · المدينة',abdulbasit_fajr:'عبد الباسط · الفجر',bang1:'تسجيل بانگ رقم 01',bang2:'تسجيل بانگ رقم 02',bang3:'تسجيل بانگ رقم 03',bang4:'تسجيل بانگ رقم 04',bang5:'تسجيل بانگ رقم 05',bang6:'تسجيل بانگ رقم 06',bang7:'تسجيل بانگ رقم 07',bang8:'تسجيل بانگ رقم 08',bang9:'تسجيل بانگ رقم 09',bang10:'تسجيل بانگ رقم 10',bang11:'تسجيل بانگ رقم 11',bang12:'تسجيل بانگ رقم 12',bang13:'تسجيل بانگ رقم 13',bang14:'تسجيل بانگ رقم 14',bangtawaw1:'تسجيل بانگ طويل 1',bangtawaw2:'تسجيل بانگ طويل 2',bangtawaw3:'تسجيل بانگ طويل 3',bangtawaw4:'تسجيل بانگ طويل 4',bangtawaw5:'تسجيل بانگ طويل 5',bangtawaw6:'تسجيل بانگ طويل 6',makka01:'تسجيل مكة – Bang',peshawa01:'پێشەوا – Bang',abdulrahman01:'عبدالرحمن – Bang'};
+function renderVoiceGrid(selectId,gridId){
+ const select=$(selectId),grid=$(gridId);if(!select||!grid)return;
+ grid.innerHTML='';
+ [...select.options].forEach((opt,i)=>{
+  const tile=document.createElement('button');tile.type='button';tile.className='voice-tile'+(select.value===opt.value?' selected':'');
+  tile.setAttribute('aria-pressed',String(select.value===opt.value));
+  const label=VOICE_LABELS[opt.value]||opt.textContent;
+  tile.innerHTML=`<span class="voice-avatar">${i===0?'۞':i===1?'◉':i===2?'♬':i===3?'♪':i===4?'✦':'♫'}</span><span class="voice-copy"><b>${label}</b><small>${select.value===opt.value?'الصوت المختار':'اضغط للاختيار'}</small></span><span class="voice-play" aria-label="تشغيل تجريبي">▶</span>`;
+  tile.addEventListener('click',async(ev)=>{
+   const isPlay=ev.target&&ev.target.closest&&ev.target.closest('.voice-play');
+   select.value=opt.value;saveAdhanPrefs();renderVoiceGrid(selectId,gridId);
+   if(isPlay){await playAdhan(true,selectId==='fajrVoice'?'Fajr':'Dhuhr')}
+   else {toast('تم اختيار '+label);}
+  });
+  grid.appendChild(tile);
+ });
+}
+renderVoiceGrid('adhanVoice','generalVoiceGrid');renderVoiceGrid('fajrVoice','fajrVoiceGrid');
+$('adhanVoice').addEventListener('change',()=>renderVoiceGrid('adhanVoice','generalVoiceGrid'));
+$('fajrVoice').addEventListener('change',()=>renderVoiceGrid('fajrVoice','fajrVoiceGrid'));
+
+const PRAYER_VOICE_KEYS=['Fajr','Dhuhr','Asr','Maghrib','Isha'];
+const PRAYER_VOICE_NAMES={Fajr:'الفجر',Dhuhr:'الظهر',Asr:'العصر',Maghrib:'المغرب',Isha:'العشاء'};
+const PRAYER_VOICE_OPTIONS=[['makkah','أذان مكة المكرمة'],['ali_mulla','علي بن أحمد ملا'],['abdulbasit','عبد الباسط عبد الصمد'],['naeena','أحمد نعينع'],['iraqi','عبدالرحمن العراقي'],['makkah_fajr','أذان الفجر – مكة'],['madinah_fajr','أذان الفجر – المدينة'],['abdulbasit_fajr','عبد الباسط – الفجر'],['bang1','تسجيل بانگ رقم 01'],['bang2','تسجيل بانگ رقم 02'],['bang3','تسجيل بانگ رقم 03'],['bang4','تسجيل بانگ رقم 04'],['bang5','تسجيل بانگ رقم 05'],['bang6','تسجيل بانگ رقم 06'],['bang7','تسجيل بانگ رقم 07'],['bang8','تسجيل بانگ رقم 08'],['bang9','تسجيل بانگ رقم 09'],['bang10','تسجيل بانگ رقم 10'],['bang11','تسجيل بانگ رقم 11'],['bang12','تسجيل بانگ رقم 12'],['bang13','تسجيل بانگ رقم 13'],['bang14','تسجيل بانگ رقم 14'],['bangtawaw1','تسجيل بانگ طويل 1'],['bangtawaw2','تسجيل بانگ طويل 2'],['bangtawaw3','تسجيل بانگ طويل 3'],['bangtawaw4','تسجيل بانگ طويل 4'],['bangtawaw5','تسجيل بانگ طويل 5'],['bangtawaw6','تسجيل بانگ طويل 6'],['makka01','تسجيل مكة – Bang'],['peshawa01','پێشەوا – Bang'],['abdulrahman01','عبدالرحمن – Bang'],['raad','رعد الكردي · ملف MP3']];
+function prayerVoiceValue(key){const saved=adhanPrefs.prayers&&adhanPrefs.prayers[key];return saved||(key==='Fajr'?$('fajrVoice').value:$('adhanVoice').value)}
+function renderPrayerVoiceRows(){
+ const host=$('prayerVoiceRows');if(!host)return;
+ host.innerHTML=PRAYER_VOICE_KEYS.map(key=>{
+  const value=prayerVoiceValue(key);
+  const options=PRAYER_VOICE_OPTIONS.map(([v,label])=>`<option value="${v}" ${v===value?'selected':''}>${label}</option>`).join('');
+  return `<div class="prayer-voice-row"><label for="voice-${key}">${PRAYER_VOICE_NAMES[key]}</label><select id="voice-${key}" data-prayer-voice="${key}" aria-label="صوت أذان ${PRAYER_VOICE_NAMES[key]}">${options}</select><button type="button" data-test-prayer-voice="${key}" aria-label="تجربة صوت ${PRAYER_VOICE_NAMES[key]}" title="استمع للصوت">▶</button></div>`;
+ }).join('')+'<div class="prayer-voice-help">كل صلاة لها صوت مستقل. اضغط ▶ للتجربة، وسيُحفظ اختيارك تلقائياً.</div>';
+ host.querySelectorAll('select[data-prayer-voice]').forEach(sel=>sel.addEventListener('change',()=>{adhanPrefs.prayers=adhanPrefs.prayers||{};adhanPrefs.prayers[sel.dataset.prayerVoice]=sel.value;saveAdhanPrefs();toast('تم حفظ صوت أذان '+PRAYER_VOICE_NAMES[sel.dataset.prayerVoice])}));
+ host.querySelectorAll('button[data-test-prayer-voice]').forEach(btn=>btn.addEventListener('click',()=>{const key=btn.dataset.testPrayerVoice;const sel=$('voice-'+key);adhanPrefs.prayers=adhanPrefs.prayers||{};adhanPrefs.prayers[key]=sel.value;saveAdhanPrefs();playAdhan(true,key)}));
+}
+renderPrayerVoiceRows();
+
+function persistAdhan(){try{localStorage.setItem('ronahi-adhan-enabled',String(adhanEnabled))}catch(e){}}
+function openAdhanDB(){
+ return new Promise((resolve,reject)=>{
+  const req=indexedDB.open('ronahi-adhan-audio',1);
+  req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('audio'))req.result.createObjectStore('audio')};
+  req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+ });
+}
+async function saveRaadAudio(file){
+ const db=await openAdhanDB();
+ await new Promise((resolve,reject)=>{
+  const tx=db.transaction('audio','readwrite');tx.objectStore('audio').put(file,'raad');
+  tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);
+ });
+ db.close();
+}
+async function getRaadAudio(){
+ const db=await openAdhanDB();
+ const blob=await new Promise((resolve,reject)=>{
+  const req=db.transaction('audio','readonly').objectStore('audio').get('raad');
+  req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error);
+ });
+ db.close();return blob;
+}
+$('raadAudioFile').addEventListener('change',async e=>{
+ const f=e.target.files&&e.target.files[0];if(!f)return;
+ if(!f.type.startsWith('audio/')&&!f.name.toLowerCase().endsWith('.mp3')){toast('يرجى اختيار ملف MP3');return}
+ try{await saveRaadAudio(f);$('adhanStatus').textContent='تم حفظ تسجيل رعد الكردي على هذا الجهاز. يمكنك اختياره للفجر أو لبقية الصلوات.';toast('تم حفظ تسجيل رعد الكردي')}
+ catch(err){$('adhanStatus').textContent='تعذر حفظ الملف على الجهاز. جرّب ملفاً أصغر.'}
+});
+async function playAdhan(test=false,prayerKey=''){
+ const a=$('adhanAudio');if(!a)return;
+ const voice=(prayerKey&&adhanPrefs.prayers&&adhanPrefs.prayers[prayerKey])||(prayerKey==='Fajr'?$('fajrVoice').value:$('adhanVoice').value);
+ try{
+  let src=BANG_AUDIO_SOURCES[voice]||ADHAN_SOURCES[voice];
+  if(voice==='raad'){
+   const blob=await getRaadAudio();
+   if(!blob){$('adhanStatus').textContent='لم تضف ملف أذان رعد الكردي بعد. أضف ملف MP3 من هذه الصفحة أولاً.';toast('أضف ملف أذان رعد الكردي MP3');return}
+   src=URL.createObjectURL(blob);
+  }
+  if(!src){$('adhanStatus').textContent='التسجيل غير متوفر لهذا الاختيار.';toast('التسجيل غير متوفر');return}
+  // Resolve bundled audio against the app document URL (works in Safari and Capacitor).
+  const resolvedSrc=/^(blob:|https?:|data:)/i.test(src)?src:new URL(src,document.baseURI).href;
+  if(a.dataset.voice!==voice||a.src!==resolvedSrc){
+   a.pause();a.removeAttribute('src');a.load();
+   a.src=resolvedSrc;a.dataset.voice=voice;a.preload='auto';a.load();
+  }
+  a.currentTime=0;
+  // IMPORTANT for iOS Safari/WebKit: call play() directly from the tap flow.
+  // Waiting for canplay before play() can consume the transient user activation
+  // and cause NotAllowedError even though the user tapped the preview button.
+  a.preload='auto';
+  a.playsInline=true;
+  a.setAttribute('playsinline','');
+  a.setAttribute('webkit-playsinline','');
+  a.muted=false;
+  a.volume=1;
+  const playRequest=a.play();
+  if(playRequest && typeof playRequest.then==='function') await playRequest;
+  window.ronahiAdhanPlaying=true;
+  $('adhanStatus').textContent=test?'يتم تشغيل تسجيل الأذان كاملاً.':'حان وقت الصلاة — بدأ تشغيل الأذان كاملاً.';
+  a.onended=()=>{window.ronahiAdhanPlaying=false;$('adhanStatus').textContent='انتهى الأذان. عادت أصوات التطبيق إلى حالتها السابقة.'};
+ }catch(e){
+  window.ronahiAdhanPlaying=false;
+  const code=a.error&&a.error.code;
+  const detail=(e&&e.name==='NotAllowedError')?'منع iOS تشغيل الصوت. اضغط زر التشغيل مباشرة مرة أخرى وتأكد من عدم كتم صوت الجهاز.':code===2?'تعذر الوصول إلى ملف الصوت.':code===3?'صيغة الملف الصوتي غير مدعومة.':code===4?'ملف الصوت غير موجود أو غير صالح.':(e&&e.message)||'تحقق من إعدادات الصوت.';
+  $('adhanStatus').textContent='تعذر تشغيل الأذان: '+detail;
+  toast('تعذر تشغيل صوت الأذان');
+  console.error('Ronahi Adhan playback error',{voice,src:a.currentSrc,error:e,mediaError:a.error});
+ }
+}
+function checkAdhan(now){
+ if(!adhanEnabled||!timings||document.visibilityState!=='visible')return;
+ for(const k of ['Fajr','Dhuhr','Asr','Maghrib','Isha']){
+  if(mutedAdhanPrayers[k])continue;
+  const t=cleanTime(timings[k]);if(!/^\d{1,2}:\d{2}$/.test(t))continue;
+  const [hh,mm]=t.split(':').map(Number);if(now.getHours()!==hh||now.getMinutes()!==mm)continue;
+  const stamp=`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}-${k}`;
+  let last='';try{last=localStorage.getItem('ronahi-last-adhan')||''}catch(e){}
+  if(last===stamp)return;
+  try{localStorage.setItem('ronahi-last-adhan',stamp)}catch(e){}
+  playAdhan(false,k);
+  if('Notification'in window&&Notification.permission==='granted'){try{new Notification('حان وقت الصلاة',{body:(names.find(x=>x[0]===k)||[k,k])[1]+' — Ronahî'})}catch(e){}}
+  return;
+ }
+}
+$('adhanEnable').onclick=async()=>{
+ saveAdhanPrefs();adhanEnabled=true;persistAdhan();
+ await playAdhan(true,'Dhuhr');
+ $('adhanEnable').textContent='الأذان التلقائي مفعّل';
+ if('Notification'in window&&Notification.permission==='default'){try{await Notification.requestPermission()}catch(e){}}
+};
+$('adhanTest').onclick=()=>{saveAdhanPrefs();playAdhan(true,'Dhuhr')};
+$('fajrTest').onclick=()=>{saveAdhanPrefs();playAdhan(true,'Fajr')};
+$('adhanStop').onclick=()=>{const a=$('adhanAudio');window.ronahiAdhanPlaying=false;if(a){a.pause();a.currentTime=0;$('adhanStatus').textContent='تم إيقاف الأذان. عادت أصوات التطبيق إلى حالتها السابقة.'}};
+if(adhanEnabled){$('adhanEnable').textContent='الأذان التلقائي مفعّل';$('adhanStatus').textContent='الأذان التلقائي مفعّل. يجب إبقاء التطبيق مفتوحاً للسماح بفحص وقت الصلاة.'}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&timings){if(new Date().toDateString()!==window.ronahiLoadedDay)loadTimes();else updateNext()}});
+window.addEventListener('pageshow',()=>{if(timings)updateNext()});
+
+let qiblaBearing=0,compassActive=false,lastHeading=null,compassHasReading=false;
+function normalizeAngle(v){return ((v%360)+360)%360}
+function qibla(){
+ if(!$('qiblaDegree')||!$('qiblaNeedle')||!$('qiblaText'))return;
+ const kLat=21.4225*Math.PI/180,kLon=39.8262*Math.PI/180,p=lat*Math.PI/180,l=lon*Math.PI/180;
+ const y=Math.sin(kLon-l),x=Math.cos(p)*Math.tan(kLat)-Math.sin(p)*Math.cos(kLon-l);
+ qiblaBearing=normalizeAngle(Math.atan2(y,x)*180/Math.PI);
+ $('qiblaDegree').textContent=Math.round(qiblaBearing)+'°';
+ $('qiblaText').textContent='اتجاه مكة المكرمة من الشمال: '+Math.round(qiblaBearing)+'°';
+ updateQiblaNeedle();
+}
+function updateQiblaNeedle(){
+ if(!$('qiblaNeedle'))return;
+ // If the device heading is available, rotate the arrow relative to the phone.
+ // Otherwise show the true bearing measured clockwise from geographic north.
+ const angle=lastHeading===null?qiblaBearing:normalizeAngle(qiblaBearing-lastHeading);
+ $('qiblaNeedle').style.transform=`rotate(${angle}deg)`;
+}
+function setCompassStatus(message){const el=$('compassStatus');if(el)el.textContent=message}
+function onDeviceOrientation(event){
+ let deviceHeading=null;
+ // iPhone Safari exposes a calibrated compass heading in degrees clockwise from north.
+ if(typeof event.webkitCompassHeading==='number'&&Number.isFinite(event.webkitCompassHeading)){
+  deviceHeading=event.webkitCompassHeading;
+ }else if((event.absolute===true||event.type==='deviceorientationabsolute')&&typeof event.alpha==='number'&&Number.isFinite(event.alpha)){
+  // Absolute alpha is measured against the device reference frame; compensate for screen rotation.
+  const screenAngle=(screen.orientation&&typeof screen.orientation.angle==='number')?screen.orientation.angle:(typeof window.orientation==='number'?window.orientation:0);
+  deviceHeading=360-event.alpha+screenAngle;
+ }
+ // Ignore relative-only alpha: it is not a reliable geographic north reference.
+ if(deviceHeading===null)return;
+ lastHeading=normalizeAngle(deviceHeading);compassHasReading=true;updateQiblaNeedle();
+ const accuracy=typeof event.webkitCompassAccuracy==='number'&&event.webkitCompassAccuracy>=0?Math.round(event.webkitCompassAccuracy)+'°':'غير محددة';
+ setCompassStatus('البوصلة الحية تعمل. وجّه السهم إلى الكعبة المشرفة. دقة المستشعر: '+accuracy);
+}
+function startDeviceCompass(){
+ if(!('DeviceOrientationEvent'in window)){
+  setCompassStatus('هذا الجهاز أو المتصفح لا يدعم مستشعر اتجاه الهاتف؛ يظهر السهم اتجاه القبلة من الشمال فقط.');
+  toast('مستشعر البوصلة غير مدعوم');return;
+ }
+ const listen=()=>{
+  if(compassActive)return;
+  compassActive=true;lastHeading=null;compassHasReading=false;updateQiblaNeedle();
+  window.addEventListener('deviceorientation',onDeviceOrientation,true);
+  window.addEventListener('deviceorientationabsolute',onDeviceOrientation,true);
+  setCompassStatus('تم تفعيل المستشعر؛ ننتظر قراءة الشمال الحقيقي… أبعد الهاتف عن المعادن وحرّكه ببطء بشكل رقم 8.');
+  window.setTimeout(()=>{
+   if(compassActive&&!compassHasReading)setCompassStatus('لم تصل قراءة بوصلة موثوقة. تأكد من دعم الجهاز، وإذن الحركة، وجرّب المعايرة بعيداً عن المعادن.');
+  },8000);
+  toast('تم تفعيل مستشعر البوصلة');
+ };
+ if(typeof DeviceOrientationEvent.requestPermission==='function'){
+  DeviceOrientationEvent.requestPermission().then(permission=>{
+   if(permission==='granted')listen();
+   else{setCompassStatus('لم يُمنح إذن مستشعر الاتجاه. اسمح بالوصول إلى الحركة والاتجاه من إعدادات Safari.');toast('إذن البوصلة مرفوض');}
+  }).catch(()=>{setCompassStatus('تعذر طلب إذن البوصلة. افتح التطبيق عبر HTTPS واضغط تفعيل البوصلة مجدداً.');toast('تعذر تشغيل البوصلة')});
+ }else listen();
+}
+$('locateBtn').onclick=()=>{
+ if(!navigator.geolocation){setCompassStatus('المتصفح لا يدعم تحديد الموقع؛ سيبقى الحساب على إحداثيات دهوك.');toast('تحديد الموقع غير مدعوم');return}
+ if(!window.isSecureContext){setCompassStatus('يلزم فتح التطبيق عبر HTTPS للسماح بتحديد الموقع.');toast('افتح التطبيق عبر اتصال HTTPS');return}
+ toast('جارٍ تحديد موقعك...');
+ navigator.geolocation.getCurrentPosition(pos=>{
+  lat=pos.coords.latitude;lon=pos.coords.longitude;qibla();
+  try{const prefs=JSON.parse(localStorage.getItem('ronahi-settings')||'{}');Object.assign(prefs,{lat,lon});localStorage.setItem('ronahi-settings',JSON.stringify(prefs))}catch(e){}
+  setCompassStatus('تم تحديد موقعك بدقة '+Math.round(pos.coords.accuracy)+' متر. شغّل بوصلة الجهاز لتحريك السهم.');
+  toast('تم تحديث اتجاه القبلة');
+ },err=>{
+  const msg=err.code===1?'تم رفض إذن الموقع. اسمح للموقع من إعدادات المتصفح.':err.code===2?'تعذر تحديد الموقع. تحقق من GPS.':'انتهت مهلة تحديد الموقع. حاول قرب نافذة أو في الخارج.';
+  setCompassStatus(msg+' سيبقى الحساب على إحداثيات دهوك.');toast('تعذر تحديد موقعك');
+ },{enableHighAccuracy:true,timeout:20000,maximumAge:0})
+};$('refresh').onclick=loadTimes;populateGovernorates();$('governorateSelect').value=provinceKey;populateCities();if(findCity(cityKey)){ $('citySelect').value=cityKey;applySelectedCity(); }else{const match=IRAQ_GOVERNORATES.flatMap(g=>g.cities).find(c=>c[2].toLowerCase()===String(city).toLowerCase());if(match){cityKey=match[0];provinceKey=IRAQ_GOVERNORATES.find(g=>g.cities.some(c=>c[0]===cityKey)).key;$('governorateSelect').value=provinceKey;populateCities();$('citySelect').value=cityKey;applySelectedCity();}}$('governorateSelect').onchange=()=>{provinceKey=$('governorateSelect').value;cityKey='';populateCities();};$('citySelect').onchange=()=>{const c=findCity($('citySelect').value);if(c){cityKey=c[0];selectedCityAr=c[1];}};$('saveSettings').onclick=()=>{applySelectedCity();method=$('method').value;school=$('school').value;try{localStorage.setItem('ronahi-settings',JSON.stringify({city,cityAr:selectedCityAr,country,method,school,lat,lon,provinceKey,cityKey}))}catch(e){}$('cityLabel').textContent=selectedCityAr;$('legacyCityLabel').textContent=selectedCityAr+' – العراق';loadTimes();toast('تم حفظ المدينة وتحديث مواقيت الصلاة')};
+
+// v1.39: choose the city directly from the location pill on the home screen.
+function fillQuickCityPicker(){
+ const gov=$('quickGovernorateSelect'),citySel=$('quickCitySelect');if(!gov||!citySel)return;
+ gov.innerHTML=IRAQ_GOVERNORATES.map(g=>`<option value="${g.key}">${g.name}</option>`).join('');
+ gov.value=provinceKey||'duhok';
+ const fill=()=>{const g=findGovernorate(gov.value);citySel.innerHTML=g.cities.map(c=>`<option value="${c[0]}">${c[1]}</option>`).join('');const current=g.cities.find(c=>c[0]===cityKey);citySel.value=current?current[0]:g.cities[0][0];};
+ fill();gov.onchange=fill;
+}
+function openQuickCityPicker(){fillQuickCityPicker();$('cityPicker').classList.add('open');document.body.style.overflow='hidden';}
+function closeQuickCityPicker(){$('cityPicker').classList.remove('open');document.body.style.overflow='';}
+$('openCityPicker').addEventListener('click',openQuickCityPicker);
+$('closeCityPicker').addEventListener('click',closeQuickCityPicker);
+$('cancelCityPicker').addEventListener('click',closeQuickCityPicker);
+$('cityPicker').addEventListener('click',ev=>{if(ev.target===$('cityPicker'))closeQuickCityPicker();});
+$('applyQuickCity').addEventListener('click',()=>{
+ $('governorateSelect').value=$('quickGovernorateSelect').value;provinceKey=$('governorateSelect').value;populateCities();$('citySelect').value=$('quickCitySelect').value;
+ $('saveSettings').click();closeQuickCityPicker();
+});
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&$('cityPicker').classList.contains('open'))closeQuickCityPicker();});
+
+function updateDigitalClock(){const e=$('digitalClock');if(e)e.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date())}updateDigitalClock();setInterval(updateDigitalClock,1000);
+// Quran catalogue and reader (Arabic text loaded from the public AlQuran Cloud API).
+let surahsCache=[];
+async function loadSurahs(){const box=$('surahList');if(!box)return;try{const r=await fetch('https://api.alquran.cloud/v1/surah');if(!r.ok)throw new Error('network');const j=await r.json();surahsCache=j.data||[];renderSurahs(surahsCache)}catch(e){box.innerHTML='<div class="card muted">تعذر تحميل قائمة السور. تحقق من اتصال الإنترنت ثم أعد فتح قسم القرآن.</div>'}}
+function renderSurahs(items){const box=$('surahList');if(!box)return;box.innerHTML=items.map(x=>`<button class="surah-item" data-surah="${x.number}"><span class="surah-number"><span>${x.number}</span></span><span class="surah-copy"><b>${x.name}</b><small>${x.revelationType==='Meccan'?'مكية':'مدنية'}</small></span><span class="surah-count">${x.numberOfAyahs} آية</span></button>`).join('');box.querySelectorAll('[data-surah]').forEach(b=>b.onclick=()=>openSurah(Number(b.dataset.surah)))}
+async function openSurah(n){const list=$('surahList'),reader=$('quranReader');if(!reader)return;list.hidden=true;reader.hidden=false;$('ayahList').innerHTML='<div class="loading">جارٍ تحميل الآيات...</div>';try{const r=await fetch(`https://api.alquran.cloud/v1/surah/${n}/quran-uthmani`);if(!r.ok)throw new Error('network');const j=await r.json(),d=j.data;$('readerTitle').textContent=d.name;$('readerMeta').textContent=`${d.numberOfAyahs} آية`;$('ayahList').innerHTML=d.ayahs.map(a=>`<span class="ayah">${a.text}<span class="ayah-num">${a.numberInSurah}</span> </span>`).join('')}catch(e){$('ayahList').innerHTML='<p class="muted">تعذر تحميل السورة. تحقق من الإنترنت.</p>'}}
+$('surahSearch')?.addEventListener('input',e=>{const q=e.target.value.trim();renderSurahs(surahsCache.filter(x=>x.name.includes(q)||String(x.number)===q))});$('backSurahs')?.addEventListener('click',()=>{$('quranReader').hidden=true;$('surahList').hidden=false});
+const adhkarData={morning:[['أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ','مرة واحدة'],['اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا وَبِكَ نَمُوتُ','مرة واحدة'],['سُبْحَانَ اللَّهِ وَبِحَمْدِهِ','100 مرة']],evening:[['أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ','مرة واحدة'],['اللَّهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا وَبِكَ نَمُوتُ','مرة واحدة'],['سُبْحَانَ اللَّهِ وَبِحَمْدِهِ','100 مرة']],prayer:[['أَسْتَغْفِرُ اللَّهَ','3 مرات'],['اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ','مرة واحدة'],['سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَاللَّهُ أَكْبَرُ','33 مرة']]};let adhkarKind='morning',adhkarDone={};
+function renderAdhkar(){const data=adhkarData[adhkarKind],box=$('adhkarList');if(!box)return;box.innerHTML=data.map((x,i)=>{const key=adhkarKind+'-'+i,done=!!adhkarDone[key];return `<article class="adhkar-item"><p>${x[0]}</p><div class="adhkar-foot"><span>${x[1]}</span><button class="adhkar-count" data-adhkar="${i}">${done?'✓ تم':'تم الذكر'}</button></div></article>`}).join('');box.querySelectorAll('[data-adhkar]').forEach(b=>b.onclick=()=>{const k=adhkarKind+'-'+b.dataset.adhkar;adhkarDone[k]=!adhkarDone[k];renderAdhkar()});const done=data.filter((_,i)=>adhkarDone[adhkarKind+'-'+i]).length;$('adhkarProgress').textContent=`${done} / ${data.length}`;$('adhkarProgressBar').style.width=(done/data.length*100)+'%'}
+document.querySelectorAll('#adhkarModes [data-kind]').forEach(b=>b.onclick=()=>{adhkarKind=b.dataset.kind;document.querySelectorAll('#adhkarModes [data-kind]').forEach(x=>x.classList.toggle('active',x===b));renderAdhkar()});renderAdhkar();
+// Annual calendar: 2027 Duhok prayer times from AlAdhan annual calendar API.
+const ANNUAL_EVENTS_2027=[
+ ['2027-01-05','الإسراء والمعراج','27 رجب 1448 هـ'],
+ ['2027-01-23','النصف من شعبان','15 شعبان 1448 هـ'],
+ ['2027-02-08','بداية شهر رمضان','1 رمضان 1448 هـ'],
+ ['2027-03-06','ليلة القدر (تقديري)','27 رمضان 1448 هـ'],
+ ['2027-03-09','عيد الفطر المبارك','1 شوال 1448 هـ'],
+ ['2027-03-10','ثاني أيام عيد الفطر','2 شوال 1448 هـ'],
+ ['2027-03-11','ثالث أيام عيد الفطر','3 شوال 1448 هـ'],
+ ['2027-05-15','يوم عرفة','9 ذو الحجة 1448 هـ'],
+ ['2027-05-16','عيد الأضحى المبارك','10 ذو الحجة 1448 هـ'],
+ ['2027-05-17','ثاني أيام عيد الأضحى','11 ذو الحجة 1448 هـ'],
+ ['2027-05-18','ثالث أيام عيد الأضحى','12 ذو الحجة 1448 هـ'],
+ ['2027-05-19','رابع أيام عيد الأضحى','13 ذو الحجة 1448 هـ'],
+ ['2027-06-06','رأس السنة الهجرية','1 محرم 1449 هـ'],
+ ['2027-06-15','يوم عاشوراء','10 محرم 1449 هـ'],
+ ['2027-08-14','المولد النبوي الشريف','12 ربيع الأول 1449 هـ'],
+ ['2027-12-25','الإسراء والمعراج','27 رجب 1449 هـ']
+];
+let annualPrayerData=[];
+const annualMonthNames=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+function renderAnnualEvents(){const box=$('annualEvents');if(!box)return;box.innerHTML=ANNUAL_EVENTS_2027.map(e=>`<div class="annual-event"><div><b>${e[1]}</b><small>${e[2]}</small></div><time>${new Date(e[0]+'T12:00:00').toLocaleDateString('ar-IQ',{day:'numeric',month:'long'})}</time></div>`).join('')}
+function annualDateKey(d){const g=d&&d.gregorian&&d.gregorian.date;if(g){const [dd,mm,yyyy]=g.split('-');return `${yyyy}-${mm}-${dd}`}return ''}
+function renderAnnualPrayerRows(){const body=$('annualPrayerRows');if(!body)return;const m=Number($('annualMonth').value||new Date().getMonth()+1),year=Number(window.ronahiCalendarYear||new Date().getFullYear());const rows=annualPrayerData.filter(x=>{const k=annualDateKey(x.date);return Number(k.slice(0,4))===year&&Number(k.slice(5,7))===m});$('annualCount').textContent=`${rows.length} يوماً`;if(!rows.length){body.innerHTML='<tr><td colspan="6" class="loading">لا توجد بيانات لهذا الشهر.</td></tr>';return}const eventDates=new Set(ANNUAL_EVENTS_2027.map(e=>e[0])),today=new Date().toISOString().slice(0,10);body.innerHTML=rows.map(x=>{const key=annualDateKey(x.date),g=x.date?.gregorian||{},t=x.timings||{},fmt=v=>(v||'—').split(' ')[0];return `<tr class="${key===today?'today-row ':''}${eventDates.has(key)?'event-day':''}"><td class="date-cell">${g.day||key.slice(8,10)}-${key.slice(5,7)}</td><td>${fmt(t.Fajr)}</td><td>${fmt(t.Dhuhr)}</td><td>${fmt(t.Asr)}</td><td>${fmt(t.Maghrib)}</td><td>${fmt(t.Isha)}</td></tr>`}).join('')}
+async function loadAnnualCalendar(){const status=$('annualStatus'),body=$('annualPrayerRows');if(!status||!body)return;const year=Number(window.ronahiCalendarYear||new Date().getFullYear());status.textContent=`جارٍ تحميل مواقيت ${year}...`;body.innerHTML='<tr><td colspan="6" class="loading">جارٍ تحميل المواقيت...</td></tr>';
+ const cacheKey=`ronahi-monthly-${year}-${lat}-${lon}-${method}-${school}`;let rows=null;try{const cached=JSON.parse(localStorage.getItem(cacheKey)||'null');if(cached&&cached.savedAt>Date.now()-86400000&&Array.isArray(cached.rows))rows=cached.rows}catch(e){}
+ if(!rows){const url=`https://api.aladhan.com/v1/calendar/${year}?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lon)}&method=${encodeURIComponent(method)}&school=${encodeURIComponent(school)}&timezonestring=Asia%2FBaghdad`;
+  try{const r=await fetch(url);if(!r.ok)throw Error('HTTP '+r.status);const j=await r.json();if(j.code!==200)throw Error('API');const d=j.data;rows=Array.isArray(d)?d.flat(Infinity):Object.values(d||{}).flat(Infinity);rows=rows.filter(x=>x&&x.timings&&x.date&&x.date.gregorian);if(rows.length<350)throw Error('Incomplete annual calendar');try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),rows}))}catch(e){}}
+  catch(err){status.textContent='تعذر تحميل المواقيت. تحقق من الإنترنت ثم أعد المحاولة.';body.innerHTML='<tr><td colspan="6" class="loading error">لم تصل بيانات المواقيت كاملة. لم نعرض أوقاتاً تقديرية.</td></tr>';return}}
+ annualPrayerData=rows.sort((a,b)=>annualDateKey(a.date).localeCompare(annualDateKey(b.date)));renderAnnualPrayerRows();status.textContent=`تم تحميل مواقيت ${$('annualMonth').options[$('annualMonth').selectedIndex]?.text||''} لمدينة ${city} حسب طريقة الحساب ${method}.`}
+window.ronahiCalendarYear=new Date().getFullYear();if($('annualMonth'))$('annualMonth').value=String(new Date().getMonth()+1);if($('calendarYearLabel'))$('calendarYearLabel').textContent=String(window.ronahiCalendarYear);$('loadAnnualCalendar')?.addEventListener('click',loadAnnualCalendar);$('annualMonth')?.addEventListener('change',renderAnnualPrayerRows);renderAnnualEvents();
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+ const target=$(b.dataset.page);if(!target){toast('هذا القسم غير متوفر');return}
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+ b.classList.add('active');target.classList.add('active');
+ if(b.dataset.page==='qibla')qibla();if(b.dataset.page==='quran'&&!surahsCache.length)loadSurahs();if(b.dataset.page==='calendar'&&!annualPrayerData.length)loadAnnualCalendar();$('openMonthlyPrayerTable')?.addEventListener('click',()=>{const page=$('calendar');if(!page)return;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.page==='calendar'));document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id==='calendar'));if(!annualPrayerData.length)loadAnnualCalendar();window.scrollTo({top:0,behavior:'smooth'});});
+});function getAutomaticTheme(){
+ const now=new Date(),minute=now.getHours()*60+now.getMinutes();
+ // Duhok's bundled Bang timetable has no Sunrise field and its Maghrib values
+ // are displayed in 12-hour format. Using them directly made 05:xx look like
+ // an early-morning sunset, keeping the app in night mode all day.
+ // Use the device's local clock as a reliable fallback: 06:00–17:00 daylight.
+ let dayStart=6*60,dayEnd=17*60;
+ if(timings){
+  const rise=prayerClockMinutes(timings.Sunrise);
+  if(rise!==null)dayStart=rise;
+  // Only accept a 24-hour Maghrib value as a sunset boundary.
+  const raw=String(timings.Maghrib||'').match(/(\d{1,2}):(\d{2})/);
+  if(raw&&Number(raw[1])>=12)dayEnd=Number(raw[1])*60+Number(raw[2]);
+ }
+ return minute>=dayStart&&minute<dayEnd?'light':'midnight';
+/* v1.52 — configurable pre-prayer reminders */
+const PRE_REMINDER_KEY='ronahi-pre-prayer-reminder-v1';
+let preReminderPrefs=(()=>{try{return JSON.parse(localStorage.getItem(PRE_REMINDER_KEY)||'{}')}catch(e){return {}}})();
+function renderPreReminderPrefs(){ $('preReminderEnabled').value=preReminderPrefs.enabled?'on':'off'; $('preReminderMinutes').value=String(preReminderPrefs.minutes||10); $('preReminderSound').value=preReminderPrefs.sound||'chime'; }
+function savePreReminderPrefs(){ preReminderPrefs={enabled:$('preReminderEnabled').value==='on',minutes:Number($('preReminderMinutes').value)||10,sound:$('preReminderSound').value||'chime'};try{localStorage.setItem(PRE_REMINDER_KEY,JSON.stringify(preReminderPrefs))}catch(e){} }
+function playPreReminderTone(){const kind=$('preReminderSound').value;if(kind==='none')return;try{const Ctx=window.AudioContext||window.webkitAudioContext;if(!Ctx)return;const ctx=new Ctx(),now=ctx.currentTime;const notes=kind==='bell'?[880,1175]:kind==='soft'?[523,659]:[659,784,988];notes.forEach((freq,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(.0001,now+i*.18);gain.gain.exponentialRampToValueAtTime(.12,now+i*.18+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+i*.18+.32);osc.connect(gain);gain.connect(ctx.destination);osc.start(now+i*.18);osc.stop(now+i*.18+.34)});setTimeout(()=>ctx.close().catch(()=>{}),1400)}catch(e){}}
+$('preReminderTest').onclick=()=>playPreReminderTone();renderPreReminderPrefs();
+async function schedulePrePrayerNotifications(){
+ if(!preReminderPrefs.enabled||!timings)return;
+ const cap=window.Capacitor,plugin=cap&&cap.Plugins&&cap.Plugins.LocalNotifications;
+ if(!plugin||typeof plugin.schedule!=='function'){$('preReminderStatus').textContent='تم حفظ الإعدادات. لجدولة التنبيهات عند إغلاق التطبيق، شغّل نسخة iOS/Android بعد مزامنة إضافة Local Notifications.';return;}
+ try{
+  let permission=await plugin.checkPermissions();if(permission.display!=='granted')permission=await plugin.requestPermissions();
+  if(permission.display!=='granted'){$('preReminderStatus').textContent='لم يتم السماح بالإشعارات. اسمح بإشعارات Ronahî من إعدادات الجهاز.';return;}
+  try{await plugin.cancel({notifications:Array.from({length:35},(_,i)=>({id:52000+i}))})}catch(e){}
+  const notifications=[],keys=['Fajr','Dhuhr','Asr','Maghrib','Isha'],ar={Fajr:'الفجر',Dhuhr:'الظهر',Asr:'العصر',Maghrib:'المغرب',Isha:'العشاء'},today=new Date();
+  for(let day=0;day<7;day++){
+   const date=new Date(today.getFullYear(),today.getMonth(),today.getDate()+day,12),ts=Math.floor(date.getTime()/1000);let dayTimes=day===0?timings:null;
+   if(day){try{const u=`https://api.aladhan.com/v1/timings/${ts}?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lon)}&method=${encodeURIComponent(method)}&school=${encodeURIComponent(school)}`;const r=await fetch(u),j=r.ok?await r.json():null;if(j&&j.code===200)dayTimes=j.data.timings}catch(e){}}
+   if(!dayTimes)continue;
+   keys.forEach((k,i)=>{const raw=cleanTime(dayTimes[k]);if(!/^\d{1,2}:\d{2}$/.test(raw))return;const [hh,mm]=raw.split(':').map(Number),at=new Date(date.getFullYear(),date.getMonth(),date.getDate(),hh,mm);at.setMinutes(at.getMinutes()-preReminderPrefs.minutes);if(at<=new Date())return;notifications.push({id:52000+day*5+i,title:'استعد للصلاة 🌙',body:`باقي ${preReminderPrefs.minutes} دقيقة على صلاة ${ar[k]}`,schedule:{at,allowWhileIdle:true},sound:'default'});});
+  }
+  if(notifications.length)await plugin.schedule({notifications});$('preReminderStatus').textContent=`تمت جدولة ${notifications.length} تنبيهاً للأيام السبعة القادمة، قبل الصلاة بـ ${preReminderPrefs.minutes} دقيقة.`;
+ }catch(e){$('preReminderStatus').textContent='تعذرت جدولة التنبيهات. تحقق من صلاحيات الإشعارات ثم حاول مجدداً.';}
+}
+$('savePreReminder').onclick=async()=>{savePreReminderPrefs();if(preReminderPrefs.enabled){await schedulePrePrayerNotifications();toast('تم حفظ إعدادات التنبيه المسبق')}else{const pl=window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.LocalNotifications;if(pl&&pl.cancel){try{await pl.cancel({notifications:Array.from({length:35},(_,i)=>({id:52000+i}))})}catch(e){}}$('preReminderStatus').textContent='تم إيقاف التنبيهات المسبقة.';toast('تم إيقاف التنبيهات المسبقة')}};
+}$('notifyBtn').onclick=async()=>{if(!('Notification'in window)){toast('المتصفح لا يدعم الإشعارات');return}let p=await Notification.requestPermission();toast(p==='granted'?'تم السماح بالإشعارات':'لم يتم السماح بالإشعارات')};$('calibrate').onclick=startDeviceCompass;
+
+const LANGS={
+ar:{dir:'rtl',tagline:'رفيقك للصلاة والذكر',home:'الرئيسية',qibla:'القبلة',adhkar:'الأذكار',tasbih:'المسبحة',quran:'القرآن',settings:'الإعدادات',times:'مواقيت الصلاة',next:'الصلاة القادمة',remaining:'متبقي',hour:'ساعة',minute:'دقيقة',second:'ثانية',reminder:'🌙 تذكير بالصلاة',reminderDesc:'فعّل التنبيهات لتذكيرك عندما يكون التطبيق مفتوحاً',enable:'تفعيل',qiblaTitle:'🧭 اتجاه القبلة',qiblaDesc:'اتجاه الكعبة المشرفة من موقعك المحدد',calibrate:'استخدام بوصلة الجهاز',adhkarTitle:'🤲 أذكار مختارة',tasbihTitle:'📿 المسبحة الإلكترونية',tap:'اضغط للتسبيح',reset:'إعادة العداد',city:'المدينة',country:'الدولة',method:'طريقة الحساب',school:'حساب العصر',language:'لغة التطبيق',save:'حفظ وتحديث المواقيت',about:'حول التطبيق',names:['الفجر','الشروق','الظهر','العصر','المغرب','العشاء'],hijri:'التاريخ الهجري',loading:'جارٍ تحميل المواقيت'},
+'ku':{dir:'rtl',tagline:'Hevalê te ji bo nimêj û zikrê',home:'سەرەکی',qibla:'قیبلە',adhkar:'زیکر',tasbih:'تەسبیح',quran:'قورئان',settings:'ڕێکخستن',times:'کاتێن نڤێژێ',next:'نڤێژا دهێت',remaining:'مای',hour:'دەمژمێر',minute:'خولەک',second:'چرکە',reminder:'🌙 بیرخستنەوەیا نڤێژێ',reminderDesc:'ئاگەهداریان چالاک بکە بۆ بیرخستنەوە ل دەمێ ڤەکریا بەرنامەیێ',enable:'چالاک بکە',qiblaTitle:'🧭 ئاراستەیا قیبلەیێ',qiblaDesc:'ئاراستەیا کەعبەیێ ژ جهێ تە',calibrate:'بکارئینانا بۆسۆلا تەلەفۆنێ',adhkarTitle:'🤲 زیکرێن هەلبژارتی',tasbihTitle:'📿 تەسبیحا ئەلیکترۆنی',tap:'بۆ تەسبیحێ لێ بدە',reset:'ژمارەکێ ڤەگەرینە',city:'باژێر',country:'وەلات',method:'رێکا حسابکرنێ',school:'حسابا عەسرێ',language:'زمانێ بەرنامەیێ',save:'پاراستن و نووکرنا کاتان',about:'دەربارەی بەرنامەیێ',names:['بەیانی','ڕۆژهەلاتن','نیوەڕۆ','عەسر','مەغریب','عیشا'],hijri:'مێژوویا هیجری',loading:'کاتێن نڤێژێ دهێنە بارکرن'},
+en:{dir:'ltr',quran:'Quran',tagline:'Your companion for prayer and remembrance',home:'Home',qibla:'Qibla',adhkar:'Adhkar',settings:'Settings',times:'Prayer Times',next:'Next prayer',remaining:'Remaining',hour:'h',minute:'m',second:'s',reminder:'🌙 Prayer reminder',reminderDesc:'Enable notifications for reminders while the app is open',enable:'Enable',qiblaTitle:'🧭 Qibla direction',qiblaDesc:'Direction of the Kaaba from your selected location',calibrate:'Use device compass',adhkarTitle:'🤲 Selected adhkar',tasbihTitle:'📿 Digital tasbih',tap:'Tap to count',reset:'Reset counter',city:'City',country:'Country',method:'Calculation method',school:'Asr calculation',language:'App language',save:'Save and refresh times',about:'About',names:['Fajr','Sunrise','Dhuhr','Asr','Maghrib','Isha'],hijri:'Hijri date',loading:'Loading prayer times'},
+tr:{dir:'ltr',tagline:'Namaz ve zikir için yol arkadaşınız',home:'Ana sayfa',qibla:'Kıble',adhkar:'Dualar',tasbih:'Tesbih',quran:'Kur’an',settings:'Ayarlar',times:'Namaz vakitleri',next:'Sonraki namaz',remaining:'Kalan',hour:'sa',minute:'dk',second:'sn',reminder:'🌙 Namaz hatırlatıcısı',reminderDesc:'Uygulama açıkken hatırlatma almak için bildirimleri açın',enable:'Etkinleştir',qiblaTitle:'🧭 Kıble yönü',qiblaDesc:'Seçtiğiniz konumdan Kâbe yönü',calibrate:'Cihaz pusulasını kullan',adhkarTitle:'🤲 Seçilmiş zikirler',tasbihTitle:'📿 Dijital tesbih',tap:'Saymak için dokunun',reset:'Sayacı sıfırla',city:'Şehir',country:'Ülke',method:'Hesaplama yöntemi',school:'İkindi hesabı',language:'Uygulama dili',save:'Kaydet ve vakitleri yenile',about:'Hakkında',names:['İmsak','Güneş','Öğle','İkindi','Akşam','Yatsı'],hijri:'Hicri tarih',loading:'Namaz vakitleri yükleniyor'},
+fa:{dir:'rtl',quran:'قرآن',tagline:'همراه شما برای نماز و ذکر',home:'خانه',qibla:'قبله',adhkar:'اذکار',tasbih:'تسبیح',quran:'قرآن',settings:'تنظیمات',times:'اوقات نماز',next:'نماز بعدی',remaining:'باقی‌مانده',hour:'ساعت',minute:'دقیقه',second:'ثانیه',reminder:'🌙 یادآوری نماز',reminderDesc:'برای دریافت یادآوری هنگام باز بودن برنامه، اعلان‌ها را فعال کنید',enable:'فعال‌سازی',qiblaTitle:'🧭 جهت قبله',qiblaDesc:'جهت کعبه از موقعیت انتخاب‌شده شما',calibrate:'استفاده از قطب‌نمای دستگاه',adhkarTitle:'🤲 ذکرهای منتخب',tasbihTitle:'📿 تسبیح دیجیتال',tap:'برای شمارش لمس کنید',reset:'بازنشانی شمارنده',city:'شهر',country:'کشور',method:'روش محاسبه',school:'محاسبه عصر',language:'زبان برنامه',save:'ذخیره و به‌روزرسانی اوقات',about:'درباره برنامه',names:['فجر','طلوع آفتاب','ظهر','عصر','مغرب','عشا'],hijri:'تاریخ هجری',loading:'در حال بارگذاری اوقات نماز'},
+'ku-sorani':{dir:'rtl',tagline:'هاوڕێت بۆ نوێژ و زیکر',home:'سەرەکی',qibla:'قیبلە',adhkar:'زیکرەکان',tasbih:'تەسبیح',quran:'قورئان',settings:'ڕێکخستنەکان',times:'کاتەکانی نوێژ',next:'نوێژی داهاتوو',remaining:'ماوە',hour:'کاتژمێر',minute:'خولەک',second:'چرکە',reminder:'🌙 بیرخستنەوەی نوێژ',reminderDesc:'ئاگادارکردنەوەکان چالاک بکە بۆ بیرخستنەوە کاتێک ئەپەکە کراوەیە',enable:'چالاککردن',qiblaTitle:'🧭 ئاراستەی قیبلە',qiblaDesc:'ئاراستەی کەعبە لە شوێنی دیاریکراوتەوە',calibrate:'بەکارهێنانی قەیبڵەنوێژی ئامێر',adhkarTitle:'🤲 زیکرە هەڵبژێردراوەکان',tasbihTitle:'📿 تەسبیحی ئەلیکترۆنی',tap:'بۆ ژماردن دەست لێبدە',reset:'ڕیسێتکردنی ژمێرەر',city:'شار',country:'وڵات',method:'شێوازی ژماردن',school:'ژماردنی عەسر',language:'زمانی ئەپ',save:'پاشەکەوتکردن و نوێکردنەوەی کاتەکان',about:'دەربارە',names:['بەیانی','هەڵاتنی خۆر','نیوەڕۆ','عەسر','مەغریب','عیشا'],hijri:'بەرواری کۆچی',loading:'کاتەکانی نوێژ بار دەکرێن'}
+};
+
+// Full interface phrase translations. Quranic verses and adhkar source texts remain in Arabic by design.
+const UI_TRANSLATIONS = {"ku":{"الأذان بتوقيت":"Nimêj li gorî demjimêra","جارٍ تحميل التاريخ...":"Dîrok tê barkirin...","التاريخ الهجري":"Dîroka Hicrî","الصلاة القادمة":"Nimêja bê","جارٍ تحميل المواقيت":"Demên nimêjê tên barkirin","مواقيت الصلاة":"Demên nimêjê","اليوم":"Îro","جدول مواقيت الصلاة":"Tabloya demên nimêjê","عرض مواقيت الصلاة لجميع أيام الشهر":"Demên nimêjê ji bo hemû rojên mehê bibîne","إعدادات الأذان والأصوات":"Mîhengên ezan û dengê","🕌 الأذان والصوت":"🕌 Ezan û deng","اختر صوت المؤذّن":"Dengê mu’ezzin hilbijêre","استمع قبل الاختيار، وحدّد صوتاً مستقلاً للفجر":"Berî hilbijartinê guhdarî bike; ji bo sibê dengê cuda hilbijêre","أذان الصلوات اليومية":"Ezana nimêjên rojane","أذان صلاة الفجر":"Ezana nimêja sibê","صوت مستقل لكل صلاة":"Ji bo her nimêjekê dengekî cuda","تفعيل الأذان التلقائي":"Ezanê bixweber çalak bike","تجربة أذان الصلوات":"Ezana nimêjan biceribîne","تجربة أذان الفجر":"Ezana sibê biceribîne","اتجاه الكعبة المشرفة من موقعك المحدد":"Arasteya Ka'beyê ji cihê te yê diyarkirî","يتم حساب اتجاه القبلة":"Arasteya qibleyê tê hesabkirin","تحديد موقعي":"Cihê min diyar bike","القرآن الكريم":"Qurana Pîroz","سور القرآن الكريم":"Sureyên Qurana Pîroz","اقرأ السور ورتّب قراءتك بسهولة":"Sureyan bixwîne û xwendina xwe bi hêsanî rêk bixe","السور":"Sure","أجزاء القرآن":"Cuzên Quranê","جارٍ تحميل قائمة سور القرآن الكريم...":"Lîsteya sureyan tê barkirin...","← قائمة السور":"← Vegere lîsteya sureyan","أذكار المسلم":"Zikrên misilman","الأذكار اليومية":"Zikrên rojane","أذكار الصباح والمساء والذكر بعد الصلاة":"Zikrên sibehê, êvarê û piştî nimêjê","أذكار الصباح":"Zikrên sibehê","أذكار المساء":"Zikrên êvarê","بعد الصلاة":"Piştî nimêjê","تقدّم الأذكار":"Pêşketina zikran","لحظات هادئة للذكر والطمأنينة":"Demên aram ji bo zikr û dilniyayiyê","مجموع التسبيح":"Tevahiya tesbîhê","اضغط للعدّ":"Ji bo hejmartinê bitikîne","إعادة العداد":"Hejmarê ji nû ve bike","الشهر":"Meh","تحديث المواقيت":"Demên nimêjê nû bike","التاريخ":"Dîrok","الفجر":"Sibê","الظهر":"Nîvro","العصر":"Êvarî","المغرب":"Xevateng","العشاء":"Şev","الإعدادات":"Mîheng","المحافظة العراقية":"Parêzgeha Iraqê","المدينة أو القضاء":"Bajar an qezayê","اختر المحافظة ثم المدينة. تُستخدم إحداثيات المدينة المختارة لحساب مواقيت الصلاة، ويمكنك تغيير الاختيار في أي وقت.":"Pêşî parêzgehê û paşê bajar hilbijêre. Hevrêzên bajarê ji bo hesabkirina demên nimêjê tên bikaranîn.","طريقة الحساب":"Rêbaza hesabkirinê","المذهب للعصر":"Mezheb ji bo nimêja asrê","حفظ الإعدادات":"Mîhengan tomar bike","أصوات التفاعل":"Dengên têkiliyê","تذكير بالصلاة":"Bîranîna nimêjê","تفعيل الإشعارات":"Agahdariyan çalak bike","حول التطبيق":"Derbarê sepanê de","اختر مظهر التطبيق":"Dîmena sepanê hilbijêre","اختر اللون والتصميم الذي يناسبك":"Reng û sêwirana ku li te tê hilbijêre","تلقائي":"Bixweber","ليلة ملكية":"Şeva şahane","حديقة زمردية":"Baxçeyê zümrüdî","كون بنفسجي":"Gerdûna binefşî","وردي ناعم":"Pembe ya nerm","محيط":"Okyanûs","محراب رملي":"Mihraba qûmî","نهاري":"Rojane","اختر لغة التطبيق":"Zimanê sepanê hilbijêre","الرئيسية":"Serûpel","التقويم":"Salname","إلغاء":"Betal bike","حفظ المدينة":"Bajar tomar bike"},"ku-sorani":{"الأذان بتوقيت":"بانگ بە کاتی","جارٍ تحميل التاريخ...":"بەروار بار دەکرێت...","التاريخ الهجري":"بەرواری کۆچی","الصلاة القادمة":"نوێژی داهاتوو","جارٍ تحميل المواقيت":"کاتەکان بار دەکرێن","مواقيت الصلاة":"کاتەکانی نوێژ","اليوم":"ئەمڕۆ","جدول مواقيت الصلاة":"خشتەی کاتەکانی نوێژ","عرض مواقيت الصلاة لجميع أيام الشهر":"بینینی کاتەکانی نوێژ بۆ هەموو ڕۆژەکانی مانگ","إعدادات الأذان والأصوات":"ڕێکخستنەکانی بانگ و دەنگ","🕌 الأذان والصوت":"🕌 بانگ و دەنگ","اختر صوت المؤذّن":"دەنگی بانگدەر هەڵبژێرە","استمع قبل الاختيار، وحدّد صوتاً مستقلاً للفجر":"پێش هەڵبژاردن گوێ بگرە، دەنگێکی جیاواز بۆ بەیانی دیاری بکە","أذان الصلوات اليومية":"بانگی نوێژە ڕۆژانەکان","أذان صلاة الفجر":"بانگی نوێژی بەیانی","صوت مستقل لكل صلاة":"دەنگێکی جیاواز بۆ هەر نوێژێک","تفعيل الأذان التلقائي":"بانگی خۆکار چالاک بکە","تجربة أذان الصلوات":"تاقیکردنەوەی بانگی نوێژەکان","تجربة أذان الفجر":"تاقیکردنەوەی بانگی بەیانی","اتجاه الكعبة المشرفة من موقعك المحدد":"ئاراستەی کەعبە لە شوێنی دیاریکراوتەوە","يتم حساب اتجاه القبلة":"ئاراستەی قیبلە حیساب دەکرێت","تحديد موقعي":"شوێنەکەم دیاری بکە","القرآن الكريم":"قورئانی پیرۆز","سور القرآن الكريم":"سوورەتەکانی قورئانی پیرۆز","اقرأ السور ورتّب قراءتك بسهولة":"سوورەتەکان بخوێنەوە و خوێندنەوەکەت بە ئاسانی ڕێک بخە","السور":"سوورەتەکان","أجزاء القرآن":"پارەکانی قورئان","جارٍ تحميل قائمة سور القرآن الكريم...":"لیستی سوورەتەکان بار دەکرێت...","← قائمة السور":"← لیستی سوورەتەکان","أذكار المسلم":"زیکرەکانی موسڵمان","الأذكار اليومية":"زیکرە ڕۆژانەکان","أذكار الصباح والمساء والذكر بعد الصلاة":"زیکری بەیانی و ئێوارە و دوای نوێژ","أذكار الصباح":"زیکری بەیانی","أذكار المساء":"زیکری ئێوارە","بعد الصلاة":"دوای نوێژ","تقدّم الأذكار":"پێشکەوتنی زیکرەکان","لحظات هادئة للذكر والطمأنينة":"ساتێکی ئارام بۆ زیکر و دڵنیایی","مجموع التسبيح":"کۆی تەسبیح","اضغط للعدّ":"بۆ ژماردن دەست لێبدە","إعادة العداد":"ژمێرەر ڕیسێت بکە","الشهر":"مانگ","تحديث المواقيت":"نوێکردنەوەی کاتەکان","التاريخ":"بەروار","الفجر":"بەیانی","الظهر":"نیوەڕۆ","العصر":"عەسر","المغرب":"مەغریب","العشاء":"عیشا","الإعدادات":"ڕێکخستنەکان","المحافظة العراقية":"پارێزگای عێراق","المدينة أو القضاء":"شار یان قەزا","اختر المحافظة ثم المدينة. تُستخدم إحداثيات المدينة المختارة لحساب مواقيت الصلاة، ويمكنك تغيير الاختيار في أي وقت.":"سەرەتا پارێزگا و پاشان شار هەڵبژێرە. شوێنی شارەکە بۆ حیسابکردنی کاتەکانی نوێژ بەکاردێت.","طريقة الحساب":"شێوازی حیساب","المذهب للعصر":"مەزهەب بۆ نوێژی عەسر","حفظ الإعدادات":"ڕێکخستنەکان پاشەکەوت بکە","أصوات التفاعل":"دەنگەکانی کارلێک","تذكير بالصلاة":"بیرخستنەوەی نوێژ","تفعيل الإشعارات":"ئاگادارکردنەوەکان چالاک بکە","حول التطبيق":"دەربارەی ئەپ","اختر مظهر التطبيق":"ڕووکارى ئەپ هەڵبژێرە","اختر اللون والتصميم الذي يناسبك":"ئەو ڕەنگ و دیزاینە هەڵبژێرە کە گونجاوە","تلقائي":"خۆکار","ليلة ملكية":"شەوی شاهانە","حديقة زمردية":"باخی زومڕودی","كون بنفسجي":"گەردوونی مۆر","وردي ناعم":"پەمەیی نەرم","محيط":"دەریا","محراب رملي":"میحرابی لمی","نهاري":"ڕۆژانە","اختر لغة التطبيق":"زمانی ئەپ هەڵبژێرە","الرئيسية":"سەرەکی","التقويم":"ڕۆژژمێر","إلغاء":"هەڵوەشاندنەوە","حفظ المدينة":"شار پاشەکەوت بکە"},"en":{"الأذان بتوقيت":"Prayer times for","جارٍ تحميل التاريخ...":"Loading date...","التاريخ الهجري":"Hijri date","الصلاة القادمة":"Next prayer","جارٍ تحميل المواقيت":"Loading prayer times","مواقيت الصلاة":"Prayer times","اليوم":"Today","جدول مواقيت الصلاة":"Monthly prayer timetable","عرض مواقيت الصلاة لجميع أيام الشهر":"View prayer times for every day of the month","إعدادات الأذان والأصوات":"Adhan and audio settings","🕌 الأذان والصوت":"🕌 Adhan and sound","اختر صوت المؤذّن":"Choose the muezzin voice","استمع قبل الاختيار، وحدّد صوتاً مستقلاً للفجر":"Preview voices and choose a separate Fajr voice","أذان الصلوات اليومية":"Daily prayer adhan","أذان صلاة الفجر":"Fajr adhan","صوت مستقل لكل صلاة":"Separate voice for each prayer","تفعيل الأذان التلقائي":"Enable automatic adhan","تجربة أذان الصلوات":"Test prayer adhan","تجربة أذان الفجر":"Test Fajr adhan","اتجاه الكعبة المشرفة من موقعك المحدد":"Direction of the Kaaba from your selected location","يتم حساب اتجاه القبلة":"Calculating Qibla direction","تحديد موقعي":"Locate me","القرآن الكريم":"The Holy Quran","سور القرآن الكريم":"Quran surahs","اقرأ السور ورتّب قراءتك بسهولة":"Read surahs and organize your reading","السور":"Surahs","أجزاء القرآن":"Juz","جارٍ تحميل قائمة سور القرآن الكريم...":"Loading surah list...","← قائمة السور":"← Surah list","أذكار المسلم":"Muslim adhkar","الأذكار اليومية":"Daily adhkar","أذكار الصباح والمساء والذكر بعد الصلاة":"Morning, evening and post-prayer remembrance","أذكار الصباح":"Morning adhkar","أذكار المساء":"Evening adhkar","بعد الصلاة":"After prayer","تقدّم الأذكار":"Adhkar progress","لحظات هادئة للذكر والطمأنينة":"Quiet moments for remembrance and peace","مجموع التسبيح":"Total tasbih","اضغط للعدّ":"Tap to count","إعادة العداد":"Reset counter","الشهر":"Month","تحديث المواقيت":"Refresh prayer times","التاريخ":"Date","الفجر":"Fajr","الظهر":"Dhuhr","العصر":"Asr","المغرب":"Maghrib","العشاء":"Isha","الإعدادات":"Settings","المحافظة العراقية":"Iraqi governorate","المدينة أو القضاء":"City or district","طريقة الحساب":"Calculation method","المذهب للعصر":"Asr school","حفظ الإعدادات":"Save settings","أصوات التفاعل":"Interaction sounds","تذكير بالصلاة":"Prayer reminder","تفعيل الإشعارات":"Enable notifications","حول التطبيق":"About the app","اختر مظهر التطبيق":"Choose app theme","اختر اللون والتصميم الذي يناسبك":"Choose the color and design you like","تلقائي":"Automatic","ليلة ملكية":"Royal night","حديقة زمردية":"Emerald garden","كون بنفسجي":"Purple universe","وردي ناعم":"Soft rose","محيط":"Ocean","محراب رملي":"Desert mihrab","نهاري":"Daylight","اختر لغة التطبيق":"Choose app language","الرئيسية":"Home","التقويم":"Calendar","إلغاء":"Cancel","حفظ المدينة":"Save city"},"tr":{"الأذان بتوقيت":"Ezan vakti","جارٍ تحميل التاريخ...":"Tarih yükleniyor...","التاريخ الهجري":"Hicri tarih","الصلاة القادمة":"Sonraki namaz","جارٍ تحميل المواقيت":"Namaz vakitleri yükleniyor","مواقيت الصلاة":"Namaz vakitleri","اليوم":"Bugün","جدول مواقيت الصلاة":"Aylık namaz vakitleri","عرض مواقيت الصلاة لجميع أيام الشهر":"Ayın tüm günlerinin namaz vakitlerini görüntüle","إعدادات الأذان والأصوات":"Ezan ve ses ayarları","🕌 الأذان والصوت":"🕌 Ezan ve ses","اختر صوت المؤذّن":"Müezzin sesini seçin","استمع قبل الاختيار، وحدّد صوتاً مستقلاً للفجر":"Seçmeden önce dinleyin; sabah için ayrı ses seçin","أذان الصلوات اليومية":"Günlük namaz ezanı","أذان صلاة الفجر":"Sabah ezanı","صوت مستقل لكل صلاة":"Her namaz için ayrı ses","تفعيل الأذان التلقائي":"Otomatik ezanı etkinleştir","تجربة أذان الصلوات":"Namaz ezanını dene","تجربة أذان الفجر":"Sabah ezanını dene","اتجاه الكعبة المشرفة من موقعك المحدد":"Seçtiğiniz konumdan Kâbe yönü","يتم حساب اتجاه القبلة":"Kıble yönü hesaplanıyor","تحديد موقعي":"Konumumu bul","القرآن الكريم":"Kur’an-ı Kerim","سور القرآن الكريم":"Kur’an sureleri","اقرأ السور ورتّب قراءتك بسهولة":"Sureleri okuyun ve okumanızı kolayca düzenleyin","السور":"Sureler","أجزاء القرآن":"Cüzler","جارٍ تحميل قائمة سور القرآن الكريم...":"Sure listesi yükleniyor...","← قائمة السور":"← Sure listesi","أذكار المسلم":"Müslüman zikirleri","الأذكار اليومية":"Günlük zikirler","أذكار الصباح والمساء والذكر بعد الصلاة":"Sabah, akşam ve namaz sonrası zikirler","أذكار الصباح":"Sabah zikirleri","أذكار المساء":"Akşam zikirleri","بعد الصلاة":"Namazdan sonra","تقدّم الأذكار":"Zikir ilerlemesi","لحظات هادئة للذكر والطمأنينة":"Zikir ve huzur için sakin anlar","مجموع التسبيح":"Toplam tesbih","اضغط للعدّ":"Saymak için dokunun","إعادة العداد":"Sayacı sıfırla","الشهر":"Ay","تحديث المواقيت":"Vakitleri yenile","التاريخ":"Tarih","الفجر":"İmsak","الظهر":"Öğle","العصر":"İkindi","المغرب":"Akşam","العشاء":"Yatsı","الإعدادات":"Ayarlar","المحافظة العراقية":"Irak ili","المدينة أو القضاء":"Şehir veya ilçe","طريقة الحساب":"Hesaplama yöntemi","المذهب للعصر":"İkindi mezhebi","حفظ الإعدادات":"Ayarları kaydet","أصوات التفاعل":"Etkileşim sesleri","تذكير بالصلاة":"Namaz hatırlatıcısı","تفعيل الإشعارات":"Bildirimleri etkinleştir","حول التطبيق":"Uygulama hakkında","اختر مظهر التطبيق":"Uygulama temasını seçin","اختر اللون والتصميم الذي يناسبك":"Size uygun renk ve tasarımı seçin","تلقائي":"Otomatik","ليلة ملكية":"Kraliyet gecesi","حديقة زمردية":"Zümrüt bahçe","كون بنفسجي":"Mor evren","وردي ناعم":"Yumuşak pembe","محيط":"Okyanus","محراب رملي":"Kum mihrabı","نهاري":"Gündüz","اختر لغة التطبيق":"Uygulama dilini seçin","الرئيسية":"Ana sayfa","التقويم":"Takvim","إلغاء":"İptal","حفظ المدينة":"Şehri kaydet"},"fa":{"الأذان بتوقيت":"اذان به وقت","جارٍ تحميل التاريخ...":"در حال بارگذاری تاریخ...","الصلاة القادمة":"نماز بعدی","جارٍ تحميل المواقيت":"در حال بارگذاری اوقات نماز","مواقيت الصلاة":"اوقات نماز","اليوم":"امروز","جدول مواقيت الصلاة":"جدول ماهانه اوقات نماز","عرض مواقيت الصلاة لجميع أيام الشهر":"نمایش اوقات نماز برای همه روزهای ماه","إعدادات الأذان والأصوات":"تنظیمات اذان و صدا","🕌 الأذان والصوت":"🕌 اذان و صدا","اختر صوت المؤذّن":"صدای مؤذن را انتخاب کنید","أذان الصلوات اليومية":"اذان نمازهای روزانه","أذان صلاة الفجر":"اذان نماز صبح","صوت مستقل لكل صلاة":"صدای جداگانه برای هر نماز","تفعيل الأذان التلقائي":"فعال‌سازی اذان خودکار","تجربة أذان الصلوات":"آزمایش اذان نمازها","تجربة أذان الفجر":"آزمایش اذان صبح","اتجاه الكعبة المشرفة من موقعك المحدد":"جهت کعبه از موقعیت انتخاب‌شده شما","يتم حساب اتجاه القبلة":"جهت قبله در حال محاسبه است","تحديد موقعي":"موقعیت من","القرآن الكريم":"قرآن کریم","سور القرآن الكريم":"سوره‌های قرآن کریم","اقرأ السور ورتّب قراءتك بسهولة":"سوره‌ها را بخوانید و مطالعه خود را آسان مدیریت کنید","السور":"سوره‌ها","أجزاء القرآن":"جزءهای قرآن","أذكار المسلم":"اذکار مسلمان","الأذكار اليومية":"اذکار روزانه","أذكار الصباح والمساء والذكر بعد الصلاة":"اذکار صبح و شام و پس از نماز","أذكار الصباح":"اذکار صبح","أذكار المساء":"اذکار شام","بعد الصلاة":"پس از نماز","تقدّم الأذكار":"پیشرفت اذکار","لحظات هادئة للذكر والطمأنينة":"لحظاتی آرام برای ذکر و آرامش","مجموع التسبيح":"مجموع تسبیحات","اضغط للعدّ":"برای شمارش لمس کنید","إعادة العداد":"بازنشانی شمارنده","الشهر":"ماه","تحديث المواقيت":"به‌روزرسانی اوقات","التاريخ":"تاریخ","الفجر":"صبح","الظهر":"ظهر","العصر":"عصر","المغرب":"مغرب","العشاء":"عشا","الإعدادات":"تنظیمات","المحافظة العراقية":"استان عراق","المدينة أو القضاء":"شهر یا شهرستان","طريقة الحساب":"روش محاسبه","المذهب للعصر":"مذهب نماز عصر","حفظ الإعدادات":"ذخیره تنظیمات","أصوات التفاعل":"صداهای تعاملی","تذكير بالصلاة":"یادآوری نماز","تفعيل الإشعارات":"فعال‌سازی اعلان‌ها","حول التطبيق":"درباره برنامه","اختر مظهر التطبيق":"پوسته برنامه را انتخاب کنید","اختر اللون والتصميم الذي يناسبك":"رنگ و طرح دلخواه خود را انتخاب کنید","تلقائي":"خودکار","ليلة ملكية":"شب سلطنتی","حديقة زمردية":"باغ زمردی","كون بنفسجي":"جهان بنفش","وردي ناعم":"صورتی ملایم","محيط":"اقیانوس","محراب رملي":"محراب شنی","نهاري":"روزانه","اختر لغة التطبيق":"زبان برنامه را انتخاب کنید","الرئيسية":"خانه","التقويم":"تقویم","إلغاء":"لغو","حفظ المدينة":"ذخیره شهر"}};
+function translateUiText(code){
+ const dict=UI_TRANSLATIONS[code]||{};
+ const all={}; for(const [lang,map] of Object.entries(UI_TRANSLATIONS)){for(const [src,dst] of Object.entries(map)) all[dst]=src;}
+ const translate=value=>{const raw=value;const trimmed=raw.trim();if(!trimmed)return raw;const source=dict[trimmed]!==undefined?trimmed:(all[trimmed]||trimmed);const result=dict[source]||source;if(result===trimmed)return raw;return raw.replace(trimmed,result);};
+ const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;while((node=walker.nextNode())){const parent=node.parentElement;if(!parent||parent.closest('script,style,textarea,input,select,option,[data-no-translate],.quran-text,.ayah,.adhkar-text'))continue;const next=translate(node.nodeValue);if(next!==node.nodeValue)node.nodeValue=next;}
+ document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(el=>{for(const attr of ['placeholder','title','aria-label']){const val=el.getAttribute(attr);if(val){const next=translate(val);if(next!==val)el.setAttribute(attr,next);}}});
+ const names=LANGS[code]?.names;if(names){const cells=document.querySelectorAll('.prayer-name,[data-prayer-name]');cells.forEach((el,i)=>{if(names[i])el.textContent=names[i];});}
+}
+function setLanguage(code){
+ const d=LANGS[code]||LANGS.ar;document.documentElement.lang=code;document.documentElement.dir=d.dir;
+ const put=(id,v)=>{let e=$(id);if(e)e.textContent=v};
+ [['tagline','tagline'],['tabHome','home'],['tabQuran','quran'],['tabQibla','qibla'],['tabAdhkar','adhkar'],['tabTasbih','tasbih'],['tabQuran','quran'],['tabSettings','settings'],['timesTitle','times'],['nextLabel','next'],['reminderTitle','reminder'],['reminderDesc','reminderDesc'],['notifyBtn','enable'],['qiblaTitle','qiblaTitle'],['qiblaDesc','qiblaDesc'],['calibrate','calibrate'],['tasbihTitle','tasbihTitle'],['settingsTitle','settings'],['cityLabelText','city'],['countryLabelText','country'],['methodLabel','method'],['schoolLabel','school'],['languageLabel','language'],['saveSettings','save'],['aboutTitle','about']].forEach(([id,k])=>put(id,d[k]));put('appFooter','Ronahî');
+ const current=names;current.forEach((x,i)=>x[1]=d.names[i]);
+ try{localStorage.setItem('ronahi-language',code)}catch(e){}
+ renderGrid();if(timings)updateNext();translateUiText(code);
+}
+const VALID_THEMES=['midnight','emerald','purple','rose','ocean','desert','light'];
+function prayerClockMinutes(value){
+ if(!value)return null;
+ const m=String(value).match(/(\d{1,2}):(\d{2})/);
+ return m?Number(m[1])*60+Number(m[2]):null;
+}
+function getAutomaticTheme(){
+ const now=new Date(),minute=now.getHours()*60+now.getMinutes();
+ // Duhok's bundled Bang timetable has no Sunrise field and its Maghrib values
+ // are displayed in 12-hour format. Using them directly made 05:xx look like
+ // an early-morning sunset, keeping the app in night mode all day.
+ // Use the device's local clock as a reliable fallback: 06:00–17:00 daylight.
+ let dayStart=6*60,dayEnd=17*60;
+ if(timings){
+  const rise=prayerClockMinutes(timings.Sunrise);
+  if(rise!==null)dayStart=rise;
+  // Only accept a 24-hour Maghrib value as a sunset boundary.
+  const raw=String(timings.Maghrib||'').match(/(\d{1,2}):(\d{2})/);
+  if(raw&&Number(raw[1])>=12)dayEnd=Number(raw[1])*60+Number(raw[2]);
+ }
+ return minute>=dayStart&&minute<dayEnd?'light':'midnight';
+}
+function applyTheme(name,save=true){
+ const selected=name==='auto'?'auto':(VALID_THEMES.includes(name)?name:'midnight');
+ const theme=selected==='auto'?getAutomaticTheme():selected;
+ document.body.dataset.theme=theme;
+ const sel=$('themeSelect');if(sel)sel.value=selected;
+ const colors={midnight:'#101f34',emerald:'#0c2c28',purple:'#211735',rose:'#351b2b',ocean:'#0b2a40',desert:'#382a1c',light:'#edf4fb'};
+ const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=colors[theme];
+ if(save){try{localStorage.setItem('ronahi-theme',selected)}catch(e){}}
+ document.documentElement.dataset.theme=theme;
+ if(document.body){document.body.dataset.theme=theme;}
+ const status=$('themeStatus');if(status)status.textContent=selected==='auto'?'الثيم التلقائي يعمل: نهاري وقت النهار وليلي بعد الغروب.':'تم تطبيق الثيم وحفظه تلقائياً.';
+}
+const savedTheme=(()=>{try{return localStorage.getItem('ronahi-theme')||'auto'}catch(e){return 'auto'}})();
+document.documentElement.dataset.theme=savedTheme==='auto'?getAutomaticTheme():savedTheme;
+applyTheme(savedTheme,false);
+$('themeSelect').onchange=()=>applyTheme($('themeSelect').value,true);
+const themeOverlay=$('themePickerOverlay');if(themeOverlay&&themeOverlay.parentElement!==document.body)document.body.appendChild(themeOverlay);
+function closeThemePicker(){if(themeOverlay)themeOverlay.hidden=true;}
+$('openThemePicker')?.addEventListener('click',()=>{if(themeOverlay){themeOverlay.hidden=false;updateThemeChoices();}});
+$('closeThemePicker')?.addEventListener('click',closeThemePicker);
+themeOverlay?.addEventListener('click',e=>{if(e.target===themeOverlay)closeThemePicker();});
+function updateThemeChoices(){const selected=$('themeSelect')?.value||'auto';document.querySelectorAll('[data-theme-choice]').forEach(b=>{const on=b.dataset.themeChoice===selected;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on?'true':'false');});}
+document.querySelectorAll('[data-theme-choice]').forEach(b=>b.addEventListener('click',()=>{applyTheme(b.dataset.themeChoice,true);updateThemeChoices();closeThemePicker();}));
+
+function refreshAutomaticTheme(){
+ let selected='midnight';try{selected=localStorage.getItem('ronahi-theme')||'auto'}catch(e){}
+ if(selected==='auto')applyTheme('auto',false);
+}
+$('cityInput').value=city;$('countryInput').value=country;$('method').value=method;$('school').value=school;let tas=(()=>{try{return Number(localStorage.getItem('ronahi-tasbih'))||0}catch(e){return 0}})();$('tasCount').textContent=tas;
+$('language').value=(()=>{try{return localStorage.getItem('ronahi-language')||'ar'}catch(e){return 'ar'}})();
+$('language').onchange=e=>{setLanguage(e.target.value);toast('✓ '+e.target.options[e.target.selectedIndex].text)};
+setLanguage($('language').value);
+const languageOverlay=$('languagePicker');if(languageOverlay&&languageOverlay.parentElement!==document.body)document.body.appendChild(languageOverlay);
+function updateLanguageChoices(){const current=$('language')?.value||'ar';document.querySelectorAll('[data-language-choice]').forEach(b=>b.classList.toggle('selected',b.dataset.languageChoice===current));const label=$('language')?.options[$('language').selectedIndex]?.text||'العربية';if($('homeLanguageLabel'))$('homeLanguageLabel').textContent=label;}
+function closeLanguagePicker(){if(languageOverlay)languageOverlay.hidden=true;}
+$('openLanguagePicker')?.addEventListener('click',()=>{updateLanguageChoices();
+const uiTranslationObserver=new MutationObserver(records=>{const code=$('language')?.value||'ar';if(code==='ar')return;for(const rec of records){for(const n of rec.addedNodes||[]){if(n.nodeType===Node.TEXT_NODE){const text=n.nodeValue.trim();const dict=UI_TRANSLATIONS[code]||{};if(dict[text])n.nodeValue=n.nodeValue.replace(text,dict[text]);}else if(n.nodeType===Node.ELEMENT_NODE){const w=document.createTreeWalker(n,NodeFilter.SHOW_TEXT);let t;while((t=w.nextNode())){const key=t.nodeValue.trim(),value=dict[key];if(value)t.nodeValue=t.nodeValue.replace(key,value);}}}}});
+uiTranslationObserver.observe(document.body,{childList:true,subtree:true});
+if(languageOverlay)languageOverlay.hidden=false;});
+$('closeLanguagePicker')?.addEventListener('click',closeLanguagePicker);
+languageOverlay?.addEventListener('click',e=>{if(e.target===languageOverlay)closeLanguagePicker();});
+document.querySelectorAll('[data-language-choice]').forEach(b=>b.addEventListener('click',()=>{const sel=$('language');sel.value=b.dataset.languageChoice;sel.onchange({target:sel});updateLanguageChoices();closeLanguagePicker();}));
+updateLanguageChoices();
+
+if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});setLanguage($('language').value||'ar');loadTimes();qibla();refreshAutomaticTheme();setInterval(refreshAutomaticTheme,30000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAutomaticTheme()});
+window.addEventListener('focus',refreshAutomaticTheme);
+
+// Digital Misbaha runtime — v1.24 Infinite Counter
+(function initDigitalMisbaha(){
+ const el=id=>document.getElementById(id);
+ const countEl=el('tasCount'), beadsEl=el('misbahaBeads'), ringEl=el('misbahaRing');
+ const addBtn=el('tasAdd'), resetBtn=el('tasReset'), dhikrEl=el('currentDhikr');
+ const feedback=el('tasFeedback');
+ const vibrationBtn=el('tasVibration'), soundBtn=el('tasSound');
+ if(!countEl||!beadsEl||!ringEl||!addBtn||!resetBtn||!dhikrEl)return;
+ const dhikrList=[
+  'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+  'سُبْحَانَ اللَّهِ',
+  'الْحَمْدُ لِلَّهِ',
+  'اللَّهُ أَكْبَرُ',
+  'لَا إِلَٰهَ إِلَّا اللَّهُ',
+  'أَسْتَغْفِرُ اللَّهَ',
+  'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ'
+ ];
+ let state={count:0,dhikrIndex:0,vibration:true,sound:false};
+ try{const saved=JSON.parse(localStorage.getItem('ronahi-misbaha')||'{}');state={...state,...saved};}catch(e){}
+ state.count=Math.max(0,Number(state.count)||0);state.dhikrIndex=((Number(state.dhikrIndex)||0)%dhikrList.length+dhikrList.length)%dhikrList.length;
+ state.vibration=state.vibration!==false;state.sound=state.sound===true;
+ let audioCtx=null;
+ function persist(){try{localStorage.setItem('ronahi-misbaha',JSON.stringify(state));localStorage.setItem('ronahi-tasbih',String(state.count));}catch(e){}}
+ function renderBeads(){
+  beadsEl.innerHTML='';const total=33;
+  for(let i=0;i<total;i++){
+   const bead=document.createElement('span');bead.className='misbaha-bead'+(i<state.count%total?' completed':'');
+   const angle=(i/total)*Math.PI*2-Math.PI/2;const radius=47;
+   bead.style.left=(50+Math.cos(angle)*radius)+'%';bead.style.top=(50+Math.sin(angle)*radius)+'%';
+   bead.setAttribute('aria-hidden','true');beadsEl.appendChild(bead);
+  }
+ }
+ function render(){
+  countEl.textContent=state.count.toLocaleString('en-US');
+  if(vibrationBtn){vibrationBtn.classList.toggle('active',state.vibration);vibrationBtn.setAttribute('aria-pressed',String(state.vibration));vibrationBtn.textContent=state.vibration?'〰 الاهتزاز: يعمل':'〰 الاهتزاز: متوقف';}
+  if(soundBtn){soundBtn.classList.toggle('active',state.sound);soundBtn.setAttribute('aria-pressed',String(state.sound));soundBtn.textContent=state.sound?'♪ الصوت: يعمل':'♪ الصوت: متوقف';}
+  dhikrEl.textContent=dhikrList[state.dhikrIndex];dhikrEl.classList.remove('dhikr-change');void dhikrEl.offsetWidth;dhikrEl.classList.add('dhikr-change');
+  renderBeads();
+ }
+ function clickSound(){
+  if(!state.sound)return;
+  if(window.ronahiAdhanPlaying)return;
+  try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;audioCtx=audioCtx||new AC();if(audioCtx.state==='suspended')audioCtx.resume();
+   const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.setValueAtTime(1050,audioCtx.currentTime);osc.frequency.exponentialRampToValueAtTime(620,audioCtx.currentTime+.045);gain.gain.setValueAtTime(.0001,audioCtx.currentTime);gain.gain.exponentialRampToValueAtTime(.11,audioCtx.currentTime+.006);gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.065);osc.connect(gain);gain.connect(audioCtx.destination);osc.start();osc.stop(audioCtx.currentTime+.07);
+  }catch(e){}
+ }
+ function increment(){
+  state.count++;state.dhikrIndex=(state.dhikrIndex+1)%dhikrList.length;persist();render();
+  addBtn.classList.remove('is-pressed');void addBtn.offsetWidth;addBtn.classList.add('is-pressed');
+  if(state.vibration&&navigator.vibrate){try{navigator.vibrate(18)}catch(e){}}
+  clickSound();
+  if(feedback)feedback.textContent='بارك الله في ذكرك 🌙';
+ }
+ addBtn.addEventListener('click',increment);
+ resetBtn.addEventListener('click',()=>{state.count=0;state.dhikrIndex=0;persist();render();if(feedback)feedback.textContent='تمت إعادة العداد. ابدأ ذكرك من جديد 🌙';});
+ if(vibrationBtn)vibrationBtn.addEventListener('click',()=>{state.vibration=!state.vibration;persist();render();});
+ if(soundBtn)soundBtn.addEventListener('click',()=>{state.sound=!state.sound;persist();render();if(state.sound)clickSound();});
+ render();
+})();
+
+</script>
+<script>
+/* Ronahî original interaction sounds: subtle synthesized feedback, not copied from another app. */
+(()=>{
+ const toggle=document.getElementById('interactionSoundToggle');
+ if(!toggle)return;
+ let enabled=false,ctx=null,lastTap=0;
+ try{enabled=localStorage.getItem('ronahi-ui-sounds')==='on'}catch(e){}
+ const AC=window.AudioContext||window.webkitAudioContext;
+ function tone(freq,at,duration,volume,type='sine',endFreq=null){
+  if(!ctx)return;const osc=ctx.createOscillator(),gain=ctx.createGain();
+  osc.type=type;osc.frequency.setValueAtTime(freq,at);
+  if(endFreq)osc.frequency.exponentialRampToValueAtTime(endFreq,at+duration);
+  gain.gain.setValueAtTime(.0001,at);gain.gain.exponentialRampToValueAtTime(volume,at+.008);
+  gain.gain.exponentialRampToValueAtTime(.0001,at+duration);
+  osc.connect(gain);gain.connect(ctx.destination);osc.start(at);osc.stop(at+duration+.012);
+ }
+ function play(kind='tap'){
+  if(!enabled||!AC||window.ronahiAdhanPlaying)return;
+  try{ctx=ctx||new AC();if(ctx.state==='suspended')ctx.resume();const t=ctx.currentTime;
+   if(kind==='nav'){tone(660,t,.075,.045);tone(880,t+.045,.09,.035)}
+   else if(kind==='confirm'){tone(740,t,.07,.04);tone(990,t+.055,.11,.035)}
+   else{tone(1050,t,.055,.035,'sine',760)}
+  }catch(e){}
+ }
+ function render(){toggle.textContent=enabled?'الأصوات: تعمل ✓':'الأصوات: متوقفة';toggle.setAttribute('aria-pressed',String(enabled));toggle.classList.toggle('active',enabled)}
+ toggle.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem('ronahi-ui-sounds',enabled?'on':'off')}catch(e){};render();if(enabled)play('confirm')});
+ document.addEventListener('click',ev=>{
+  const target=ev.target&&ev.target.closest?ev.target.closest('button,[role="button"]'):null;
+  if(!target||target===toggle||target.id==='tasSound'||target.id==='tasAdd'||target.id==='tasbihAdd')return;
+  const now=Date.now();if(now-lastTap<45)return;lastTap=now;
+  if(target.classList.contains('tab')||target.closest('.tabs'))play('nav');
+  else if(target.id==='saveSettings'||target.id==='notifyBtn'||target.id==='adhanEnable')play('confirm');
+  else play('tap');
+ },true);
+ render();
+})();
+
+
+</script>
+</body></html>
