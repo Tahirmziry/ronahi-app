@@ -803,7 +803,7 @@ body[data-theme="light"] .monthly-launch-copy small{color:#55718a}
   <select class="field" id="preReminderSound"><option value="chime">رنين هادئ</option><option value="bell">جرس لطيف</option><option value="soft">نغمة ناعمة</option><option value="none">بدون صوت</option></select>
   <button class="btn secondary" id="preReminderTest" type="button">تجربة صوت التنبيه</button>
   <button class="btn" id="savePreReminder" type="button">حفظ إعدادات التنبيه</button>
-  <p class="hint" id="preReminderStatus">بعد السماح بالإشعارات، سيجدول التطبيق تنبيهات الصلاة مسبقاً حتى عند إغلاق التطبيق. صوت الإشعار يعتمد على صوت إشعارات النظام؛ ويمكن تجربة النغمة المختارة داخل التطبيق.</p>
+  <p class="hint" id="preReminderStatus">فعّل الإشعارات ليذكّرك التطبيق قبل الصلاة بالمدة التي تختارها أثناء فتح التطبيق. التنبيه عند إغلاق التطبيق يحتاج خدمة Push خارجية أو نسخة Native.</p>
  </div>
  <select class="field" id="language" aria-label="لغة التطبيق" style="display:none"><option value="ar">العربية</option><option value="ku">Kurdî – Badînî</option><option value="ku-sorani">کوردی – سۆرانی</option><option value="en">English</option><option value="tr">Türkçe</option><option value="fa">فارسی</option></select>
 <div class="card theme-card"><h3>🎨 المظهر والخلفيات</h3>
@@ -1388,24 +1388,33 @@ function renderPreReminderPrefs(){ $('preReminderEnabled').value=preReminderPref
 function savePreReminderPrefs(){ preReminderPrefs={enabled:$('preReminderEnabled').value==='on',minutes:Number($('preReminderMinutes').value)||10,sound:$('preReminderSound').value||'chime'};try{localStorage.setItem(PRE_REMINDER_KEY,JSON.stringify(preReminderPrefs))}catch(e){} }
 function playPreReminderTone(){const kind=$('preReminderSound').value;if(kind==='none')return;try{const Ctx=window.AudioContext||window.webkitAudioContext;if(!Ctx)return;const ctx=new Ctx(),now=ctx.currentTime;const notes=kind==='bell'?[880,1175]:kind==='soft'?[523,659]:[659,784,988];notes.forEach((freq,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(.0001,now+i*.18);gain.gain.exponentialRampToValueAtTime(.12,now+i*.18+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+i*.18+.32);osc.connect(gain);gain.connect(ctx.destination);osc.start(now+i*.18);osc.stop(now+i*.18+.34)});setTimeout(()=>ctx.close().catch(()=>{}),1400)}catch(e){}}
 $('preReminderTest').onclick=()=>playPreReminderTone();renderPreReminderPrefs();
+const WEB_REMINDER_SENT_KEY='ronahi-web-pre-reminder-sent';
+function checkWebPrePrayerReminder(now=new Date()){
+ if(!preReminderPrefs.enabled||!timings||!('Notification'in window)||Notification.permission!=='granted')return;
+ const keys=['Fajr','Dhuhr','Asr','Maghrib','Isha'],ar={Fajr:'الفجر',Dhuhr:'الظهر',Asr:'العصر',Maghrib:'المغرب',Isha:'العشاء'};
+ for(const key of keys){const raw=cleanTime(timings[key]);if(!/^\d{1,2}:\d{2}$/.test(raw))continue;const [hh,mm]=raw.split(':').map(Number),at=new Date(now.getFullYear(),now.getMonth(),now.getDate(),hh,mm);at.setMinutes(at.getMinutes()-preReminderPrefs.minutes);const delta=now-at;if(delta<0||delta>90000)continue;
+  const id=`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}-${key}-${preReminderPrefs.minutes}`;let sent={};try{sent=JSON.parse(localStorage.getItem(WEB_REMINDER_SENT_KEY)||'{}')}catch(e){}if(sent[id])continue;sent[id]=Date.now();try{localStorage.setItem(WEB_REMINDER_SENT_KEY,JSON.stringify(sent))}catch(e){}
+  const title='استعد للصلاة 🌙',body=`باقي ${preReminderPrefs.minutes} دقيقة على صلاة ${ar[key]}`;
+  if(navigator.serviceWorker&&navigator.serviceWorker.ready){navigator.serviceWorker.ready.then(reg=>reg.showNotification(title,{body,icon:'./icons/icon-192.png',tag:id,renotify:false})).catch(()=>new Notification(title,{body,tag:id}));}else{try{new Notification(title,{body,tag:id})}catch(e){}}
+ }
+}
 async function schedulePrePrayerNotifications(){
  if(!preReminderPrefs.enabled||!timings)return;
  const cap=window.Capacitor,plugin=cap&&cap.Plugins&&cap.Plugins.LocalNotifications;
- if(!plugin||typeof plugin.schedule!=='function'){$('preReminderStatus').textContent='تم حفظ الإعدادات. لجدولة التنبيهات عند إغلاق التطبيق، شغّل نسخة iOS/Android بعد مزامنة إضافة Local Notifications.';return;}
- try{
-  let permission=await plugin.checkPermissions();if(permission.display!=='granted')permission=await plugin.requestPermissions();
-  if(permission.display!=='granted'){$('preReminderStatus').textContent='لم يتم السماح بالإشعارات. اسمح بإشعارات Ronahî من إعدادات الجهاز.';return;}
-  try{await plugin.cancel({notifications:Array.from({length:35},(_,i)=>({id:52000+i}))})}catch(e){}
-  const notifications=[],keys=['Fajr','Dhuhr','Asr','Maghrib','Isha'],ar={Fajr:'الفجر',Dhuhr:'الظهر',Asr:'العصر',Maghrib:'المغرب',Isha:'العشاء'},today=new Date();
-  for(let day=0;day<7;day++){
-   const date=new Date(today.getFullYear(),today.getMonth(),today.getDate()+day,12),ts=Math.floor(date.getTime()/1000);let dayTimes=day===0?timings:null;
-   if(day){try{const u=`https://api.aladhan.com/v1/timings/${ts}?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lon)}&method=${encodeURIComponent(method)}&school=${encodeURIComponent(school)}`;const r=await fetch(u),j=r.ok?await r.json():null;if(j&&j.code===200)dayTimes=j.data.timings}catch(e){}}
-   if(!dayTimes)continue;
-   keys.forEach((k,i)=>{const raw=cleanTime(dayTimes[k]);if(!/^\d{1,2}:\d{2}$/.test(raw))return;const [hh,mm]=raw.split(':').map(Number),at=new Date(date.getFullYear(),date.getMonth(),date.getDate(),hh,mm);at.setMinutes(at.getMinutes()-preReminderPrefs.minutes);if(at<=new Date())return;notifications.push({id:52000+day*5+i,title:'استعد للصلاة 🌙',body:`باقي ${preReminderPrefs.minutes} دقيقة على صلاة ${ar[k]}`,schedule:{at,allowWhileIdle:true},sound:'default'});});
-  }
-  if(notifications.length)await plugin.schedule({notifications});$('preReminderStatus').textContent=`تمت جدولة ${notifications.length} تنبيهاً للأيام السبعة القادمة، قبل الصلاة بـ ${preReminderPrefs.minutes} دقيقة.`;
- }catch(e){$('preReminderStatus').textContent='تعذرت جدولة التنبيهات. تحقق من صلاحيات الإشعارات ثم حاول مجدداً.';}
+ if(plugin&&typeof plugin.schedule==='function'){
+  try{let permission=await plugin.checkPermissions();if(permission.display!=='granted')permission=await plugin.requestPermissions();if(permission.display!=='granted'){$('preReminderStatus').textContent='لم يتم السماح بالإشعارات. اسمح بإشعارات Ronahî من إعدادات الجهاز.';return;}
+   try{await plugin.cancel({notifications:Array.from({length:35},(_,i)=>({id:52000+i}))})}catch(e){}
+   const notifications=[],keys=['Fajr','Dhuhr','Asr','Maghrib','Isha'],ar={Fajr:'الفجر',Dhuhr:'الظهر',Asr:'العصر',Maghrib:'المغرب',Isha:'العشاء'},today=new Date();
+   for(let day=0;day<7;day++){const date=new Date(today.getFullYear(),today.getMonth(),today.getDate()+day,12),ts=Math.floor(date.getTime()/1000);let dayTimes=day===0?timings:null;if(day){try{const u=`https://api.aladhan.com/v1/timings/${ts}?latitude=${encodeURIComponent(lat)}&longitude=${encodeURIComponent(lon)}&method=${encodeURIComponent(method)}&school=${encodeURIComponent(school)}`;const r=await fetch(u),j=r.ok?await r.json():null;if(j&&j.code===200)dayTimes=j.data.timings}catch(e){}}if(!dayTimes)continue;keys.forEach((k,i)=>{const raw=cleanTime(dayTimes[k]);if(!/^\d{1,2}:\d{2}$/.test(raw))return;const [hh,mm]=raw.split(':').map(Number),at=new Date(date.getFullYear(),date.getMonth(),date.getDate(),hh,mm);at.setMinutes(at.getMinutes()-preReminderPrefs.minutes);if(at<=new Date())return;notifications.push({id:52000+day*5+i,title:'استعد للصلاة 🌙',body:`باقي ${preReminderPrefs.minutes} دقيقة على صلاة ${ar[k]}`,schedule:{at,allowWhileIdle:true},sound:'default'});});}
+   if(notifications.length)await plugin.schedule({notifications});$('preReminderStatus').textContent=`تمت جدولة ${notifications.length} تنبيهاً محلياً للأيام السبعة القادمة.`;return;
+  }catch(e){$('preReminderStatus').textContent='تعذرت جدولة الإشعارات المحلية؛ سيتم استخدام التذكير أثناء فتح التطبيق.';}
+ }
+ if(!('Notification'in window)){$('preReminderStatus').textContent='هذا المتصفح لا يدعم الإشعارات. يمكنك استخدام التذكير الصوتي داخل التطبيق.';return;}
+ let permission=Notification.permission;if(permission==='default'){try{permission=await Notification.requestPermission()}catch(e){permission='denied'}}
+ if(permission!=='granted'){$('preReminderStatus').textContent='اسمح بإشعارات Ronahî من المتصفح حتى يعمل التذكير عندما تكون الصفحة مفتوحة.';return;}
+ checkWebPrePrayerReminder();$('preReminderStatus').textContent=`تم تفعيل التذكير قبل الصلاة بـ ${preReminderPrefs.minutes} دقيقة أثناء فتح التطبيق. لإشعارات مضمونة عند إغلاقه نحتاج ربط خدمة Push خارجية.`;
 }
+if(!window.ronahiWebReminderTimer){window.ronahiWebReminderTimer=setInterval(()=>{if(document.visibilityState==='visible')checkWebPrePrayerReminder(new Date())},15000);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')checkWebPrePrayerReminder(new Date())});}
 $('savePreReminder').onclick=async()=>{savePreReminderPrefs();if(preReminderPrefs.enabled){await schedulePrePrayerNotifications();toast('تم حفظ إعدادات التنبيه المسبق')}else{const pl=window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.LocalNotifications;if(pl&&pl.cancel){try{await pl.cancel({notifications:Array.from({length:35},(_,i)=>({id:52000+i}))})}catch(e){}}$('preReminderStatus').textContent='تم إيقاف التنبيهات المسبقة.';toast('تم إيقاف التنبيهات المسبقة')}};
 }$('notifyBtn').onclick=async()=>{if(!('Notification'in window)){toast('المتصفح لا يدعم الإشعارات');return}let p=await Notification.requestPermission();toast(p==='granted'?'تم السماح بالإشعارات':'لم يتم السماح بالإشعارات')};$('calibrate').onclick=startDeviceCompass;
 
